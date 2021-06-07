@@ -1,0 +1,26 @@
+{
+  "name": "Pause",
+  "description": "A mindfulness extension for Chrome",
+  "version": "1.0",
+  "manifest_version": 3,
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/Pause16.png",
+      "32": "/images/Pause32.png",
+      "48": "/images/Pause48.png",
+      "128": "/images/Pause128.png"
+    },
+    "icons": {
+      "16": "/images/Pause16.png",
+      "32": "/images/Pause32.png",
+      "48": "/images/Pause48.png",
+      "128": "/images/Pause128.png"
+    }
+  }
+}
