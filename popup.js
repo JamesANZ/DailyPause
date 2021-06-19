@@ -1,69 +1,41 @@
-// Initialize button with user's preferred color
-let changeColor = document.getElementById("changeColor");
-// TODO duplicate
-const presetIntervals = {
-  "#3aa757": 3600000, // 1 hour
-  "#e8453c": 3600000 * 2, // 2 hours
-  "#f9bb2d": 3600000 * 3, // 3 hours
-  "#4688f1": 3600000 * 4 // 4 hours
-}
-const promptFor = 6000000; // 10 mins
+document.addEventListener("DOMContentLoaded", () => {
 
-const colorCB = ({ color }) => {
-  changeColor.style.backgroundColor = color;
-  changeColor.textContent = `${presetIntervals[color] / 3600000}H`;
-};
+  async function init() {
+    const meditationReminderTime = await chrome.storage.sync.get("currentReminderTime");
+    const meditatedToday = await getMeditatedToday();
+    await checkDailyStreak();
+    const streak = await chrome.storage.sync.get("streak");
+    document.getElementById("dailyStreak").innerText = `Current daily streak: ${streak}`;
+    const timeToday = new Date().getHours();
+    if(meditationReminderTime >= timeToday && !meditatedToday) {
+      document.getElementById("meditatedToday").innerText = `you are due for a meditation!`;
+    } else {
+      document.getElementById("meditatedToday").innerText = `You have meditated today, congrats!`;
+    }
+  }
 
-const mindfulnessCallBack = ({ timestamp }) => {
-  // reset the icon
-  updateIcon(false);
-  document.getElementById("status").innerText = `We will remind you to take a mindfulness break every ${timestamp / 3600000} hour(s)`;
-  startTimer(timestamp / 1000);
-  setTimeout(() => {
-    //TODO trigger a notification
-    document.getElementById("status").innerText = "This is a friendly reminder that it is time to take a mindfulness break";
-    //set mindfulness timer
-    startTimer(120);
-    // change the icon to alert the user that it is time for a break
-    updateIcon(true);
-    // show this reminder for 10 minutes then start over
-    setTimeout(() => {
-      setMindfulnessReminder();
-    }, promptFor);
-  }, timestamp);
-};
+  init().catch(console.error);
 
-const updateIcon = (value) => {
-  chrome.runtime.sendMessage({
-    action: 'updateIcon',
-    value: value
-  });
-}
+  let meditateNowButton = document.getElementById("meditateNow");
+  let guidedMeditationButton = document.getElementById("guidedMeditation");
+  let settings = document.getElementById("settings");
 
-chrome.storage.sync.get("color", colorCB);
-chrome.storage.sync.get("timestamp", mindfulnessCallBack);
-
-// When the button is clicked, inject setPageBackgroundColor into current page
-changeColor.addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: setPageBackgroundColor,
+  meditateNowButton.addEventListener("click", () => {
+    openTab("meditate.html");
   });
 
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: setMindfulnessReminder,
+  guidedMeditationButton.addEventListener("click",  () => {
+    openTab("guidedMeditation.html");
   });
+
+  settings.addEventListener("click",  () => {
+    openTab("options.html");
+  });
+
+  const openTab = (pageName) => {
+    console.log(`opening a new ${pageName} tab`);
+    chrome.tabs.create({url: pageName});
+  }
+
 });
 
-// The body of this function will be executed as a content script inside the
-// current page
-function setPageBackgroundColor() {
-  chrome.storage.sync.get("color", colorCB);
-}
-
-function setMindfulnessReminder() {
-  chrome.storage.sync.get("timestamp", mindfulnessCallBack);
-}

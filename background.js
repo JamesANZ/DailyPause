@@ -1,32 +1,27 @@
-const defaultColor = '#3aa757';
-
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.sync.set({ color: defaultColor });
-    console.log('Default background color set to %cgreen', `color: ${defaultColor}`);
+    chrome.storage.sync.set({ currentReminderTime: 12 }); // noon
+    chrome.storage.sync.set({ streak: 0 });
+    chrome.storage.sync.set({ meditationTimeSet: 7200 });
+    chrome.storage.sync.set({ lastMeditation: 0 });
 });
 
-chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-    if (msg.action === "updateIcon") {
-        if (msg.value) {
-            // set back to original
-            chrome.browserAction.setIcon({
-                path : {
-                    "16": "images/Pause16.png",
-                    "32": "images/Pause32.png",
-                    "48": "images/Pause48.png",
-                    "128": "images/Pause128.png"
-                }
-            });
-        } else {
-            // set to alert mode to remind user of mindfulness break
-            chrome.browserAction.setIcon({
-                path : {
-                    "16": "images/Pause16.png",
-                    "32": "images/Pause32.png",
-                    "48": "images/Pause48.png",
-                    "128": "images/Pause128.png"
-                }
-            });
-        }
-    }
+async function setReminder() {
+    await chrome.alarms.clear('mindfulnessReminder');
+    const reminderTime = await chrome.storage.sync.get("currentReminderTime");
+    const whenToRing = new Date().setHours(reminderTime);
+    chrome.alarms.create('mindfulnessReminder', {
+        when: whenToRing,
+    });
+}
+
+chrome.onAlarm.addEventListener(() => {
+    chrome.notifications.create('', {
+        title: 'Time to meditate!',
+        message: 'This is your daily mindfulness reminder!',
+        iconUrl: 'images/Pause32x.png',
+        type: 'basic'
+    });
+    setReminder().catch(console.error);
 });
+
+setReminder().catch(console.error);
