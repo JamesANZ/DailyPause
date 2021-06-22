@@ -1,26 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const oneDayTimeStamp = 86400;
+const oneDayTimeStamp = 86400;
 
-    async function getMeditatedToday() {
-        // TODO use whole days rather than last time & 24 hours later
-        const lastMeditation = await chrome.storage.sync.get("lastMeditation");
-        return lastMeditation >= new Date.now() - oneDayTimeStamp;
-    }
+function promisifiedChromeGet(valueName) {
+    return new Promise(function(resolve, reject) {
+        chrome.storage.sync.get(valueName, function(result){
+            resolve(result[valueName]);
+        });
+    });
+}
 
-    async function getDailyStreakMissed() {
-        // TODO use whole days rather than last time & 24 hours later
-        const lastMeditation = await chrome.storage.sync.get("lastMeditation");
-        return lastMeditation + oneDayTimeStamp < new Date.now();
-    }
+async function getMeditatedToday() {
+    const lastMeditationDay = await promisifiedChromeGet("lastMeditationDay");
+    return lastMeditationDay >= new Date().setHours(0,0,0,0) - oneDayTimeStamp;
+}
 
-    function resetDailyStreak() {
-        chrome.storage.sync.set({streak: 0});
-    }
+async function getDailyStreakMissed() {
+    const lastMeditationDay = await promisifiedChromeGet("lastMeditationDay");
+    return lastMeditationDay + oneDayTimeStamp < new Date().setHours(0,0,0,0);
+}
 
-    async function checkDailyStreak() {
-        const missedDailyStreak = await getDailyStreakMissed();
-        if(missedDailyStreak) {
-            resetDailyStreak();
-        }
+function resetDailyStreak() {
+    chrome.storage.sync.set({ streak: 0 });
+}
+
+async function checkDailyStreak() {
+    const missedDailyStreak = await getDailyStreakMissed();
+    if(missedDailyStreak) {
+        resetDailyStreak();
     }
-});
+}

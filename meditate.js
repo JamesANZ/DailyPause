@@ -1,22 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    chrome.storage.sync.get("streak", (streak) => {
-        document.getElementById("dailyStreak").innerText = `You daily streak: ${streak} day(s)`;
+    const meditatedTodayMsg = "you have meditated today, keep up the good work!";
+    const notMeditatedTodayMsg = "You have not yet meditated today, do it now to keep up your streak!";
+
+    chrome.storage.sync.get("streak", (result) => {
+        document.getElementById("dailyStreak").innerText = `Your daily streak: ${result.streak} day(s)`;
     });
+
+    getMeditatedToday().then((meditatedToday) => {
+        if(meditatedToday) {
+            document.getElementById("status").innerText = meditatedTodayMsg;
+        } else {
+            document.getElementById("status").innerText = notMeditatedTodayMsg;
+        }
+    }).catch(console.error);
+
+    function play() {
+        new Audio('./ping.wav').play();
+    }
+
+    function done(meditatedToday, streak) {
+        play();
+        if (!meditatedToday) {
+            chrome.storage.sync.set({streak: streak + 1, lastMeditationDay: new Date().setHours(0,0,0,0)});
+        }
+        document.getElementById("status").innerText = meditatedTodayMsg;
+        document.getElementById("timer").hidden = true;
+    }
 
     const meditate = async () => {
         document.getElementById("timer").hidden = false;
-        const time = await chrome.storage.sync.get("time");
-        const streak = await chrome.storage.sync.get("streak");
+        const meditationTimeSet = await promisifiedChromeGet("meditationTimeSet");
+        const streak = await promisifiedChromeGet("streak");
         const meditatedToday = await getMeditatedToday();
-        document.getElementById("status").innerText = `meditated today? ${meditatedToday}`;
-        startTimer(time);
+        startTimer(meditationTimeSet / 1000);
         setTimeout(() => {
-            if (!meditatedToday) {
-                chrome.storage.sync.set({streak: streak + 1, lastMeditation: new Date().getTime()})
-                document.getElementById("status").innerText = `you have meditated today, keep up the good work!`;
-            }
-        }, time);
+            done(meditatedToday, streak);
+        }, meditationTimeSet);
     };
 
     document.getElementById("meditate").addEventListener("click", meditate);

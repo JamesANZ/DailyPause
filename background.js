@@ -1,20 +1,24 @@
 chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.sync.set({ currentReminderTime: 12 }); // noon
     chrome.storage.sync.set({ streak: 0 });
-    chrome.storage.sync.set({ meditationTimeSet: 7200 });
-    chrome.storage.sync.set({ lastMeditation: 0 });
+    chrome.storage.sync.set({ meditationTimeSet: 120000 }); // 2 minutes in milliseconds
+    chrome.storage.sync.set({ lastMeditationDay: 0 });
+    setReminder().catch(console.error);
 });
 
 async function setReminder() {
     await chrome.alarms.clear('mindfulnessReminder');
-    const reminderTime = await chrome.storage.sync.get("currentReminderTime");
-    const whenToRing = new Date().setHours(reminderTime);
+    const reminderTime = await new Promise(function(resolve, reject) {
+        chrome.storage.sync.get("currentReminderTime", function(result){
+            resolve(result["currentReminderTime"]);
+        });
+    });
     chrome.alarms.create('mindfulnessReminder', {
-        when: whenToRing,
+        when: new Date().setHours(reminderTime)
     });
 }
 
-chrome.onAlarm.addEventListener(() => {
+chrome.alarms.onAlarm.addListener(() => {
     chrome.notifications.create('', {
         title: 'Time to meditate!',
         message: 'This is your daily mindfulness reminder!',
@@ -23,5 +27,3 @@ chrome.onAlarm.addEventListener(() => {
     });
     setReminder().catch(console.error);
 });
-
-setReminder().catch(console.error);

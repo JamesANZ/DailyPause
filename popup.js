@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   async function init() {
-    const meditationReminderTime = await chrome.storage.sync.get("currentReminderTime");
+    const meditationReminderTime = await promisifiedChromeGet("currentReminderTime");
     const meditatedToday = await getMeditatedToday();
     await checkDailyStreak();
-    const streak = await chrome.storage.sync.get("streak");
+    const streak = await promisifiedChromeGet("streak");
     document.getElementById("dailyStreak").innerText = `Current daily streak: ${streak}`;
     const timeToday = new Date().getHours();
-    if(meditationReminderTime >= timeToday && !meditatedToday) {
+    if(meditationReminderTime >= timeToday || !meditatedToday) {
       document.getElementById("meditatedToday").innerText = `you are due for a meditation!`;
     } else {
       document.getElementById("meditatedToday").innerText = `You have meditated today, congrats!`;
