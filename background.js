@@ -19,10 +19,10 @@ async function setReminder() {
 }
 
 chrome.alarms.onAlarm.addListener(() => {
-    chrome.notifications.create('', {
+    chrome.notifications.create('reminder', {
         title: 'Time to meditate!',
         message: 'This is your daily mindfulness reminder!',
-        iconUrl: 'images/Pause32x.png',
+        iconUrl: '/images/Pause32x.png',
         type: 'basic'
     });
     setReminder().catch(console.error);
