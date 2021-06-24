@@ -1,4 +1,4 @@
-const oneDayTimeStamp = 86400;
+const oneDayTimeStamp = 86400000; // in ms
 
 function promisifiedChromeGet(valueName) {
     return new Promise(function(resolve, reject) {
