@@ -10,7 +10,7 @@ function promisifiedChromeGet(valueName) {
 
 async function getMeditatedToday() {
     const lastMeditationDay = await promisifiedChromeGet("lastMeditationDay");
-    return lastMeditationDay >= new Date().setHours(0,0,0,0) - oneDayTimeStamp;
+    return lastMeditationDay === new Date().setHours(0,0,0,0);
 }
 
 async function getDailyStreakMissed() {
