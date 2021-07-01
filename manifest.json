@@ -1,6 +1,6 @@
 {
-  "name": "Pause",
-  "description": "A mindfulness extension for Chrome",
+  "name": "DailyPause",
+  "description": "A simple mindfulness extension for Chrome",
   "version": "1.0",
   "manifest_version": 3,
   "options_page": "options.html",

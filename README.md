@@ -1,4 +1,4 @@
-# Pause
+# DailyPause
 A simple mindfulness plugin for Chrome and Firefox
 
 ## Why use this extension?

@@ -8,6 +8,12 @@ function promisifiedChromeGet(valueName) {
     });
 }
 
+function sendMsgComplete() {
+    chrome.runtime.sendMessage({type: "notification", options: {
+        type: "complete"
+    }});
+}
+
 async function getMeditatedToday() {
     const lastMeditationDay = await promisifiedChromeGet("lastMeditationDay");
     return lastMeditationDay === new Date().setHours(0,0,0,0);

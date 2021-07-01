@@ -18,12 +18,14 @@ async function setReminder() {
     });
 }
 
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.type === "complete") {
+        chrome.action.setBadgeText({text: ""}); // remove ! from icon
+    }
+});
+
 chrome.alarms.onAlarm.addListener(() => {
-    chrome.notifications.create('reminder', {
-        title: 'Time to meditate!',
-        message: 'This is your daily mindfulness reminder!',
-        iconUrl: '/images/Pause32x.png',
-        type: 'basic'
-    });
+    // add ! to icon to remind the user to meditate
+    chrome.action.setBadgeText({text: "!"});
     setReminder().catch(console.error);
 });

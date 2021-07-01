@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         play();
         if (!meditatedToday) {
             chrome.storage.sync.set({streak: streak + 1, lastMeditationDay: new Date().setHours(0,0,0,0)});
+            sendMsgComplete();
         }
         document.getElementById("status").innerText = meditatedTodayMsg;
         document.getElementById("timer").hidden = true;
