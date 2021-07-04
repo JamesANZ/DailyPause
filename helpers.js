@@ -9,9 +9,19 @@ function promisifiedChromeGet(valueName) {
 }
 
 function sendMsgComplete() {
-    chrome.runtime.sendMessage({type: "notification", options: {
-        type: "complete"
-    }});
+    chrome.runtime.sendMessage({
+        options: {
+            type: "complete"
+        }
+    });
+}
+
+function sendMsgCheck() {
+    chrome.runtime.sendMessage({
+        options: {
+            type: "check"
+        }
+    });
 }
 
 async function getMeditatedToday() {

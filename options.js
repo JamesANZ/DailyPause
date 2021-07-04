@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  sendMsgCheck();
+
   chrome.storage.sync.get("currentReminderTime", (result) => {
     document.getElementById("currentReminderTime").innerText = `we will remind you at ${result.currentReminderTime * 100}`;
   });
