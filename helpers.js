@@ -10,17 +10,7 @@ function promisifiedChromeGet(valueName) {
 
 function sendMsgComplete() {
     chrome.runtime.sendMessage({
-        options: {
-            type: "complete"
-        }
-    });
-}
-
-function sendMsgCheck() {
-    chrome.runtime.sendMessage({
-        options: {
-            type: "check"
-        }
+        type: "complete"
     });
 }
 

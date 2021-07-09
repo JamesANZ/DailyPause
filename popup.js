@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const streak = await promisifiedChromeGet("streak");
     document.getElementById("dailyStreak").innerText = `Current daily streak: ${streak}`;
     if(!meditatedToday) {
-      sendMsgCheck();
       document.getElementById("meditatedToday").innerText = `you are due for a meditation!`;
     } else {
       document.getElementById("meditatedToday").innerText = `You have meditated today, congrats!`;
