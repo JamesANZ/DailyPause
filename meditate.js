@@ -3,9 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const meditatedTodayMsg = "you have meditated today, keep up the good work!";
     const notMeditatedTodayMsg = "You have not yet meditated today, do it now to keep up your streak!";
 
-    chrome.storage.sync.get("streak", (result) => {
-        document.getElementById("dailyStreak").innerText = `Your daily streak: ${result.streak} day(s)`;
-    });
+    function displayStreak() {
+        chrome.storage.sync.get("streak", (result) => {
+            document.getElementById("dailyStreak").innerText = `Your daily streak: ${result.streak} day(s)`;
+        });
+    }
 
     getMeditatedToday().then((meditatedToday) => {
         if(meditatedToday) {
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!meditatedToday) {
             chrome.storage.sync.set({streak: streak + 1, lastMeditationDay: new Date().setHours(0,0,0,0)});
             sendMsgComplete();
+            displayStreak();
         }
         document.getElementById("status").innerText = meditatedTodayMsg;
         document.getElementById("timer").hidden = true;
@@ -41,5 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     document.getElementById("meditate").addEventListener("click", meditate);
+
+    displayStreak();
 
 });
