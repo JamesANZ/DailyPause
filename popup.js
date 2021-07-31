@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const meditatedToday = await getMeditatedToday();
     await checkDailyStreak();
     const streak = await promisifiedChromeGet("streak");
-    document.getElementById("dailyStreak").innerText = `Your daily streak: ${streak} days`;
+    document.getElementById("dailyStreak").innerText = `You've been meditating for ${streak} day(s)`;
     if(!meditatedToday) {
-      document.getElementById("meditatedToday").innerText = `You are due for a meditation!`;
+      document.getElementById("meditatedToday").innerText = `Please remember to take a moment`;
     } else {
-      document.getElementById("meditatedToday").innerText = `You have meditated today, congrats!`;
+      document.getElementById("meditatedToday").innerText = `You've been mindful today`;
     }
   }
 
