@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const meditatedTodayMsg = "you have meditated today, keep up the good work!";
-    const notMeditatedTodayMsg = "You have not yet meditated today, do it now to keep up your streak!";
+    const meditatedTodayMsg = "You've been mindful today";
+    const notMeditatedTodayMsg = "Please remember to be mindful today, take some time to meditate now";
 
     function displayStreak() {
         chrome.storage.sync.get("streak", (result) => {
-            document.getElementById("dailyStreak").innerText = `Your daily streak: ${result.streak} day(s)`;
+            document.getElementById("dailyStreak").innerText = `You've been consistently mindful for ${result.streak} day(s)`;
         });
     }
 
