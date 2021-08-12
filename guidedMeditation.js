@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     chrome.storage.sync.get("streak", (result) => {
-        document.getElementById("dailyStreak").innerText = `You've been consistently mindful for: ${result.streak} day(s)`;
+        if(result.streak === 1) {
+            document.getElementById("dailyStreak").innerText = `You've been consistently mindful for ${result.streak} day`;
+        } else {
+            document.getElementById("dailyStreak").innerText = `You've been consistently mindful for ${result.streak} days`;
+        }
     });
 
     const confirmWatchedVideo = async () => {
