@@ -1,18 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   async function init() {
     const meditatedToday = await getMeditatedToday();
     await checkDailyStreak();
     const streak = await promisifiedChromeGet("streak");
-    if(streak === 1) {
-      document.getElementById("dailyStreak").innerText = `You've been consistently mindful for ${streak} day`;
+    if (streak === 1) {
+      document.getElementById("dailyStreak").innerText =
+        `You've been consistently mindful for ${streak} day`;
     } else {
-      document.getElementById("dailyStreak").innerText = `You've been consistently mindful for ${streak} days`;
+      document.getElementById("dailyStreak").innerText =
+        `You've been consistently mindful for ${streak} days`;
     }
-    if(!meditatedToday) {
-      document.getElementById("meditatedToday").innerText = `Please remember to take a moment`;
+    if (!meditatedToday) {
+      document.getElementById("meditatedToday").innerText =
+        `Please remember to take a moment`;
     } else {
-      document.getElementById("meditatedToday").innerText = `You've been mindful today`;
+      document.getElementById("meditatedToday").innerText =
+        `You've been mindful today`;
     }
   }
 
@@ -27,22 +30,20 @@ document.addEventListener("DOMContentLoaded", () => {
     openTab("meditate.html");
   });
 
-  guidedMeditationButton.addEventListener("click",  () => {
+  guidedMeditationButton.addEventListener("click", () => {
     openTab("guidedMeditation.html");
   });
 
-  settings.addEventListener("click",  () => {
+  settings.addEventListener("click", () => {
     openTab("options.html");
   });
 
   help.addEventListener("click", () => {
-    openTab('mailto:hey@featureavenue.com?subject=Dailypause.co')
+    openTab("mailto:hey@featureavenue.com?subject=Dailypause.co");
   });
 
   const openTab = (pageName) => {
     console.log(`opening a new ${pageName} tab`);
-    chrome.tabs.create({url: pageName});
-  }
-
+    chrome.tabs.create({ url: pageName });
+  };
 });
-

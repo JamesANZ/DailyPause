@@ -1,6 +1,22 @@
-h1 { color: black; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+h1 {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 72px;
+  margin: 0 0 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
 
-p { color: black; font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }
+p {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
 
 img {
   width: 600px;
@@ -10,8 +26,9 @@ img {
 }
 
 button.current {
-  box-shadow: 0 0 0 2px white,
-              0 0 0 4px black;
+  box-shadow:
+    0 0 0 2px white,
+    0 0 0 4px black;
 }
 
 body {
