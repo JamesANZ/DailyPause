@@ -4,10 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
     "Please remember to be mindful today, take some time to meditate now";
 
   function displayStreak() {
+    const _ = displayPaymentQRIfStreakMissed();
     chrome.storage.sync.get("streak", (result) => {
       document.getElementById("dailyStreak").innerText =
         `You've been consistently mindful for ${result.streak} ${result.streak === 1 ? "day" : "days"}`;
     });
+  }
+
+  async function displayPaymentQRIfStreakMissed() {
+    const streakMissed = await getDailyStreakMissed();
+    if (streakMissed) {
+      document.getElementById("dailyStreak").innerText =
+        `You lost your streak! To help you stay motivated, you can send us a small penalty fee.`;
+      document.getElementById("payment").hidden = false;
+    }
   }
 
   getMeditatedToday()
