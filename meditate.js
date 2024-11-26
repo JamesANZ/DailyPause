@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const meditatedTodayMsg = "You've been mindful today";
-  const notMeditatedTodayMsg =
-    "Please remember to be mindful today, take some time to meditate now";
+  const meditatedTodayMsg = "You've been mindful today.";
+  const notMeditatedTodayMsg = "Please remember to be mindful today.";
 
   function displayStreak() {
     const _ = displayPaymentQRIfStreakMissed();
     chrome.storage.sync.get("streak", (result) => {
       document.getElementById("dailyStreak").innerText =
-        `You've been consistently mindful for ${result.streak} ${result.streak === 1 ? "day" : "days"}`;
+        `You've been consistently mindful for ${result.streak} ${result.streak === 1 ? "day." : "days."}`;
     });
   }
 

@@ -5,17 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const streak = await promisifiedChromeGet("streak");
     if (streak === 1) {
       document.getElementById("dailyStreak").innerText =
-        `You've been consistently mindful for ${streak} day`;
+        `You've been consistently mindful for ${streak} day.`;
     } else {
       document.getElementById("dailyStreak").innerText =
-        `You've been consistently mindful for ${streak} days`;
+        `You've been consistently mindful for ${streak} days.`;
     }
     if (!meditatedToday) {
       document.getElementById("meditatedToday").innerText =
-        `Please remember to take a moment`;
+        `Please remember to take a moment.`;
     } else {
       document.getElementById("meditatedToday").innerText =
-        `You've been mindful today`;
+        `You've been mindful today.`;
     }
   }
 
