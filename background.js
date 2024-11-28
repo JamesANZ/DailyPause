@@ -3,7 +3,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ meditationTimeSet: 120000 }); // 2 minutes in milliseconds
   chrome.storage.sync.set({ lastMeditationDay: 0 });
   chrome.action.setBadgeText({ text: "!!!" });
-  chrome.alarms.create("dailyMeditationReminder", { periodInMinutes: 1440 });
+  chrome.alarms.create("dailyMeditationReminder", { periodInMinutes: 720 });
 });
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {

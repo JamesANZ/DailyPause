@@ -1,18 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.sync.get("streak", (result) => {
-    if (result.streak === 1) {
-      document.getElementById("dailyStreak").innerText =
-        `You've been consistently mindful for ${result.streak} day.`;
-    } else {
-      document.getElementById("dailyStreak").innerText =
-        `You've been consistently mindful for ${result.streak} days.`;
-    }
+    document.getElementById("dailyStreak").innerText =
+      `You've been consistently mindful for ${result.streak === 1 ? "1 day" : result.streak + " days"}.`;
   });
 
   const confirmWatchedVideo = async () => {
     const meditatedToday = await getMeditatedToday();
     if (!meditatedToday) {
-      alert("Thank you for meditating!");
       const streak = await promisifiedChromeGet("streak");
       chrome.storage.sync.set({
         streak: streak + 1,
