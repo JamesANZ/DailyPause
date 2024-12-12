@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("dailyStreak").innerText =
         `You lost your streak! To help you stay motivated, you can send us a small penalty fee.`;
       document.getElementById("payment").hidden = false;
+      document.getElementById("paymentMsg").hidden = false;
     }
   }
 
