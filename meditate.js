@@ -47,6 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const meditate = async () => {
     document.getElementById("timer").hidden = false;
+    const text = document.getElementById("gratitudeBox").innerText;
+    const gratitude = await promisifiedChromeGet("gratitude");
+    chrome.storage.sync.set({
+      gratitude: [...gratitude, text],
+    });
+    document.getElementById("gratitudeBox").hidden = true;
     const meditationTimeSet = await promisifiedChromeGet("meditationTimeSet");
     const streak = await promisifiedChromeGet("streak");
     const meditatedToday = await getMeditatedToday();

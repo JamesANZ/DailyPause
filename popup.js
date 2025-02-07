@@ -13,11 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let meditateNowButton = document.getElementById("meditateNow");
   let guidedMeditationButton = document.getElementById("guidedMeditation");
+  let gratitudeButton = document.getElementById("gratitude");
   let settings = document.getElementById("settings");
   let help = document.getElementById("help");
 
   meditateNowButton.addEventListener("click", () => {
     openTab("meditate.html");
+  });
+
+  gratitudeButton.addEventListener("click", () => {
+    openTab("gratitude.html");
   });
 
   guidedMeditationButton.addEventListener("click", () => {
