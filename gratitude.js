@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const gratitude = await promisifiedChromeGet("gratitude");
-  if (gratitude) {
-    document.getElementById("gratitudeLog").innerText = gratitude.split(",");
-  }
+  const gratitude = (await promisifiedChromeGet("gratitude")) ?? "";
+  document.getElementById("gratitudeLog").innerText = gratitude.toString();
 });

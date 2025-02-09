@@ -90,3 +90,8 @@ body {
   justify-content: center;
   font-size: 48px;
 }
+
+#gratitudeBox {
+  height: 100px;
+  width: 300px;
+}
