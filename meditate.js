@@ -48,10 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const meditate = async () => {
     document.getElementById("timer").hidden = false;
     const text = document.getElementById("gratitudeBox").value;
+    const date = new Date().toLocaleDateString();
     const gratitude = (await promisifiedChromeGet("gratitude")) ?? [];
     if (text !== "") {
       chrome.storage.sync.set({
-        gratitude: [...gratitude, text],
+        gratitude: [...gratitude, `${date} - ${text}`],
       });
     }
     document.getElementById("gratitudeBox").hidden = true;
