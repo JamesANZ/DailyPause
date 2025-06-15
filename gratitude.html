@@ -8,12 +8,27 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    <title>gratitude</title>
-    <script src="helpers.js"></script>
-    <script src="gratitude.js"></script>
+    <title>DailyPause - Gratitude Journal</title>
   </head>
   <body>
-    <h2>Gratitude journal</h2>
-    <div id="gratitudeLog"></div>
+    <div class="gratitude-container">
+      <div class="gratitude-header">
+        <h2>Gratitude Journal</h2>
+        <p class="gratitude-subtitle">
+          Reflect on your daily moments of gratitude
+        </p>
+      </div>
+
+      <div class="gratitude-content">
+        <div id="gratitudeLog" class="gratitude-entries"></div>
+      </div>
+
+      <div class="gratitude-footer">
+        <a href="meditate.html" class="btn btn-primary">Back to Meditation</a>
+      </div>
+    </div>
+
+    <script src="helpers.js"></script>
+    <script src="gratitude.js"></script>
   </body>
 </html>
