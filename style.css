@@ -486,3 +486,30 @@ body {
     padding: 1rem;
   }
 }
+
+/* Navigation Buttons */
+.navigation-buttons {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-buttons .btn {
+  min-width: 200px;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navigation-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .navigation-buttons .btn {
+    min-width: 150px;
+    margin: 0.25rem;
+  }
+}
