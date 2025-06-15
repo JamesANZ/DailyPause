@@ -1,6 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
@@ -8,23 +10,73 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    <title>Guided meditation</title>
+    <title>Guided Meditation - Daily Pause</title>
   </head>
-  <body>
-    <h1>Take some time & watch the meditation video</h1>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/2GjZanuXWWk"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe
-    ><button id="guidedMeditationWatched" class="btn btn-danger">
-      I have watched the video and done the meditation
-    </button>
-    <p id="dailyStreak"></p>
+  <body class="guided-meditation-page">
+    <div class="container meditation-container">
+      <div class="meditation-header text-center mb-4">
+        <h1>Guided Meditation</h1>
+        <p class="lead">Take a moment to pause and breathe</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="meditation-video-container mb-4">
+            <div class="video-wrapper">
+              <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/2GjZanuXWWk"
+                title="Guided Meditation"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="meditation-controls text-center mb-4">
+            <div class="timer-display mb-3">
+              <span id="meditationTimer">00:00</span>
+            </div>
+            <div class="progress mb-3">
+              <div
+                id="meditationProgress"
+                class="progress-bar"
+                role="progressbar"
+                style="width: 0%"
+              ></div>
+            </div>
+            <button id="startMeditation" class="btn btn-primary me-2">
+              Start Session
+            </button>
+            <button id="guidedMeditationWatched" class="btn btn-success">
+              Complete Meditation
+            </button>
+          </div>
+
+          <div class="meditation-tips card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Meditation Tips</h5>
+              <ul class="tips-list">
+                <li>Find a quiet, comfortable space</li>
+                <li>Sit with a straight but relaxed posture</li>
+                <li>Focus on your breath</li>
+                <li>Let thoughts pass without judgment</li>
+                <li>
+                  Start with short sessions and gradually increase duration
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="streak-display text-center">
+            <p id="dailyStreak" class="streak-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="helpers.js"></script>
     <script src="guidedMeditation.js"></script>
   </body>

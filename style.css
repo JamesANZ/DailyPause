@@ -355,3 +355,134 @@ body {
     font-size: 1rem;
   }
 }
+
+/* Guided Meditation Page Styles */
+.guided-meditation-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.meditation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.meditation-header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.meditation-header .lead {
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.meditation-video-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.meditation-controls {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timer-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  font-family: monospace;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
+
+.meditation-tips {
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.meditation-tips .card-title {
+  color: #2c3e50;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.tips-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.tips-list li {
+  padding: 0.5rem 0;
+  color: #6c757d;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.tips-list li:before {
+  content: "•";
+  color: #4caf50;
+  position: absolute;
+  left: 0;
+}
+
+.streak-display {
+  margin-top: 2rem;
+}
+
+.streak-text {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.alert {
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .meditation-header h1 {
+    font-size: 2rem;
+  }
+
+  .timer-display {
+    font-size: 2rem;
+  }
+
+  .meditation-controls {
+    padding: 1rem;
+  }
+}
