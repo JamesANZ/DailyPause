@@ -1,6 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
@@ -8,18 +10,132 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    <title>options</title>
+    <title>Settings - Daily Pause</title>
+    <style>
+      body {
+        background-color: #f8f9fa;
+        padding: 2rem;
+      }
+      .settings-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      }
+      .settings-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .settings-header h1 {
+        color: #2c3e50;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .settings-header p {
+        color: #6c757d;
+        font-size: 1.1rem;
+      }
+      .settings-section {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+      }
+      .settings-section h2 {
+        color: #2c3e50;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      .form-label {
+        color: #2c3e50;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      .form-control {
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        padding: 0.75rem;
+      }
+      .form-control:focus {
+        border-color: #2196f3;
+        box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+      }
+      .current-setting {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+      }
+      .btn-save {
+        background-color: #4caf50;
+        color: white;
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        border: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      .btn-save:hover {
+        background-color: #43a047;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .navigation-buttons {
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .navigation-buttons a {
+        color: #2196f3;
+        text-decoration: none;
+        margin: 0 1rem;
+      }
+      .navigation-buttons a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
-    <div>
-      <p id="meditationTimeSet"></p>
-      <label for="meditationTime">How long would you like to meditate?</label
-      ><input type="number" id="meditationTime" />
-      <p>Minutes</p>
-      <br />
-      <button id="meditationTimeButton" class="btn btn-danger">Set</button>
+    <div class="settings-container">
+      <div class="settings-header">
+        <h1>Your Settings</h1>
+        <p>Customize your Daily Pause experience</p>
+      </div>
+
+      <div class="settings-section">
+        <h2>Meditation Preferences</h2>
+        <div class="form-group">
+          <label for="meditationTime" class="form-label">
+            How long would you like your meditation sessions to be?
+          </label>
+          <div class="input-group">
+            <input
+              type="number"
+              id="meditationTime"
+              class="form-control"
+              min="1"
+              max="60"
+              placeholder="Enter duration in minutes"
+            />
+            <span class="input-group-text">minutes</span>
+          </div>
+          <div id="meditationTimeSet" class="current-setting"></div>
+        </div>
+        <button id="meditationTimeButton" class="btn btn-save">
+          Save Meditation Duration
+        </button>
+      </div>
+
+      <div class="navigation-buttons">
+        <a href="meditate.html">Return to Meditation</a>
+        <a href="guidedMeditation.html">Try Guided Session</a>
+      </div>
     </div>
+
+    <script src="helpers.js"></script>
+    <script src="options.js"></script>
   </body>
-  <script src="helpers.js"></script>
-  <script src="options.js"></script>
 </html>
