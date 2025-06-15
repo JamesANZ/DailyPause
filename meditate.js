@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const meditatedTodayMsg = "You've been mindful today.";
   const notMeditatedTodayMsg = "Please remember to be mindful today.";
+  const paymentSection = document.querySelector(".payment-section");
 
   function displayStreak() {
     const _ = displayPaymentQRIfStreakMissed();
     chrome.storage.sync.get(["streak", "longestStreak"], (result) => {
       document.getElementById("dailyStreak").innerText =
-        `You've been consistently mindful for ${result.streak} ${result.streak === 1 ? "day" : "days"}. Your longest streak is ${result.longestStreak} ${result.longestStreak === 1 ? "day" : "days"}.`;
+        `Current streak: ${result.streak} ${result.streak === 1 ? "day" : "days"} - Longest streak: ${result.longestStreak} ${result.longestStreak === 1 ? "day" : "days"}`;
     });
   }
 
@@ -15,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (streakMissed) {
       document.getElementById("dailyStreak").innerText =
         `You lost your streak! To help you stay motivated, you can send us a small penalty fee.`;
-      document.getElementById("payment").hidden = false;
-      document.getElementById("paymentMsg").hidden = false;
+      paymentSection.hidden = false;
     }
   }
 
@@ -50,9 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     document.getElementById("status").innerText = meditatedTodayMsg;
     document.getElementById("timer").hidden = true;
+    document.getElementById("meditate").textContent = "Start Meditation";
+    document.getElementById("meditate").disabled = false;
   }
 
   const meditate = async () => {
+    const meditateBtn = document.getElementById("meditate");
+    meditateBtn.disabled = true;
+    meditateBtn.textContent = "Meditating...";
+
     document.getElementById("timer").hidden = false;
     const text = document.getElementById("gratitudeBox").value;
     const date = new Date().toLocaleDateString();

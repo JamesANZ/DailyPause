@@ -8,28 +8,54 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    <title>meditate</title>
+    <title>DailyPause - Meditation</title>
   </head>
   <body>
-    <h2>Take some time to be mindful</h2>
-    <label id="gratitudeBoxLabel" for="gratitudeBox">Gratitude box</label
-    ><input id="gratitudeBox" placeholder="What are you grateful for today?" />
-    <button id="meditate" class="btn btn-danger">Meditate</button>
-    <p id="status"></p>
-    <p id="dailyStreak"></p>
-    <div id="timer" hidden></div>
-    <img
-      src="images/lnqr.png"
-      id="payment"
-      hidden="hidden"
-      style="width: 100px; height: 100px"
-      alt="lnbc10260n1pn58mnypp5uf3luywpr6nnyn2g3rxr036gx6k6afhf56ausjqhff0erdj7l0rqdqqcqzzsxqyz5vqsp527r9yrkm8s0wwa9ht2p6uludfhrhvxl3fcl6p9kdz6uz0gduq5uq9qxpqysgqthnc4fj7pnasy0n5lzde5jdlanc2884r68mjmygtex00wsk923n4urxkfuc8pd3qagsaceawr62n9hxnqngm2zukcuy9anjafr323hgqt6eayj"
-    />
-    <p id="paymentMsg" hidden>
-      You broke your streak! To help stay committed and support DailyPause, we
-      recommend that you send us a small amount of lightning sats via the QR
-      code.
-    </p>
+    <div class="meditation-container">
+      <div class="meditation-header">
+        <h2>Take some time to be mindful</h2>
+        <p id="dailyStreak" class="streak-display"></p>
+      </div>
+
+      <div class="meditation-content">
+        <div class="gratitude-section">
+          <label id="gratitudeBoxLabel" for="gratitudeBox"
+            >What are you grateful for today?</label
+          >
+          <textarea
+            id="gratitudeBox"
+            class="form-control"
+            placeholder="Write your thoughts here..."
+          ></textarea>
+        </div>
+
+        <div class="timer-section">
+          <div id="timer" hidden></div>
+          <button id="meditate" class="btn btn-primary meditate-btn">
+            Start Meditation
+          </button>
+        </div>
+
+        <div class="status-section">
+          <p id="status" class="status-text"></p>
+        </div>
+
+        <div class="payment-section" hidden>
+          <img
+            src="images/lnqr.png"
+            id="payment"
+            class="payment-qr"
+            alt="Payment QR Code"
+          />
+          <p id="paymentMsg" class="payment-message">
+            You broke your streak! To help stay committed and support
+            DailyPause, we recommend that you send us a small amount of
+            lightning sats via the QR code.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <script src="helpers.js"></script>
     <script src="timer.js"></script>
     <script src="meditate.js"></script>
