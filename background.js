@@ -1,5 +1,6 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ streak: 0 });
+  chrome.storage.sync.set({ longestStreak: 0 }); // Initialize longest streak
   chrome.storage.sync.set({ meditationTimeSet: 120000 }); // 2 minutes in milliseconds
   chrome.storage.sync.set({ lastMeditationDay: 0 });
   chrome.action.setBadgeText({ text: "!!!" });

@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function displayStreak() {
     const _ = displayPaymentQRIfStreakMissed();
-    chrome.storage.sync.get("streak", (result) => {
+    chrome.storage.sync.get(["streak", "longestStreak"], (result) => {
       document.getElementById("dailyStreak").innerText =
-        `You've been consistently mindful for ${result.streak} ${result.streak === 1 ? "day." : "days."}`;
+        `You've been consistently mindful for ${result.streak} ${result.streak === 1 ? "day" : "days"}. Your longest streak is ${result.longestStreak} ${result.longestStreak === 1 ? "day" : "days"}.`;
     });
   }
 
@@ -34,8 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function done(meditatedToday, streak) {
     play();
     if (!meditatedToday) {
+      const newStreak = streak + 1;
+      chrome.storage.sync.get("longestStreak", (result) => {
+        const longestStreak = result.longestStreak || 0;
+        if (newStreak > longestStreak) {
+          chrome.storage.sync.set({ longestStreak: newStreak });
+        }
+      });
       chrome.storage.sync.set({
-        streak: streak + 1,
+        streak: newStreak,
         lastMeditationDay: new Date().setHours(0, 0, 0, 0),
       });
       sendMsgComplete();

@@ -8,8 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const meditatedToday = await getMeditatedToday();
     if (!meditatedToday) {
       const streak = await promisifiedChromeGet("streak");
+      const newStreak = streak + 1;
+      const longestStreak = (await promisifiedChromeGet("longestStreak")) || 0;
+      if (newStreak > longestStreak) {
+        chrome.storage.sync.set({ longestStreak: newStreak });
+      }
       chrome.storage.sync.set({
-        streak: streak + 1,
+        streak: newStreak,
         lastMeditationDay: new Date().setHours(0, 0, 0, 0),
       });
     } else {

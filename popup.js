@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const meditatedToday = await getMeditatedToday();
     await checkDailyStreak();
     const streak = await promisifiedChromeGet("streak");
+    const longestStreak = (await promisifiedChromeGet("longestStreak")) || 0;
     document.getElementById("dailyStreak").innerText =
-      `You've been consistently mindful for ${streak === 1 ? "1 day." : streak + " days."}`;
+      `You've been consistently mindful for ${streak === 1 ? "1 day" : streak + " days"}. Your longest streak is ${longestStreak === 1 ? "1 day" : longestStreak + " days"}.`;
     document.getElementById("meditatedToday").innerText =
       `${meditatedToday ? "You've been mindful today." : "Please remember to take a moment."}`;
   }
