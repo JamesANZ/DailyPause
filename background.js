@@ -13,6 +13,11 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   }
 });
 
+// Handle notification clicks
+chrome.notifications.onClicked.addListener(() => {
+  chrome.tabs.create({ url: "meditate.html" });
+});
+
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "dailyMeditationReminder") {
     chrome.storage.sync.get("lastMeditationDay", (result) => {
@@ -24,8 +29,9 @@ chrome.alarms.onAlarm.addListener((alarm) => {
           type: "basic",
           iconUrl: "/images/DailyPauseweblogo.png",
           title: "Time to Meditate!",
-          message: "Please take a moment to meditate.",
+          message: "Click to start your meditation session.",
           priority: 1,
+          requireInteraction: true, // Keep notification visible until user interacts
         });
       }
     });
