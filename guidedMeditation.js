@@ -32,30 +32,64 @@ document.addEventListener("DOMContentLoaded", () => {
         .getElementById("startMeditation")
         .classList.replace("btn-primary", "btn-warning");
 
-      meditationTimer = setInterval(() => {
-        const elapsed = Math.floor((Date.now() - startTime) / 1000);
-        remainingTime = Math.max(0, DEFAULT_DURATION - elapsed);
-        updateTimer();
+      // Store the start time in chrome.storage
+      chrome.storage.local.set({ meditationStartTime: startTime });
 
-        if (remainingTime === 0) {
-          clearInterval(meditationTimer);
-          isMeditating = false;
-          document.getElementById("startMeditation").textContent =
-            "Start Session";
-          document
-            .getElementById("startMeditation")
-            .classList.replace("btn-warning", "btn-primary");
-          // Optional: Play a gentle sound or show a completion message
-        }
-      }, 1000);
+      // Create an alarm that fires every second
+      chrome.alarms.create('meditationTimer', {
+        periodInMinutes: 1/60 // 1 second
+      });
+
+      // Update timer immediately
+      updateTimer();
     } else {
-      clearInterval(meditationTimer);
+      pauseTimer();
+    }
+  }
+
+  function pauseTimer() {
+    if (isMeditating) {
       isMeditating = false;
       document.getElementById("startMeditation").textContent = "Resume Session";
       document
         .getElementById("startMeditation")
         .classList.replace("btn-warning", "btn-primary");
+      
+      // Clear the alarm
+      chrome.alarms.clear('meditationTimer');
+      
+      // Store the remaining time
+      chrome.storage.local.set({ meditationRemainingTime: remainingTime });
     }
+  }
+
+  // Listen for alarm events
+  chrome.alarms.onAlarm.addListener((alarm) => {
+    if (alarm.name === 'meditationTimer') {
+      chrome.storage.local.get(['meditationStartTime'], (result) => {
+        if (result.meditationStartTime) {
+          const elapsed = Math.floor((Date.now() - result.meditationStartTime) / 1000);
+          remainingTime = Math.max(0, DEFAULT_DURATION - elapsed);
+          updateTimer();
+
+          if (remainingTime === 0) {
+            completeMeditation();
+          }
+        }
+      });
+    }
+  });
+
+  function completeMeditation() {
+    chrome.alarms.clear('meditationTimer');
+    isMeditating = false;
+    document.getElementById("startMeditation").textContent = "Start Session";
+    document
+      .getElementById("startMeditation")
+      .classList.replace("btn-warning", "btn-primary");
+    
+    // Clear stored meditation data
+    chrome.storage.local.remove(['meditationStartTime', 'meditationRemainingTime']);
   }
 
   // Event Listeners
@@ -102,6 +136,23 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("guidedMeditationWatched")
     .addEventListener("click", confirmWatchedVideo);
 
-  // Initialize timer display
-  updateTimer();
+  // Check for existing meditation session
+  chrome.storage.local.get(['meditationStartTime', 'meditationRemainingTime'], (result) => {
+    if (result.meditationStartTime) {
+      // Resume existing session
+      startTime = result.meditationStartTime;
+      if (result.meditationRemainingTime) {
+        remainingTime = result.meditationRemainingTime;
+      }
+      isMeditating = true;
+      document.getElementById("startMeditation").textContent = "Pause Session";
+      document
+        .getElementById("startMeditation")
+        .classList.replace("btn-primary", "btn-warning");
+      updateTimer();
+    } else {
+      // Initialize timer display
+      updateTimer();
+    }
+  });
 });

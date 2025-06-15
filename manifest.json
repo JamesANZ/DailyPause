@@ -22,5 +22,8 @@
     "32": "/images/Pause32x.png",
     "48": "/images/Pause64x.png",
     "128": "/images/Pause128x.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
   }
 }
