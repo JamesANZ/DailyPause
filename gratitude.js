@@ -58,4 +58,48 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
     gratitudeLog.appendChild(monthSection);
   });
+
+  // CSV Download functionality
+  document.getElementById("downloadCSV").addEventListener("click", () => {
+    downloadGratitudeCSV(gratitude);
+  });
 });
+
+function downloadGratitudeCSV(gratitudeEntries) {
+  // Create CSV content
+  const csvContent = [
+    // CSV header
+    "Date,Gratitude Entry",
+    // CSV data rows
+    ...gratitudeEntries.map((entry) => {
+      const [dateStr, content] = entry.split(" - ");
+      const [day, month, year] = dateStr.split("/");
+      const date = new Date(year, month - 1, day);
+
+      // Format date as YYYY-MM-DD
+      const formattedDate = date.toISOString().split("T")[0];
+
+      // Escape content for CSV (handle quotes and commas)
+      const escapedContent = content.replace(/"/g, '""');
+
+      return `"${formattedDate}","${escapedContent}"`;
+    }),
+  ].join("\n");
+
+  // Create and download the file
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const link = document.createElement("a");
+
+  if (link.download !== undefined) {
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute(
+      "download",
+      `gratitude_journal_${new Date().toISOString().split("T")[0]}.csv`,
+    );
+    link.style.visibility = "hidden";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+}

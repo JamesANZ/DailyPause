@@ -7,7 +7,6 @@ Daily Pause is a Chrome extension designed to help you maintain a consistent med
 ### Meditation Options
 
 - **Self-Guided Meditation**
-
   - Customizable meditation timer
   - Simple, distraction-free interface
   - Track your meditation progress

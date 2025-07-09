@@ -9,18 +9,18 @@
   function r(i) {
     if (e[i]) return e[i].exports;
     var n = (e[i] = { i: i, l: !1, exports: {} });
-    return t[i].call(n.exports, n, n.exports, r), (n.l = !0), n.exports;
+    return (t[i].call(n.exports, n, n.exports, r), (n.l = !0), n.exports);
   }
-  (r.m = t),
+  ((r.m = t),
     (r.c = e),
     (r.d = function (t, e, i) {
       r.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: i });
     }),
     (r.r = function (t) {
-      "undefined" != typeof Symbol &&
+      ("undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(t, "__esModule", { value: !0 });
+        Object.defineProperty(t, "__esModule", { value: !0 }));
     }),
     (r.t = function (t, e) {
       if ((1 & e && (t = r(t)), 8 & e)) return t;
@@ -50,13 +50,13 @@
           : function () {
               return t;
             };
-      return r.d(e, "a", e), e;
+      return (r.d(e, "a", e), e);
     }),
     (r.o = function (t, e) {
       return Object.prototype.hasOwnProperty.call(t, e);
     }),
     (r.p = ""),
-    r((r.s = 92));
+    r((r.s = 92)));
 })([
   function (t, e, r) {
     var i = r(5),
@@ -85,7 +85,7 @@
             if (typeof f == typeof c) continue;
             h(f, c);
           }
-          (t.sham || (c && c.sham)) && a(f, "sham", !0), s(r, p, f, t);
+          ((t.sham || (c && c.sham)) && a(f, "sham", !0), s(r, p, f, t));
         }
     };
   },
@@ -142,10 +142,10 @@
       a = r(14),
       s = i("unscopables"),
       o = Array.prototype;
-    null == o[s] && a(o, s, n(null)),
+    (null == o[s] && a(o, s, n(null)),
       (t.exports = function (t) {
         o[s][t] = !0;
-      });
+      }));
   },
   function (t, e, r) {
     var i = r(62),
@@ -205,7 +205,7 @@
             } catch (t) {}
           if ("get" in r || "set" in r)
             throw TypeError("Accessors not supported");
-          return "value" in r && (t[e] = r.value), t;
+          return ("value" in r && (t[e] = r.value), t);
         };
   },
   function (t, e) {
@@ -228,7 +228,7 @@
           return n.f(t, e, a(1, r));
         }
       : function (t, e, r) {
-          return (t[e] = r), t;
+          return ((t[e] = r), t);
         };
   },
   function (t, e, r) {
@@ -308,7 +308,7 @@
       u = !1,
       m = !1;
     function d(t) {
-      i.env() &&
+      (i.env() &&
         (p(t.design) && h.on("__wf_design", t.design),
         p(t.preview) && h.on("__wf_preview", t.preview)),
         p(t.destroy) && h.on("__wf_destroy", t.destroy),
@@ -318,10 +318,10 @@
             if (u) return void t.ready();
             if (c.contains(a, t.ready)) return;
             a.push(t.ready);
-          })(t);
+          })(t));
     }
     function y(t) {
-      p(t.design) && h.off("__wf_design", t.design),
+      (p(t.design) && h.off("__wf_design", t.design),
         p(t.preview) && h.off("__wf_preview", t.preview),
         p(t.destroy) && h.off("__wf_destroy", t.destroy),
         t.ready &&
@@ -330,14 +330,14 @@
             a = c.filter(a, function (e) {
               return e !== t.ready;
             });
-          })(t);
+          })(t));
     }
-    (f.config.hideBackface = !1),
+    ((f.config.hideBackface = !1),
       (f.config.keepInherited = !0),
       (i.define = function (t, e, r) {
         n[t] && y(n[t]);
         var i = (n[t] = e(o, c, r) || {});
-        return d(i), i;
+        return (d(i), i);
       }),
       (i.require = function (t) {
         return n[t];
@@ -363,7 +363,7 @@
                       ? window !== window.top
                       : void 0
           : r;
-      });
+      }));
     var g,
       v = navigator.userAgent.toLowerCase(),
       b = (i.env.touch =
@@ -374,7 +374,7 @@
         /Google/.test(navigator.vendor) &&
         parseInt(v.match(/chrome\/(\d+)\./)[1], 10)),
       E = (i.env.ios = /(ipod|iphone|ipad)/.test(v));
-    (i.env.safari = /safari/.test(v) && !x && !E),
+    ((i.env.safari = /safari/.test(v) && !x && !E),
       b &&
         l.on("touchstart mousedown", function (t) {
           g = t.target;
@@ -385,7 +385,7 @@
           }
         : function () {
             return !0;
-          });
+          }));
     var P,
       S = "resize.webflow orientationchange.webflow load.webflow";
     function _(t, e) {
@@ -415,11 +415,11 @@
       p(t) && t();
     }
     function A() {
-      P && (P.reject(), h.off("load", P.resolve)),
+      (P && (P.reject(), h.off("load", P.resolve)),
         (P = new o.Deferred()),
-        h.on("load", P.resolve);
+        h.on("load", P.resolve));
     }
-    (i.resize = _(h, S)),
+    ((i.resize = _(h, S)),
       (i.scroll = _(
         h,
         "scroll.webflow resize.webflow orientationchange.webflow load.webflow",
@@ -430,16 +430,16 @@
       }),
       i.env() && (i.location = function () {}),
       (i.ready = function () {
-        (u = !0),
+        ((u = !0),
           m ? ((m = !1), c.each(n, d)) : c.each(a, w),
           c.each(s, w),
-          i.resize.up();
+          i.resize.up());
       }),
       (i.load = function (t) {
         P.then(t);
       }),
       (i.destroy = function (t) {
-        (t = t || {}),
+        ((t = t || {}),
           (m = !0),
           h.triggerHandler("__wf_destroy"),
           null != t.domready && (u = t.domready),
@@ -449,11 +449,11 @@
           i.redraw.off(),
           (a = []),
           (s = []),
-          "pending" === P.state() && A();
+          "pending" === P.state() && A());
       }),
       o(i.ready),
       A(),
-      (t.exports = window.Webflow = i);
+      (t.exports = window.Webflow = i));
   },
   function (t, e, r) {
     var i = r(116),
@@ -574,12 +574,12 @@
         this.set(i[0], i[1]);
       }
     }
-    (h.prototype.clear = i),
+    ((h.prototype.clear = i),
       (h.prototype.delete = n),
       (h.prototype.get = a),
       (h.prototype.has = s),
       (h.prototype.set = o),
-      (t.exports = h);
+      (t.exports = h));
   },
   function (t, e, r) {
     var i = r(60);
@@ -691,12 +691,12 @@
         this.set(i[0], i[1]);
       }
     }
-    (h.prototype.clear = i),
+    ((h.prototype.clear = i),
       (h.prototype.delete = n),
       (h.prototype.get = a),
       (h.prototype.has = s),
       (h.prototype.set = o),
-      (t.exports = h);
+      (t.exports = h));
   },
   function (t, e) {
     var r = 9007199254740991;
@@ -749,27 +749,27 @@
         d = m.get,
         y = m.has,
         g = m.set;
-      (i = function (t, e) {
-        return g.call(m, t, e), e;
+      ((i = function (t, e) {
+        return (g.call(m, t, e), e);
       }),
         (n = function (t) {
           return d.call(m, t) || {};
         }),
         (a = function (t) {
           return y.call(m, t);
-        });
+        }));
     } else {
       var v = c("state");
-      (f[v] = !0),
+      ((f[v] = !0),
         (i = function (t, e) {
-          return l(t, v, e), e;
+          return (l(t, v, e), e);
         }),
         (n = function (t) {
           return p(t, v) ? t[v] : {};
         }),
         (a = function (t) {
           return p(t, v);
-        });
+        }));
     }
     t.exports = {
       set: i,
@@ -953,17 +953,17 @@
           return function i(o, h) {
             function l() {
               var t = new p();
-              return a(t.init) && t.init.apply(t, arguments), t;
+              return (a(t.init) && t.init.apply(t, arguments), t);
             }
             function p() {}
-            h === r && ((h = o), (o = Object)), (l.Bare = p);
+            (h === r && ((h = o), (o = Object)), (l.Bare = p));
             var c,
               f = (s[t] = o[t]),
               u = (p[t] = l[t] = new s());
             return (
               (u.constructor = l),
               (l.mixin = function (e) {
-                return (p[t] = l[t] = i(l, e)[t]), l;
+                return ((p[t] = l[t] = i(l, e)[t]), l);
               }),
               (l.open = function (t) {
                 if (
@@ -972,7 +972,7 @@
                   n(c))
                 )
                   for (var r in c) e.call(c, r) && (u[r] = c[r]);
-                return a(u.init) || (u.init = o), l;
+                return (a(u.init) || (u.init = o), l);
               }),
               l.open(h)
             );
@@ -1325,11 +1325,11 @@
               if ("function" == a) return void t.call(this, this);
               if ("object" == a) {
                 var l = 0;
-                u.call(
+                (u.call(
                   this,
                   t,
                   function (t, e) {
-                    t.span > l && (l = t.span), t.stop(), t.animate(e);
+                    (t.span > l && (l = t.span), t.stop(), t.animate(e));
                   },
                   function (t) {
                     "wait" in t && (l = h(t.wait, 0));
@@ -1339,15 +1339,15 @@
                   l > 0 &&
                     ((this.timer = new H({ duration: l, context: this })),
                     (this.active = !0),
-                    e && (this.timer.complete = s));
+                    e && (this.timer.complete = s)));
                 var m = this,
                   d = !1,
                   y = {};
                 R(function () {
-                  u.call(m, t, function (t) {
+                  (u.call(m, t, function (t) {
                     t.active && ((d = !0), (y[t.name] = t.nextStyle));
                   }),
-                    d && m.$el.css(y);
+                    d && m.$el.css(y));
                 });
               }
             }
@@ -1364,7 +1364,7 @@
           }
           function o(t) {
             var e;
-            this.timer && this.timer.destroy(),
+            (this.timer && this.timer.destroy(),
               (this.queue = []),
               (this.active = !1),
               "string" == typeof t
@@ -1374,10 +1374,10 @@
                       ? t
                       : this.props),
               u.call(this, e, m),
-              f.call(this);
+              f.call(this));
           }
           function p() {
-            o.call(this), (this.el.style.display = "none");
+            (o.call(this), (this.el.style.display = "none"));
           }
           function c() {
             this.el.offsetHeight;
@@ -1388,9 +1388,9 @@
               r = [];
             for (t in (this.upstream && r.push(this.upstream), this.props))
               (e = this.props[t]).active && r.push(e.string);
-            (r = r.join(",")),
+            ((r = r.join(",")),
               this.style !== r &&
-                ((this.style = r), (this.el.style[M.transition.dom] = r));
+                ((this.style = r), (this.el.style[M.transition.dom] = r)));
           }
           function u(t, e, i) {
             var a,
@@ -1400,11 +1400,11 @@
               l = e !== m,
               p = {};
             for (a in t)
-              (o = t[a]),
+              ((o = t[a]),
                 a in K
                   ? (p.transform || (p.transform = {}), (p.transform[a] = o))
                   : (g.test(a) && (a = r(a)),
-                    a in U ? (p[a] = o) : (h || (h = {}), (h[a] = o)));
+                    a in U ? (p[a] = o) : (h || (h = {}), (h[a] = o))));
             for (a in p) {
               if (((o = p[a]), !(s = this.props[a]))) {
                 if (!l) continue;
@@ -1435,7 +1435,7 @@
                 : (this.el && r.apply(this, arguments), this);
             };
           }
-          (e.init = function (e) {
+          ((e.init = function (e) {
             if (
               ((this.$el = t(e)),
               (this.el = this.$el[0]),
@@ -1455,7 +1455,7 @@
             b("add", n),
             b("start", a),
             b("wait", function (t) {
-              (t = h(t, 0)),
+              ((t = h(t, 0)),
                 this.active
                   ? this.queue.push({ options: t })
                   : ((this.timer = new H({
@@ -1463,7 +1463,7 @@
                       context: this,
                       complete: s,
                     })),
-                    (this.active = !0));
+                    (this.active = !0)));
             }),
             b("then", function (t) {
               return this.active
@@ -1476,24 +1476,24 @@
             b("next", s),
             b("stop", o),
             b("set", function (t) {
-              o.call(this, t), u.call(this, t, y, v);
+              (o.call(this, t), u.call(this, t, y, v));
             }),
             b("show", function (t) {
-              "string" != typeof t && (t = "block"),
-                (this.el.style.display = t);
+              ("string" != typeof t && (t = "block"),
+                (this.el.style.display = t));
             }),
             b("hide", p),
             b("redraw", c),
             b("destroy", function () {
-              o.call(this),
+              (o.call(this),
                 t.removeData(this.el, d),
-                (this.$el = this.el = null);
-            });
+                (this.$el = this.el = null));
+            }));
         }),
         O = p(B, function (e) {
           function r(e, r) {
             var i = t.data(e, d) || t.data(e, d, new B.Bare());
-            return i.el || i.init(e), r ? i.start(r) : i;
+            return (i.el || i.init(e), r ? i.start(r) : i);
           }
           e.init = function (e, i) {
             var n = t(e);
@@ -1514,7 +1514,7 @@
             var t = this.get();
             this.update("auto");
             var e = this.get();
-            return this.update(t), e;
+            return (this.update(t), e);
           }
           function r(t) {
             var e = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(t);
@@ -1526,16 +1526,16 @@
           var n = 500,
             s = "ease",
             o = 0;
-          (t.init = function (t, e, r, i) {
-            (this.$el = t), (this.el = t[0]);
+          ((t.init = function (t, e, r, i) {
+            ((this.$el = t), (this.el = t[0]));
             var a = e[0];
-            r[2] && (a = r[2]),
+            (r[2] && (a = r[2]),
               X[a] && (a = X[a]),
               (this.name = a),
               (this.type = r[1]),
               (this.duration = h(e[1], this.duration, n)),
               (this.ease = (function (t, e, r) {
-                return void 0 !== e && (r = e), t in c ? t : r;
+                return (void 0 !== e && (r = e), t in c ? t : r);
               })(e[2], this.ease, s)),
               (this.delay = h(e[3], this.delay, o)),
               (this.span = this.duration + this.delay),
@@ -1553,24 +1553,24 @@
                     this.duration +
                     "ms" +
                     ("ease" != this.ease ? A + c[this.ease][0] : "") +
-                    (this.delay ? A + this.delay + "ms" : "")));
+                    (this.delay ? A + this.delay + "ms" : ""))));
           }),
             (t.set = function (t) {
-              (t = this.convert(t, this.type)), this.update(t), this.redraw();
+              ((t = this.convert(t, this.type)), this.update(t), this.redraw());
             }),
             (t.transition = function (t) {
-              (this.active = !0),
+              ((this.active = !0),
                 (t = this.convert(t, this.type)),
                 this.auto &&
                   ("auto" == this.el.style[this.name] &&
                     (this.update(this.get()), this.redraw()),
                   "auto" == t && (t = e.call(this))),
-                (this.nextStyle = t);
+                (this.nextStyle = t));
             }),
             (t.fallback = function (t) {
               var r =
                 this.el.style[this.name] || this.convert(this.get(), this.type);
-              (t = this.convert(t, this.type)),
+              ((t = this.convert(t, this.type)),
                 this.auto &&
                   ("auto" == r && (r = this.convert(this.get(), this.type)),
                   "auto" == t && (t = e.call(this))),
@@ -1582,7 +1582,7 @@
                   ease: this.ease,
                   update: this.update,
                   context: this,
-                }));
+                })));
             }),
             (t.get = function () {
               return Y(this.el, this.name);
@@ -1653,50 +1653,50 @@
             }),
             (t.redraw = function () {
               this.el.offsetHeight;
-            });
+            }));
         }),
         z = p(L, function (t, e) {
           t.init = function () {
-            e.init.apply(this, arguments),
-              this.original || (this.original = this.convert(this.get(), b));
+            (e.init.apply(this, arguments),
+              this.original || (this.original = this.convert(this.get(), b)));
           };
         }),
         G = p(L, function (t, e) {
-          (t.init = function () {
-            e.init.apply(this, arguments), (this.animate = this.fallback);
+          ((t.init = function () {
+            (e.init.apply(this, arguments), (this.animate = this.fallback));
           }),
             (t.get = function () {
               return this.$el[this.name]();
             }),
             (t.update = function (t) {
               this.$el[this.name](t);
-            });
+            }));
         }),
         N = p(L, function (t, e) {
           function r(t, e) {
             var r, i, n, a, s;
             for (r in t)
-              (n = (a = K[r])[0]),
+              ((n = (a = K[r])[0]),
                 (i = a[1] || r),
                 (s = this.convert(t[r], n)),
-                e.call(this, i, s, n);
+                e.call(this, i, s, n));
           }
-          (t.init = function () {
-            e.init.apply(this, arguments),
+          ((t.init = function () {
+            (e.init.apply(this, arguments),
               this.current ||
                 ((this.current = {}),
                 K.perspective &&
                   W.perspective &&
                   ((this.current.perspective = W.perspective),
                   $(this.el, this.name, this.style(this.current)),
-                  this.redraw()));
+                  this.redraw())));
           }),
             (t.set = function (t) {
-              r.call(this, t, function (t, e) {
+              (r.call(this, t, function (t, e) {
                 this.current[t] = e;
               }),
                 $(this.el, this.name, this.style(this.current)),
-                this.redraw();
+                this.redraw());
             }),
             (t.transition = function (t) {
               var e = this.values(t);
@@ -1710,7 +1710,7 @@
               var r,
                 i = {};
               for (r in this.current) i[r] = r in e ? e[r] : this.current[r];
-              (this.active = !0), (this.nextStyle = this.style(i));
+              ((this.active = !0), (this.nextStyle = this.style(i)));
             }),
             (t.fallback = function (t) {
               var e = this.values(t);
@@ -1738,15 +1738,15 @@
                 i = {};
               return (
                 r.call(this, t, function (t, r, n) {
-                  (i[t] = r),
+                  ((i[t] = r),
                     void 0 === this.current[t] &&
                       ((e = 0),
                       ~t.indexOf("scale") && (e = 1),
-                      (this.current[t] = this.convert(e, n)));
+                      (this.current[t] = this.convert(e, n))));
                 }),
                 i
               );
-            });
+            }));
         }),
         j = p(function (e) {
           function r() {
@@ -1757,19 +1757,19 @@
             if (n) for (R(r), e = V(), t = n; t--; ) (i = h[t]) && i.render(e);
           }
           var i = { ease: c.ease[1], from: 0, to: 1 };
-          (e.init = function (t) {
-            (this.duration = t.duration || 0), (this.delay = t.delay || 0);
+          ((e.init = function (t) {
+            ((this.duration = t.duration || 0), (this.delay = t.delay || 0));
             var e = t.ease || i.ease;
-            c[e] && (e = c[e][1]),
+            (c[e] && (e = c[e][1]),
               "function" != typeof e && (e = i.ease),
               (this.ease = e),
               (this.update = t.update || s),
               (this.complete = t.complete || s),
               (this.context = t.context || this),
-              (this.name = t.name);
+              (this.name = t.name));
             var r = t.from,
               n = t.to;
-            void 0 === r && (r = i.from),
+            (void 0 === r && (r = i.from),
               void 0 === n && (n = i.to),
               (this.unit = t.unit || ""),
               "number" == typeof r && "number" == typeof n
@@ -1777,7 +1777,7 @@
                 : this.format(n, r),
               (this.value = this.begin + this.unit),
               (this.start = V()),
-              !1 !== t.autoplay && this.play();
+              !1 !== t.autoplay && this.play());
           }),
             (e.play = function () {
               var t;
@@ -1822,11 +1822,11 @@
                   void this.update.call(this.context, this.value)
                 );
               }
-              (e = this.endHex || this.begin + this.change),
+              ((e = this.endHex || this.begin + this.change),
                 (this.value = e + this.unit),
                 this.update.call(this.context, this.value),
                 this.complete.call(this.context),
-                this.destroy();
+                this.destroy());
             }),
             (e.format = function (t, e) {
               if (((e += ""), "#" == (t += "").charAt(0)))
@@ -1839,42 +1839,42 @@
                 );
               if (!this.unit) {
                 var r = e.replace(y, "");
-                r !== t.replace(y, "") && o("tween", e, t), (this.unit = r);
+                (r !== t.replace(y, "") && o("tween", e, t), (this.unit = r));
               }
-              (e = parseFloat(e)),
+              ((e = parseFloat(e)),
                 (t = parseFloat(t)),
                 (this.begin = this.value = e),
-                (this.change = t - e);
+                (this.change = t - e));
             }),
             (e.destroy = function () {
-              this.stop(),
+              (this.stop(),
                 (this.context = null),
-                (this.ease = this.update = this.complete = s);
-            });
+                (this.ease = this.update = this.complete = s));
+            }));
           var h = [],
             l = 1e3;
         }),
         H = p(j, function (t) {
-          (t.init = function (t) {
-            (this.duration = t.duration || 0),
+          ((t.init = function (t) {
+            ((this.duration = t.duration || 0),
               (this.complete = t.complete || s),
               (this.context = t.context),
-              this.play();
+              this.play());
           }),
             (t.render = function (t) {
               t - this.start < this.duration ||
                 (this.complete.call(this.context), this.destroy());
-            });
+            }));
         }),
         q = p(j, function (t, e) {
-          (t.init = function (t) {
+          ((t.init = function (t) {
             var e, r;
             for (e in ((this.context = t.context),
             (this.update = t.update),
             (this.tweens = []),
             (this.current = t.current),
             t.values))
-              (r = t.values[e]),
+              ((r = t.values[e]),
                 this.current[e] !== r &&
                   this.tweens.push(
                     new j({
@@ -1886,7 +1886,7 @@
                       ease: t.ease,
                       autoplay: !1,
                     }),
-                  );
+                  ));
             this.play();
           }),
             (t.render = function (t) {
@@ -1904,9 +1904,9 @@
               if ((e.destroy.call(this), this.tweens)) {
                 var t;
                 for (t = this.tweens.length; t--; ) this.tweens[t].destroy();
-                (this.tweens = null), (this.current = null);
+                ((this.tweens = null), (this.current = null));
               }
-            });
+            }));
         }),
         W = (e.config = {
           debug: !1,
@@ -1918,7 +1918,7 @@
           fallback: !M.transition,
           agentTests: [],
         });
-      (e.fallback = function (t) {
+      ((e.fallback = function (t) {
         if (!M.transition) return (W.fallback = !0);
         W.agentTests.push("(" + t + ")");
         var e = new RegExp(W.agentTests.join("|"), "i");
@@ -1933,7 +1933,7 @@
         }),
         (t.fn.tram = function (t) {
           return e.call(null, this, t);
-        });
+        }));
       var $ = t.style,
         Y = t.css,
         X = { transform: M.transform && M.transform.css },
@@ -1983,7 +1983,7 @@
           "scroll-left": [G, v, "scrollLeft"],
         },
         K = {};
-      M.transform &&
+      (M.transform &&
         ((U.transform = [N]),
         (K = {
           x: [E, "translateX"],
@@ -2003,7 +2003,7 @@
           ((K.z = [E, "translateZ"]),
           (K.rotateZ = [P]),
           (K.scaleZ = [v]),
-          (K.perspective = [x]));
+          (K.perspective = [x])));
       var Z = /ms/,
         J = /s|\./;
       return (t.tram = e);
@@ -2020,12 +2020,12 @@
       var e = (this.__data__ = new i(t));
       this.size = e.size;
     }
-    (l.prototype.clear = n),
+    ((l.prototype.clear = n),
       (l.prototype.delete = a),
       (l.prototype.get = s),
       (l.prototype.has = o),
       (l.prototype.set = h),
-      (t.exports = l);
+      (t.exports = l));
   },
   function (t, e) {
     t.exports = function (t, e) {
@@ -2129,7 +2129,7 @@
           break;
         }
       }
-      return p.delete(t), p.delete(e), g;
+      return (p.delete(t), p.delete(e), g);
     };
   },
   function (t, e, r) {
@@ -2396,14 +2396,14 @@
       p = l.get,
       c = l.enforce,
       f = String(h).split("toString");
-    n("inspectSource", function (t) {
+    (n("inspectSource", function (t) {
       return h.call(t);
     }),
       (t.exports = function (t, e, r, n) {
         var h = !!n && !!n.unsafe,
           l = !!n && !!n.enumerable,
           p = !!n && !!n.noTargetGet;
-        "function" == typeof r &&
+        ("function" == typeof r &&
           ("string" != typeof e || s(r, "name") || a(r, "name", e),
           (c(r).source = f.join("string" == typeof e ? e : ""))),
           t !== i
@@ -2411,10 +2411,10 @@
               l ? (t[e] = r) : a(t, e, r))
             : l
               ? (t[e] = r)
-              : o(e, r);
+              : o(e, r));
       })(Function.prototype, "toString", function () {
         return ("function" == typeof this && p(this).source) || h.call(this);
-      });
+      }));
   },
   function (t, e, r) {
     t.exports = r(5);
@@ -2446,7 +2446,7 @@
       p = r(50),
       c = l("iterator"),
       f = !1;
-    [].keys &&
+    ([].keys &&
       ("next" in (a = [].keys())
         ? (n = s(s(a))) !== Object.prototype && (i = n)
         : (f = !0)),
@@ -2456,7 +2456,7 @@
         o(i, c, function () {
           return this;
         }),
-      (t.exports = { IteratorPrototype: i, BUGGY_SAFARI_ITERATORS: f });
+      (t.exports = { IteratorPrototype: i, BUGGY_SAFARI_ITERATORS: f }));
   },
   function (t, e, r) {
     var i = r(13),
@@ -2507,7 +2507,7 @@
           delete c.prototype[a[r]];
         return c();
       };
-    (t.exports =
+    ((t.exports =
       Object.create ||
       function (t, e) {
         var r;
@@ -2521,7 +2521,7 @@
           void 0 === e ? r : n(r, e)
         );
       }),
-      (s[l] = !0);
+      (s[l] = !0));
   },
   function (t, e, r) {
     var i = r(11).f,
@@ -2572,7 +2572,7 @@
           if (o < 2)
             for (;;) {
               if (f in p) {
-                (h = p[f]), (f += u);
+                ((h = p[f]), (f += u));
                 break;
               }
               if (((f += u), t ? f < 0 : c <= f))
@@ -2585,7 +2585,7 @@
     t.exports = { left: o(!1), right: o(!0) };
   },
   function (t, e, r) {
-    r(93), r(251), r(252), r(253), r(254), (t.exports = r(255));
+    (r(93), r(251), r(252), r(253), r(254), (t.exports = r(255)));
   },
   function (t, e, r) {
     "use strict";
@@ -2661,7 +2661,7 @@
               }
               return r;
             }));
-      (t.map = t.collect =
+      ((t.map = t.collect =
         function (t, e, r) {
           var i = [];
           return null == t
@@ -2678,7 +2678,7 @@
             var i;
             return (
               d(t, function (t, n, a) {
-                if (e.call(r, t, n, a)) return (i = t), !0;
+                if (e.call(r, t, n, a)) return ((i = t), !0);
               }),
               i
             );
@@ -2694,7 +2694,7 @@
                     e.call(r, t, n, a) && i.push(t);
                   }),
                   i);
-          });
+          }));
       var d =
         (t.some =
         t.any =
@@ -2710,7 +2710,7 @@
                   }),
                   !!a);
           });
-      (t.contains = t.include =
+      ((t.contains = t.include =
         function (t, e) {
           return (
             null != t &&
@@ -2738,7 +2738,7 @@
               (r = arguments),
               (i = this),
               n.frame(function () {
-                (e = !1), t.apply(i, r);
+                ((e = !1), t.apply(i, r));
               }));
           };
         }),
@@ -2755,7 +2755,7 @@
                 : ((n = null), i || ((h = e.apply(s, a)), (s = a = null)));
             };
           return function () {
-            (s = this), (a = arguments), (o = t.now());
+            ((s = this), (a = arguments), (o = t.now()));
             var p = i && !n;
             return (
               n || (n = setTimeout(l, r)),
@@ -2794,7 +2794,7 @@
           evaluate: /<%([\s\S]+?)%>/g,
           interpolate: /<%=([\s\S]+?)%>/g,
           escape: /<%-([\s\S]+?)%>/g,
-        });
+        }));
       var y = /(.)^/,
         g = {
           "'": "'",
@@ -2810,7 +2810,7 @@
         };
       return (
         (t.template = function (e, r, i) {
-          !r && i && (r = i), (r = t.defaults({}, r, t.templateSettings));
+          (!r && i && (r = i), (r = t.defaults({}, r, t.templateSettings)));
           var n = RegExp(
               [
                 (r.escape || y).source,
@@ -2821,7 +2821,7 @@
             ),
             a = 0,
             s = "__p+='";
-          e.replace(n, function (t, r, i, n, o) {
+          (e.replace(n, function (t, r, i, n, o) {
             return (
               (s += e.slice(a, o).replace(v, b)),
               (a = o + t.length),
@@ -2838,7 +2838,7 @@
             (s =
               "var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};\n" +
               s +
-              "return __p;\n");
+              "return __p;\n"));
           try {
             var o = new Function(r.variable || "obj", "_", s);
           } catch (t) {
@@ -2848,7 +2848,7 @@
               return o.call(this, e, t);
             },
             l = r.variable || "obj";
-          return (h.source = "function(" + l + "){\n" + s + "}"), h;
+          return ((h.source = "function(" + l + "){\n" + s + "}"), h);
         }),
         t
       );
@@ -2897,13 +2897,13 @@
       n = i(r(97)),
       a = i(r(98)),
       s = r(41);
-    Object.defineProperty(e, "__esModule", { value: !0 }),
+    (Object.defineProperty(e, "__esModule", { value: !0 }),
       (e.ready =
         e.destroy =
         e.init =
         e.cleanupElement =
         e.createInstance =
-          void 0);
+          void 0));
     var o = s(r(99)),
       h = s(r(100)),
       l = s(r(101));
@@ -2911,7 +2911,7 @@
     var p = { Playing: "playing", Stopped: "stopped" },
       c = new ((function () {
         function t() {
-          (0, n.default)(this, t), (0, h.default)(this, "_cache", []);
+          ((0, n.default)(this, t), (0, h.default)(this, "_cache", []));
         }
         return (
           (0, a.default)(t, [
@@ -2921,8 +2921,8 @@
                 var r = (0, l.default)(this._cache, function (e) {
                   return e.wrapper === t;
                 });
-                -1 !== r && this._cache.splice(r, 1),
-                  this._cache.push({ wrapper: t, instance: e });
+                (-1 !== r && this._cache.splice(r, 1),
+                  this._cache.push({ wrapper: t, instance: e }));
               },
             },
             {
@@ -2950,7 +2950,7 @@
       f = {},
       u = (function () {
         function t() {
-          (0, n.default)(this, t),
+          ((0, n.default)(this, t),
             (0, h.default)(this, "config", null),
             (0, h.default)(this, "currentState", p.Stopped),
             (0, h.default)(this, "handlers", {
@@ -2960,7 +2960,7 @@
               dataReady: [],
               destroy: [],
               error: [],
-            });
+            }));
         }
         return (
           (0, a.default)(t, [
@@ -3025,12 +3025,12 @@
                     },
                   };
                   try {
-                    this.animationItem && this.destroy(),
+                    (this.animationItem && this.destroy(),
                       (this.animationItem = window.Webflow.require(
                         "lottie",
                       ).lottie.loadAnimation(
                         (0, o.default)({}, v, { path: i }),
-                      ));
+                      )));
                   } catch (t) {
                     return void this.handlers.error.forEach(function (e) {
                       return e(t);
@@ -3170,8 +3170,8 @@
                 if (this.animationItem) {
                   var t =
                     1 === this.animationItem.playDirection ? 0 : this.frames;
-                  this.animationItem.goToAndPlay(t, !0),
-                    (this.currentState = p.Playing);
+                  (this.animationItem.goToAndPlay(t, !0),
+                    (this.currentState = p.Playing));
                 }
               },
             },
@@ -3286,7 +3286,7 @@
             {
               key: "isLoaded",
               get: function () {
-                return this.animationItem, this.animationItem.isLoaded;
+                return (this.animationItem, this.animationItem.isLoaded);
               },
             },
             {
@@ -3306,7 +3306,7 @@
       },
       d = function (t) {
         var e = c.get(t);
-        return null == e && (e = new u()), e.load(t), e;
+        return (null == e && (e = new u()), e.load(t), e);
       };
     e.createInstance = d;
     var y = function (t) {
@@ -3316,7 +3316,7 @@
     e.cleanupElement = y;
     var g = function () {
       m().forEach(function (t) {
-        1 === parseFloat(t.getAttribute("data-is-ix2-target")) || y(t), d(t);
+        (1 === parseFloat(t.getAttribute("data-is-ix2-target")) || y(t), d(t));
       });
     };
     e.init = g;
@@ -3336,14 +3336,14 @@
     function r(t, e) {
       for (var r = 0; r < e.length; r++) {
         var i = e[r];
-        (i.enumerable = i.enumerable || !1),
+        ((i.enumerable = i.enumerable || !1),
           (i.configurable = !0),
           "value" in i && (i.writable = !0),
-          Object.defineProperty(t, i.key, i);
+          Object.defineProperty(t, i.key, i));
       }
     }
     t.exports = function (t, e, i) {
-      return e && r(t.prototype, e), i && r(t, i), t;
+      return (e && r(t.prototype, e), i && r(t, i), t);
     };
   },
   function (t, e) {
@@ -3388,7 +3388,7 @@
       var o = null == t ? 0 : t.length;
       if (!o) return -1;
       var h = null == r ? 0 : a(r);
-      return h < 0 && (h = s(o + h, 0)), i(t, n(e, 3), h);
+      return (h < 0 && (h = s(o + h, 0)), i(t, n(e, 3), h));
     };
   },
   function (t, e) {
@@ -3460,7 +3460,7 @@
   },
   function (t, e) {
     t.exports = function () {
-      (this.__data__ = []), (this.size = 0);
+      ((this.__data__ = []), (this.size = 0));
     };
   },
   function (t, e, r) {
@@ -3493,20 +3493,20 @@
     t.exports = function (t, e) {
       var r = this.__data__,
         n = i(r, t);
-      return n < 0 ? (++this.size, r.push([t, e])) : (r[n][1] = e), this;
+      return (n < 0 ? (++this.size, r.push([t, e])) : (r[n][1] = e), this);
     };
   },
   function (t, e, r) {
     var i = r(29);
     t.exports = function () {
-      (this.__data__ = new i()), (this.size = 0);
+      ((this.__data__ = new i()), (this.size = 0));
     };
   },
   function (t, e) {
     t.exports = function (t) {
       var e = this.__data__,
         r = e.delete(t);
-      return (this.size = e.size), r;
+      return ((this.size = e.size), r);
     };
   },
   function (t, e) {
@@ -3529,10 +3529,10 @@
       if (r instanceof i) {
         var o = r.__data__;
         if (!n || o.length < s - 1)
-          return o.push([t, e]), (this.size = ++r.size), this;
+          return (o.push([t, e]), (this.size = ++r.size), this);
         r = this.__data__ = new a(o);
       }
-      return r.set(t, e), (this.size = r.size), this;
+      return (r.set(t, e), (this.size = r.size), this);
     };
   },
   function (t, e, r) {
@@ -3574,7 +3574,7 @@
         var i = !0;
       } catch (t) {}
       var n = s.call(t);
-      return i && (e ? (t[o] = r) : delete t[o]), n;
+      return (i && (e ? (t[o] = r) : delete t[o]), n);
     };
   },
   function (t, e) {
@@ -3607,12 +3607,12 @@
       n = r(29),
       a = r(42);
     t.exports = function () {
-      (this.size = 0),
+      ((this.size = 0),
         (this.__data__ = {
           hash: new i(),
           map: new (a || n)(),
           string: new i(),
-        });
+        }));
     };
   },
   function (t, e, r) {
@@ -3629,23 +3629,23 @@
         this.set(i[0], i[1]);
       }
     }
-    (h.prototype.clear = i),
+    ((h.prototype.clear = i),
       (h.prototype.delete = n),
       (h.prototype.get = a),
       (h.prototype.has = s),
       (h.prototype.set = o),
-      (t.exports = h);
+      (t.exports = h));
   },
   function (t, e, r) {
     var i = r(33);
     t.exports = function () {
-      (this.__data__ = i ? i(null) : {}), (this.size = 0);
+      ((this.__data__ = i ? i(null) : {}), (this.size = 0));
     };
   },
   function (t, e) {
     t.exports = function (t) {
       var e = this.has(t) && delete this.__data__[t];
-      return (this.size -= e ? 1 : 0), e;
+      return ((this.size -= e ? 1 : 0), e);
     };
   },
   function (t, e, r) {
@@ -3685,7 +3685,7 @@
     var i = r(34);
     t.exports = function (t) {
       var e = i(this, t).delete(t);
-      return (this.size -= e ? 1 : 0), e;
+      return ((this.size -= e ? 1 : 0), e);
     };
   },
   function (t, e) {
@@ -3713,7 +3713,7 @@
     t.exports = function (t, e) {
       var r = i(this, t),
         n = r.size;
-      return r.set(t, e), (this.size += r.size == n ? 0 : 1), this;
+      return (r.set(t, e), (this.size += r.size == n ? 0 : 1), this);
     };
   },
   function (t, e, r) {
@@ -3740,7 +3740,7 @@
         w = E == P;
       if (w && l(t)) {
         if (!l(e)) return !1;
-        (b = !0), (S = !1);
+        ((b = !0), (S = !1));
       }
       if (w && !S)
         return (
@@ -3753,7 +3753,7 @@
         if (A || C) {
           var k = A ? t.value() : t,
             T = C ? e.value() : e;
-          return v || (v = new i()), g(k, T, r, y, v);
+          return (v || (v = new i()), g(k, T, r, y, v));
         }
       }
       return !!w && (v || (v = new i()), s(t, e, r, y, g, v));
@@ -3768,14 +3768,14 @@
         r = null == t ? 0 : t.length;
       for (this.__data__ = new i(); ++e < r; ) this.add(t[e]);
     }
-    (s.prototype.add = s.prototype.push = n),
+    ((s.prototype.add = s.prototype.push = n),
       (s.prototype.has = a),
-      (t.exports = s);
+      (t.exports = s));
   },
   function (t, e) {
     var r = "__lodash_hash_undefined__";
     t.exports = function (t) {
-      return this.__data__.set(t, r), this;
+      return (this.__data__.set(t, r), this);
     };
   },
   function (t, e) {
@@ -3822,7 +3822,7 @@
         case E:
           if (t.byteLength != e.byteLength || t.byteOffset != e.byteOffset)
             return !1;
-          (t = t.buffer), (e = e.buffer);
+          ((t = t.buffer), (e = e.buffer));
         case x:
           return !(t.byteLength != e.byteLength || !_(new n(t), new n(e)));
         case c:
@@ -3841,9 +3841,9 @@
           if ((A || (A = h), t.size != e.size && !C)) return !1;
           var k = w.get(t);
           if (k) return k == e;
-          (i |= p), w.set(t, e);
+          ((i |= p), w.set(t, e));
           var T = s(A(t), A(e), i, P, _, w);
-          return w.delete(t), T;
+          return (w.delete(t), T);
         case b:
           if (S) return S.call(t) == S.call(e);
       }
@@ -3895,7 +3895,7 @@
         d = h.get(e);
       if (m && d) return m == e && d == t;
       var y = !0;
-      h.set(t, e), h.set(e, t);
+      (h.set(t, e), h.set(e, t));
       for (var g = l; ++f < c; ) {
         var v = t[(u = p[f])],
           b = e[u];
@@ -3920,7 +3920,7 @@
           ) &&
           (y = !1);
       }
-      return h.delete(t), h.delete(e), y;
+      return (h.delete(t), h.delete(e), y);
     };
   },
   function (t, e, r) {
@@ -4028,7 +4028,7 @@
       n = r(44),
       a = r(23),
       s = {};
-    (s["[object Float32Array]"] =
+    ((s["[object Float32Array]"] =
       s["[object Float64Array]"] =
       s["[object Int8Array]"] =
       s["[object Int16Array]"] =
@@ -4056,7 +4056,7 @@
           !1),
       (t.exports = function (t) {
         return a(t) && n(t.length) && !!s[i(t)];
-      });
+      }));
   },
   function (t, e) {
     t.exports = function (t) {
@@ -4130,7 +4130,7 @@
       u = l(s),
       m = l(o),
       d = h;
-    ((i && "[object DataView]" != d(new i(new ArrayBuffer(1)))) ||
+    (((i && "[object DataView]" != d(new i(new ArrayBuffer(1)))) ||
       (n && "[object Map]" != d(new n())) ||
       (a && "[object Promise]" != d(a.resolve())) ||
       (s && "[object Set]" != d(new s())) ||
@@ -4154,7 +4154,7 @@
           }
         return e;
       }),
-      (t.exports = d);
+      (t.exports = d));
   },
   function (t, e, r) {
     var i = r(18)(r(7), "DataView");
@@ -4232,7 +4232,7 @@
       n = 500;
     t.exports = function (t) {
       var e = i(t, function (t) {
-          return r.size === n && r.clear(), t;
+          return (r.size === n && r.clear(), t);
         }),
         r = e.cache;
       return e;
@@ -4250,11 +4250,11 @@
           a = r.cache;
         if (a.has(n)) return a.get(n);
         var s = t.apply(this, i);
-        return (r.cache = a.set(n, s) || a), s;
+        return ((r.cache = a.set(n, s) || a), s);
       };
-      return (r.cache = new (a.Cache || i)()), r;
+      return ((r.cache = new (a.Cache || i)()), r);
     }
-    (a.Cache = i), (t.exports = a);
+    ((a.Cache = i), (t.exports = a));
   },
   function (t, e, r) {
     var i = r(175);
@@ -4405,10 +4405,10 @@
     };
   },
   function (t, e, r) {
-    (t.exports = r(190)), r(248), r(249);
+    ((t.exports = r(190)), r(248), r(249));
   },
   function (t, e, r) {
-    r(191),
+    (r(191),
       r(208),
       r(215),
       r(216),
@@ -4437,7 +4437,7 @@
       r(243),
       r(245),
       r(246),
-      r(247);
+      r(247));
     var i = r(84);
     t.exports = i.Array;
   },
@@ -4577,7 +4577,10 @@
     t.exports = function (t, e, r) {
       var l = e + " Iterator";
       return (
-        (t.prototype = n(i, { next: a(1, r) })), s(t, l, !1, !0), (o[l] = h), t
+        (t.prototype = n(i, { next: a(1, r) })),
+        s(t, l, !1, !0),
+        (o[l] = h),
+        t
       );
     };
   },
@@ -4637,14 +4640,14 @@
               e = !1,
               r = {};
             try {
-              (t = Object.getOwnPropertyDescriptor(
+              ((t = Object.getOwnPropertyDescriptor(
                 Object.prototype,
                 "__proto__",
               ).set).call(r, []),
-                (e = r instanceof Array);
+                (e = r instanceof Array));
             } catch (t) {}
             return function (r, a) {
-              return i(r), n(a), e ? t.call(r, a) : (r.__proto__ = a), r;
+              return (i(r), n(a), e ? t.call(r, a) : (r.__proto__ = a), r);
             };
           })()
         : void 0);
@@ -4701,7 +4704,7 @@
       else
         for (c = v.call(f), r = new u(); !(p = c.next()).done; g++)
           h(r, g, y ? a(c, d, [p.value, g], !0) : p.value);
-      return (r.length = g), r;
+      return ((r.length = g), r);
     };
   },
   function (t, e, r) {
@@ -4775,26 +4778,26 @@
             n = !0;
           },
         };
-      (s[i] = function () {
+      ((s[i] = function () {
         return this;
       }),
         Array.from(s, function () {
           throw 2;
-        });
+        }));
     } catch (t) {}
     t.exports = function (t, e) {
       if (!e && !n) return !1;
       var r = !1;
       try {
         var a = {};
-        (a[i] = function () {
+        ((a[i] = function () {
           return {
             next: function () {
               return { done: (r = !0) };
             },
           };
         }),
-          t(a);
+          t(a));
       } catch (t) {}
       return r;
     };
@@ -4826,7 +4829,7 @@
 
           )
             a(r, t, arguments[t++]);
-          return (r.length = e), r;
+          return ((r.length = e), r);
         },
       },
     );
@@ -4845,7 +4848,7 @@
       f = r(3)("isConcatSpreadable"),
       u = !n(function () {
         var t = [];
-        return (t[f] = !1), t.concat()[0] !== t;
+        return ((t[f] = !1), t.concat()[0] !== t);
       }),
       m = c("concat"),
       d = function (t) {
@@ -4875,7 +4878,7 @@
                 throw TypeError("Maximum allowed index exceeded");
               l(c, f++, a);
             }
-          return (c.length = f), c;
+          return ((c.length = f), c);
         },
       },
     );
@@ -4884,7 +4887,7 @@
     var i = r(0),
       n = r(219),
       a = r(6);
-    i({ target: "Array", proto: !0 }, { copyWithin: n }), a("copyWithin");
+    (i({ target: "Array", proto: !0 }, { copyWithin: n }), a("copyWithin"));
   },
   function (t, e, r) {
     "use strict";
@@ -4907,7 +4910,7 @@
           c-- > 0;
 
         )
-          l in r ? (r[h] = r[l]) : delete r[h], (h += f), (l += f);
+          (l in r ? (r[h] = r[l]) : delete r[h], (h += f), (l += f));
         return r;
       };
   },
@@ -4928,7 +4931,7 @@
     var i = r(0),
       n = r(222),
       a = r(6);
-    i({ target: "Array", proto: !0 }, { fill: n }), a("fill");
+    (i({ target: "Array", proto: !0 }, { fill: n }), a("fill"));
   },
   function (t, e, r) {
     "use strict";
@@ -4969,7 +4972,7 @@
       n = r(16).find,
       a = r(6),
       s = !0;
-    "find" in [] &&
+    ("find" in [] &&
       Array(1).find(function () {
         s = !1;
       }),
@@ -4981,7 +4984,7 @@
           },
         },
       ),
-      a("find");
+      a("find"));
   },
   function (t, e, r) {
     "use strict";
@@ -4989,7 +4992,7 @@
       n = r(16).findIndex,
       a = r(6),
       s = !0;
-    "findIndex" in [] &&
+    ("findIndex" in [] &&
       Array(1).findIndex(function () {
         s = !1;
       }),
@@ -5001,7 +5004,7 @@
           },
         },
       ),
-      a("findIndex");
+      a("findIndex"));
   },
   function (t, e, r) {
     "use strict";
@@ -5019,7 +5022,7 @@
             e = a(this),
             r = s(e.length),
             i = h(e, 0);
-          return (i.length = n(i, e, e, r, 0, void 0 === t ? 1 : o(t))), i;
+          return ((i.length = n(i, e, e, r, 0, void 0 === t ? 1 : o(t))), i);
         },
       },
     );
@@ -5078,7 +5081,7 @@
     var i = r(0),
       n = r(55).includes,
       a = r(6);
-    i(
+    (i(
       { target: "Array", proto: !0 },
       {
         includes: function (t) {
@@ -5086,7 +5089,7 @@
         },
       },
     ),
-      a("includes");
+      a("includes"));
   },
   function (t, e, r) {
     "use strict";
@@ -5116,7 +5119,7 @@
       o = r(81),
       h = s.set,
       l = s.getterFor("Array Iterator");
-    (t.exports = o(
+    ((t.exports = o(
       Array,
       "Array",
       function (t, e) {
@@ -5140,7 +5143,7 @@
       (a.Arguments = a.Array),
       n("keys"),
       n("values"),
-      n("entries");
+      n("entries"));
   },
   function (t, e, r) {
     "use strict";
@@ -5255,7 +5258,7 @@
       { target: "Array", proto: !0, forced: String(s) === String(s.reverse()) },
       {
         reverse: function () {
-          return n(this) && (this.length = this.length), a.call(this);
+          return (n(this) && (this.length = this.length), a.call(this));
         },
       },
     );
@@ -5299,7 +5302,7 @@
             y++, p++
           )
             y in m && l(i, p, m[y]);
-          return (i.length = p), i;
+          return ((i.length = p), i);
         },
       },
     );
@@ -5405,14 +5408,14 @@
             (m = v + u) in y && l(p, u, y[m]);
           if (((p.length = i), r < i)) {
             for (u = v; u < g - i; u++)
-              (d = u + r), (m = u + i) in y ? (y[d] = y[m]) : delete y[d];
+              ((d = u + r), (m = u + i) in y ? (y[d] = y[m]) : delete y[d]);
             for (u = g; u > g - i + r; u--) delete y[u - 1];
           } else if (r > i)
             for (u = g - i; u > v; u--)
-              (d = u + r - 1),
-                (m = u + i - 1) in y ? (y[d] = y[m]) : delete y[d];
+              ((d = u + r - 1),
+                (m = u + i - 1) in y ? (y[d] = y[m]) : delete y[d]);
           for (u = 0; u < r; u++) y[u + v] = arguments[u + 2];
-          return (y.length = g - i + r), p;
+          return ((y.length = g - i + r), p);
         },
       },
     );
@@ -5490,7 +5493,7 @@
         function ProjectInterface() {
           return {};
         }
-        !(function () {
+        (!(function () {
           var t,
             e = [
               "abs",
@@ -5550,7 +5553,7 @@
               return r;
             }
             return Math.abs(t);
-          });
+          }));
         var defaultCurveSegments = 150,
           degToRads = Math.PI / 180,
           roundCorner = 0.5519;
@@ -5562,7 +5565,7 @@
               };
         }
         function styleDiv(t) {
-          (t.style.position = "absolute"),
+          ((t.style.position = "absolute"),
             (t.style.top = 0),
             (t.style.left = 0),
             (t.style.display = "block"),
@@ -5572,39 +5575,39 @@
             (t.style.webkitBackfaceVisibility = "visible"),
             (t.style.transformStyle = "preserve-3d"),
             (t.style.webkitTransformStyle = "preserve-3d"),
-            (t.style.mozTransformStyle = "preserve-3d");
+            (t.style.mozTransformStyle = "preserve-3d"));
         }
         function BMEnterFrameEvent(t, e, r, i) {
-          (this.type = t),
+          ((this.type = t),
             (this.currentTime = e),
             (this.totalTime = r),
-            (this.direction = i < 0 ? -1 : 1);
+            (this.direction = i < 0 ? -1 : 1));
         }
         function BMCompleteEvent(t, e) {
-          (this.type = t), (this.direction = e < 0 ? -1 : 1);
+          ((this.type = t), (this.direction = e < 0 ? -1 : 1));
         }
         function BMCompleteLoopEvent(t, e, r, i) {
-          (this.type = t),
+          ((this.type = t),
             (this.currentLoop = r),
             (this.totalLoops = e),
-            (this.direction = i < 0 ? -1 : 1);
+            (this.direction = i < 0 ? -1 : 1));
         }
         function BMSegmentStartEvent(t, e, r) {
-          (this.type = t), (this.firstFrame = e), (this.totalFrames = r);
+          ((this.type = t), (this.firstFrame = e), (this.totalFrames = r));
         }
         function BMDestroyEvent(t, e) {
-          (this.type = t), (this.target = e);
+          ((this.type = t), (this.target = e));
         }
         function BMRenderFrameErrorEvent(t, e) {
-          (this.type = "renderFrameError"),
+          ((this.type = "renderFrameError"),
             (this.nativeError = t),
-            (this.currentTime = e);
+            (this.currentTime = e));
         }
         function BMConfigErrorEvent(t) {
-          (this.type = "configError"), (this.nativeError = t);
+          ((this.type = "configError"), (this.nativeError = t));
         }
         function BMAnimationConfigErrorEvent(t, e) {
-          (this.type = t), (this.nativeError = e);
+          ((this.type = t), (this.nativeError = e));
         }
         roundValues(!1);
         var createElementID =
@@ -5622,22 +5625,22 @@
             s % 6)
           ) {
             case 0:
-              (i = r), (n = p), (a = h);
+              ((i = r), (n = p), (a = h));
               break;
             case 1:
-              (i = l), (n = r), (a = h);
+              ((i = l), (n = r), (a = h));
               break;
             case 2:
-              (i = h), (n = r), (a = p);
+              ((i = h), (n = r), (a = p));
               break;
             case 3:
-              (i = h), (n = l), (a = r);
+              ((i = h), (n = l), (a = r));
               break;
             case 4:
-              (i = p), (n = h), (a = r);
+              ((i = p), (n = h), (a = r));
               break;
             case 5:
-              (i = r), (n = h), (a = l);
+              ((i = r), (n = h), (a = l));
           }
           return [i, n, a];
         }
@@ -5653,13 +5656,13 @@
               i = 0;
               break;
             case t:
-              (i = e - r + s * (e < r ? 6 : 0)), (i /= 6 * s);
+              ((i = e - r + s * (e < r ? 6 : 0)), (i /= 6 * s));
               break;
             case e:
-              (i = r - t + 2 * s), (i /= 6 * s);
+              ((i = r - t + 2 * s), (i /= 6 * s));
               break;
             case r:
-              (i = t - e + 4 * s), (i /= 6 * s);
+              ((i = t - e + 4 * s), (i /= 6 * s));
           }
           return [i, o, h];
         }
@@ -5692,7 +5695,7 @@
             e,
             r = [];
           for (t = 0; t < 256; t += 1)
-            (e = t.toString(16)), (r[t] = 1 === e.length ? "0" + e : e);
+            ((e = t.toString(16)), (r[t] = 1 === e.length ? "0" + e : e));
           return function (t, e, i) {
             return (
               t < 0 && (t = 0),
@@ -5722,9 +5725,9 @@
             if (e) {
               if (this._cbs[t]) {
                 for (var r = 0, i = this._cbs[t].length; r < i; )
-                  this._cbs[t][r] === e &&
+                  (this._cbs[t][r] === e &&
                     (this._cbs[t].splice(r, 1), (r -= 1), (i -= 1)),
-                    (r += 1);
+                    (r += 1));
                 this._cbs[t].length || (this._cbs[t] = null);
               }
             } else this._cbs[t] = null;
@@ -5781,14 +5784,14 @@
             this._mdf = !1;
             var e = this.dynamicProperties.length;
             for (t = 0; t < e; t += 1)
-              this.dynamicProperties[t].getValue(),
-                this.dynamicProperties[t]._mdf && (this._mdf = !0);
+              (this.dynamicProperties[t].getValue(),
+                this.dynamicProperties[t]._mdf && (this._mdf = !0));
           },
           initDynamicPropertyContainer: function (t) {
-            (this.container = t),
+            ((this.container = t),
               (this.dynamicProperties = []),
               (this._mdf = !1),
-              (this._isAnimated = !1);
+              (this._isAnimated = !1));
           },
         };
         var getBlendMode =
@@ -6103,12 +6106,12 @@
             function C(t, e, r) {
               var i = createTypedArray("float32", 6);
               if (this.isIdentity())
-                (i[0] = t[0]),
+                ((i[0] = t[0]),
                   (i[1] = t[1]),
                   (i[2] = e[0]),
                   (i[3] = e[1]),
                   (i[4] = r[0]),
-                  (i[5] = r[1]);
+                  (i[5] = r[1]));
               else {
                 var n = this.props[0],
                   a = this.props[1],
@@ -6116,12 +6119,12 @@
                   o = this.props[5],
                   h = this.props[12],
                   l = this.props[13];
-                (i[0] = t[0] * n + t[1] * s + h),
+                ((i[0] = t[0] * n + t[1] * s + h),
                   (i[1] = t[0] * a + t[1] * o + l),
                   (i[2] = e[0] * n + e[1] * s + h),
                   (i[3] = e[0] * a + e[1] * o + l),
                   (i[4] = r[0] * n + r[1] * s + h),
-                  (i[5] = r[0] * a + r[1] * o + l);
+                  (i[5] = r[0] * a + r[1] * o + l));
               }
               return i;
             }
@@ -6154,9 +6157,9 @@
             }
             function D() {
               for (var t = 0, e = this.props, r = "matrix3d("; t < 16; )
-                (r += i(1e4 * e[t]) / 1e4),
+                ((r += i(1e4 * e[t]) / 1e4),
                   (r += 15 === t ? ")" : ","),
-                  (t += 1);
+                  (t += 1));
               return r;
             }
             function M(t) {
@@ -6183,7 +6186,7 @@
               );
             }
             return function () {
-              (this.reset = n),
+              ((this.reset = n),
                 (this.rotate = a),
                 (this.rotateX = s),
                 (this.rotateY = o),
@@ -6215,7 +6218,7 @@
                 (this._identity = !0),
                 (this._identityCalculated = !1),
                 (this.props = createTypedArray("float32", 16)),
-                this.reset();
+                this.reset());
             };
           })();
         !(function (t, e) {
@@ -6237,18 +6240,18 @@
               o = (i.S = []);
             for (r || (t = [r++]); a < n; ) o[a] = a++;
             for (a = 0; a < n; a++)
-              (o[a] = o[(s = p & (s + t[a % r] + (e = o[a])))]), (o[s] = e);
+              ((o[a] = o[(s = p & (s + t[a % r] + (e = o[a])))]), (o[s] = e));
             i.g = function (t) {
               for (var e, r = 0, a = i.i, s = i.j, o = i.S; t--; )
-                (e = o[(a = p & (a + 1))]),
+                ((e = o[(a = p & (a + 1))]),
                   (r =
                     r * n +
-                    o[p & ((o[a] = o[(s = p & (s + e))]) + (o[s] = e))]);
-              return (i.i = a), (i.j = s), r;
+                    o[p & ((o[a] = o[(s = p & (s + e))]) + (o[s] = e))]));
+              return ((i.i = a), (i.j = s), r);
             };
           }
           function f(t, e) {
-            return (e.i = t.i), (e.j = t.j), (e.S = t.S.slice()), e;
+            return ((e.i = t.i), (e.j = t.j), (e.S = t.S.slice()), e);
           }
           function u(t, e) {
             for (var r, i = t + "", n = 0; n < i.length; )
@@ -6258,7 +6261,7 @@
           function m(t) {
             return String.fromCharCode.apply(0, t);
           }
-          (e["seed" + s] = function (p, d, y) {
+          ((e["seed" + s] = function (p, d, y) {
             var g = [],
               v = u(
                 (function t(e, r) {
@@ -6280,7 +6283,8 @@
                             if (r) return m(r.randomBytes(n));
                             var e = new Uint8Array(n);
                             return (
-                              (i.crypto || i.msCrypto).getRandomValues(e), m(e)
+                              (i.crypto || i.msCrypto).getRandomValues(e),
+                              m(e)
                             );
                           } catch (e) {
                             var a = i.navigator,
@@ -6296,8 +6300,8 @@
               b = new c(g),
               x = function () {
                 for (var t = b.g(a), e = o, r = 0; t < h; )
-                  (t = (t + r) * n), (e *= n), (r = b.g(1));
-                for (; t >= l; ) (t /= 2), (e /= 2), (r >>>= 1);
+                  ((t = (t + r) * n), (e *= n), (r = b.g(1)));
+                for (; t >= l; ) ((t /= 2), (e /= 2), (r >>>= 1));
                 return (t + r) / e;
               };
             return (
@@ -6325,7 +6329,7 @@
               )(x, v, "global" in d ? d.global : this == e, d.state)
             );
           }),
-            u(e.random(), t);
+            u(e.random(), t));
         })([], BMMath);
         var BezierFactory = (function () {
           var t = {
@@ -6338,7 +6342,7 @@
                   );
                 if (e[s]) return e[s];
                 var o = new u([t, r, i, n]);
-                return (e[s] = o), o;
+                return ((e[s] = o), o);
               },
             },
             e = {};
@@ -6364,10 +6368,10 @@
             return 3 * h(e, r) * t * t + 2 * l(e, r) * t + p(e);
           }
           function u(t) {
-            (this._p = t),
+            ((this._p = t),
               (this._mSampleValues = o ? new Float32Array(a) : new Array(a)),
               (this._precomputed = !1),
-              (this.get = this.get.bind(this));
+              (this.get = this.get.bind(this)));
           }
           return (
             (u.prototype = {
@@ -6392,8 +6396,8 @@
                   e = this._p[1],
                   r = this._p[2],
                   i = this._p[3];
-                (this._precomputed = !0),
-                  (t === e && r === i) || this._calcSampleValues();
+                ((this._precomputed = !0),
+                  (t === e && r === i) || this._calcSampleValues());
               },
               _calcSampleValues: function () {
                 for (var t = this._p[0], e = this._p[2], r = 0; r < a; ++r)
@@ -6454,7 +6458,7 @@
         }
         function createProxyFunction(t) {
           function e() {}
-          return (e.prototype = t), e;
+          return ((e.prototype = t), e);
         }
         function bezFunction() {
           var t = Math;
@@ -6476,25 +6480,25 @@
               m = bezierLengthPool.newElement();
             for (s = r.length, n = 0; n < p; n += 1) {
               for (h = n / (p - 1), l = 0, a = 0; a < s; a += 1)
-                (o =
+                ((o =
                   bmPow(1 - h, 3) * t[a] +
                   3 * bmPow(1 - h, 2) * h * r[a] +
                   3 * (1 - h) * bmPow(h, 2) * i[a] +
                   bmPow(h, 3) * e[a]),
                   (f[a] = o),
                   null !== u[a] && (l += bmPow(f[a] - u[a], 2)),
-                  (u[a] = f[a]);
-              l && (c += l = bmSqrt(l)),
+                  (u[a] = f[a]));
+              (l && (c += l = bmSqrt(l)),
                 (m.percents[n] = h),
-                (m.lengths[n] = c);
+                (m.lengths[n] = c));
             }
-            return (m.addedLength = c), m;
+            return ((m.addedLength = c), m);
           };
           function i(t) {
-            (this.segmentLength = 0), (this.points = new Array(t));
+            ((this.segmentLength = 0), (this.points = new Array(t)));
           }
           function n(t, e) {
-            (this.partialLength = t), (this.point = e);
+            ((this.partialLength = t), (this.point = e));
           }
           var a,
             s =
@@ -6540,16 +6544,18 @@
                       p < c;
                       p += 1
                     )
-                      (f =
+                      ((f =
                         bmPow(1 - u, 3) * t[p] +
                         3 * bmPow(1 - u, 2) * u * (t[p] + s[p]) +
                         3 * (1 - u) * bmPow(u, 2) * (r[p] + o[p]) +
                         bmPow(u, 3) * r[p]),
                         (d[p] = f),
-                        null !== v && (m += bmPow(d[p] - v[p], 2));
-                    (g += m = bmSqrt(m)), (b.points[l] = new n(m, d)), (v = d);
+                        null !== v && (m += bmPow(d[p] - v[p], 2)));
+                    ((g += m = bmSqrt(m)),
+                      (b.points[l] = new n(m, d)),
+                      (v = d));
                   }
-                  (b.segmentLength = g), (a[h] = b);
+                  ((b.segmentLength = g), (a[h] = b));
                 }
                 return a[h];
               });
@@ -6586,8 +6592,8 @@
                 l = i.lengths,
                 p = 0;
               for (e = 0; e < h - 1; e += 1)
-                (l[e] = r(a[e], a[e + 1], s[e], o[e + 1])),
-                  (p += l[e].addedLength);
+                ((l[e] = r(a[e], a[e + 1], s[e], o[e + 1])),
+                  (p += l[e].addedLength));
               return (
                 n &&
                   h &&
@@ -6621,7 +6627,7 @@
                 D = f * f * d + d * f * f + f * d * f,
                 M = f * f * f;
               for (p = 0; p < u; p += 1)
-                (h[4 * p] =
+                ((h[4 * p] =
                   t.round(1e3 * (y * e[p] + g * i[p] + v * n[p] + b * r[p])) /
                   1e3),
                   (h[4 * p + 1] =
@@ -6632,7 +6638,7 @@
                     1e3),
                   (h[4 * p + 3] =
                     t.round(1e3 * (k * e[p] + T * i[p] + D * n[p] + M * r[p])) /
-                    1e3);
+                    1e3));
               return h;
             },
             getPointInSegment: function (e, r, i, n, a, s) {
@@ -6682,24 +6688,24 @@
             r < e.length && !window.requestAnimationFrame;
             ++r
           )
-            (window.requestAnimationFrame =
+            ((window.requestAnimationFrame =
               window[e[r] + "RequestAnimationFrame"]),
               (window.cancelAnimationFrame =
                 window[e[r] + "CancelAnimationFrame"] ||
-                window[e[r] + "CancelRequestAnimationFrame"]);
-          window.requestAnimationFrame ||
+                window[e[r] + "CancelRequestAnimationFrame"]));
+          (window.requestAnimationFrame ||
             (window.requestAnimationFrame = function (e) {
               var r = new Date().getTime(),
                 i = Math.max(0, 16 - (r - t)),
                 n = setTimeout(function () {
                   e(r + i);
                 }, i);
-              return (t = r + i), n;
+              return ((t = r + i), n);
             }),
             window.cancelAnimationFrame ||
               (window.cancelAnimationFrame = function (t) {
                 clearTimeout(t);
-              });
+              }));
         })();
         var bez = bezFunction();
         function dataFunctionManager() {
@@ -6721,8 +6727,8 @@
                     if (d[l].pt.k.i) i(d[l].pt.k);
                     else
                       for (u = d[l].pt.k.length, f = 0; f < u; f += 1)
-                        d[l].pt.k[f].s && i(d[l].pt.k[f].s[0]),
-                          d[l].pt.k[f].e && i(d[l].pt.k[f].e[0]);
+                        (d[l].pt.k[f].s && i(d[l].pt.k[f].s[0]),
+                          d[l].pt.k[f].e && i(d[l].pt.k[f].e[0]));
                 }
                 0 === o.ty
                   ? ((o.layers = e(o.refId, a)), t(o.layers, a, s))
@@ -6748,18 +6754,18 @@
                 if (t[e].ks.k.i) i(t[e].ks.k);
                 else
                   for (a = t[e].ks.k.length, n = 0; n < a; n += 1)
-                    t[e].ks.k[n].s && i(t[e].ks.k[n].s[0]),
-                      t[e].ks.k[n].e && i(t[e].ks.k[n].e[0]);
+                    (t[e].ks.k[n].s && i(t[e].ks.k[n].s[0]),
+                      t[e].ks.k[n].e && i(t[e].ks.k[n].e[0]));
               else "gr" === t[e].ty && r(t[e].it);
           }
           function i(t) {
             var e,
               r = t.i.length;
             for (e = 0; e < r; e += 1)
-              (t.i[e][0] += t.v[e][0]),
+              ((t.i[e][0] += t.v[e][0]),
                 (t.i[e][1] += t.v[e][1]),
                 (t.o[e][0] += t.v[e][0]),
-                (t.o[e][1] += t.v[e][1]);
+                (t.o[e][1] += t.v[e][1]));
           }
           function n(t, e) {
             var r = e ? e.split(".") : [100, 100, 100];
@@ -6828,7 +6834,7 @@
                   else if ("fl" === t[r].ty || "st" === t[r].ty)
                     if (t[r].c.k && t[r].c.k[0].i)
                       for (n = t[r].c.k.length, i = 0; i < n; i += 1)
-                        t[r].c.k[i].s &&
+                        (t[r].c.k[i].s &&
                           ((t[r].c.k[i].s[0] /= 255),
                           (t[r].c.k[i].s[1] /= 255),
                           (t[r].c.k[i].s[2] /= 255),
@@ -6837,12 +6843,12 @@
                             ((t[r].c.k[i].e[0] /= 255),
                             (t[r].c.k[i].e[1] /= 255),
                             (t[r].c.k[i].e[2] /= 255),
-                            (t[r].c.k[i].e[3] /= 255));
+                            (t[r].c.k[i].e[3] /= 255)));
                     else
-                      (t[r].c.k[0] /= 255),
+                      ((t[r].c.k[0] /= 255),
                         (t[r].c.k[1] /= 255),
                         (t[r].c.k[2] /= 255),
-                        (t[r].c.k[3] /= 255);
+                        (t[r].c.k[3] /= 255));
               }
               function r(t) {
                 var r,
@@ -6867,8 +6873,9 @@
                     if (t[r].ks.k.i) t[r].ks.k.c = t[r].closed;
                     else
                       for (n = t[r].ks.k.length, i = 0; i < n; i += 1)
-                        t[r].ks.k[i].s && (t[r].ks.k[i].s[0].c = t[r].closed),
-                          t[r].ks.k[i].e && (t[r].ks.k[i].e[0].c = t[r].closed);
+                        (t[r].ks.k[i].s && (t[r].ks.k[i].s[0].c = t[r].closed),
+                          t[r].ks.k[i].e &&
+                            (t[r].ks.k[i].e[0].c = t[r].closed));
                   else "gr" === t[r].ty && e(t[r].it);
               }
               function r(t) {
@@ -6886,8 +6893,8 @@
                       if (l[n].pt.k.i) l[n].pt.k.c = l[n].cl;
                       else
                         for (o = l[n].pt.k.length, s = 0; s < o; s += 1)
-                          l[n].pt.k[s].s && (l[n].pt.k[s].s[0].c = l[n].cl),
-                            l[n].pt.k[s].e && (l[n].pt.k[s].e[0].c = l[n].cl);
+                          (l[n].pt.k[s].s && (l[n].pt.k[s].s[0].c = l[n].cl),
+                            l[n].pt.k[s].e && (l[n].pt.k[s].e[0].c = l[n].cl));
                   }
                   4 === r.ty && e(r.shapes);
                 }
@@ -6963,9 +6970,9 @@
               r = [];
             function i(t, e) {
               var r = createTag("span");
-              r.setAttribute("aria-hidden", !0), (r.style.fontFamily = e);
+              (r.setAttribute("aria-hidden", !0), (r.style.fontFamily = e));
               var i = createTag("span");
-              (i.innerText = "giItT1WQy@!-/#"),
+              ((i.innerText = "giItT1WQy@!-/#"),
                 (r.style.position = "absolute"),
                 (r.style.left = "-10000px"),
                 (r.style.top = "-10000px"),
@@ -6975,7 +6982,7 @@
                 (r.style.fontWeight = "normal"),
                 (r.style.letterSpacing = "0"),
                 r.appendChild(i),
-                document.body.appendChild(r);
+                document.body.appendChild(r));
               var n = i.offsetWidth;
               return (
                 (i.style.fontFamily =
@@ -7020,7 +7027,7 @@
               2380, 2381, 2382, 2383, 2387, 2388, 2389, 2390, 2391, 2402, 2403,
             ]);
             var a = function () {
-              (this.fonts = []),
+              ((this.fonts = []),
                 (this.chars = null),
                 (this.typekitLoaded = 0),
                 (this.isLoaded = !1),
@@ -7028,7 +7035,7 @@
                 (this.initTime = Date.now()),
                 (this.setIsLoadedBinded = this.setIsLoaded.bind(this)),
                 (this.checkLoadedFontsBinded =
-                  this.checkLoadedFonts.bind(this));
+                  this.checkLoadedFonts.bind(this)));
             };
             return (
               (a.getCombinedCharacterCodes = function () {
@@ -7045,11 +7052,11 @@
                       a = this.chars.length;
                     for (e = 0; e < n; e += 1) {
                       for (r = 0, i = !1; r < a; )
-                        this.chars[r].style === t[e].style &&
+                        (this.chars[r].style === t[e].style &&
                           this.chars[r].fFamily === t[e].fFamily &&
                           this.chars[r].ch === t[e].ch &&
                           (i = !0),
-                          (r += 1);
+                          (r += 1));
                       i || (this.chars.push(t[e]), (a += 1));
                     }
                   }
@@ -7057,7 +7064,7 @@
                 addFonts: function (t, e) {
                   if (t) {
                     if (this.chars)
-                      return (this.isLoaded = !0), void (this.fonts = t.list);
+                      return ((this.isLoaded = !0), void (this.fonts = t.list));
                     var r,
                       a = t.list,
                       s = a.length,
@@ -7084,7 +7091,7 @@
                             p)
                           ) {
                             var c = createTag("style");
-                            c.setAttribute("f-forigin", a[r].fOrigin),
+                            (c.setAttribute("f-forigin", a[r].fOrigin),
                               c.setAttribute("f-origin", a[r].origin),
                               c.setAttribute("f-family", a[r].fFamily),
                               (c.type = "text/css"),
@@ -7094,7 +7101,7 @@
                                 "; font-style: normal; src: url('" +
                                 a[r].fPath +
                                 "');}"),
-                              e.appendChild(c);
+                              e.appendChild(c));
                           }
                         } else if ("g" === a[r].fOrigin || 1 === a[r].origin) {
                           for (
@@ -7108,12 +7115,12 @@
                             -1 !== h[l].href.indexOf(a[r].fPath) && (p = !1);
                           if (p) {
                             var f = createTag("link");
-                            f.setAttribute("f-forigin", a[r].fOrigin),
+                            (f.setAttribute("f-forigin", a[r].fOrigin),
                               f.setAttribute("f-origin", a[r].origin),
                               (f.type = "text/css"),
                               (f.rel = "stylesheet"),
                               (f.href = a[r].fPath),
-                              document.body.appendChild(f);
+                              document.body.appendChild(f));
                           }
                         } else if ("t" === a[r].fOrigin || 2 === a[r].origin) {
                           for (
@@ -7127,17 +7134,17 @@
                             a[r].fPath === h[l].src && (p = !1);
                           if (p) {
                             var u = createTag("link");
-                            u.setAttribute("f-forigin", a[r].fOrigin),
+                            (u.setAttribute("f-forigin", a[r].fOrigin),
                               u.setAttribute("f-origin", a[r].origin),
                               u.setAttribute("rel", "stylesheet"),
                               u.setAttribute("href", a[r].fPath),
-                              e.appendChild(u);
+                              e.appendChild(u));
                           }
                         }
-                      } else (a[r].loaded = !0), (o -= 1);
-                      (a[r].helper = n(e, a[r])),
+                      } else ((a[r].loaded = !0), (o -= 1));
+                      ((a[r].helper = n(e, a[r])),
                         (a[r].cache = {}),
-                        this.fonts.push(a[r]);
+                        this.fonts.push(a[r]));
                     }
                     0 === o
                       ? (this.isLoaded = !0)
@@ -7188,8 +7195,8 @@
                       var o = a.getComputedTextLength();
                       i.cache[n + 1] = (s - o) / 100;
                     } else
-                      (a.textContent = t),
-                        (i.cache[n + 1] = a.getComputedTextLength() / 100);
+                      ((a.textContent = t),
+                        (i.cache[n + 1] = a.getComputedTextLength() / 100));
                   }
                   return i.cache[n + 1] * r;
                 },
@@ -7264,7 +7271,7 @@
                   (s = this.keyframes[m + 1]),
                   m === d - 1 && t >= s.t - n)
                 ) {
-                  a.h && (a = s), (u = 0);
+                  (a.h && (a = s), (u = 0));
                   break;
                 }
                 if (s.t - n > t) {
@@ -7299,7 +7306,7 @@
                   for (h = T.points[D].point.length, o = 0; o < h; o += 1)
                     r[o] = T.points[D].point[o];
                 } else {
-                  a.__fnct
+                  (a.__fnct
                     ? (f = a.__fnct)
                     : ((f = BezierFactory.getBezierEasing(
                         a.o.x,
@@ -7309,7 +7316,7 @@
                         a.n,
                       ).get),
                       (a.__fnct = f)),
-                    (l = f((t - k) / (C - k)));
+                    (l = f((t - k) / (C - k))));
                   var M,
                     F = T.segmentLength * l,
                     I =
@@ -7349,20 +7356,20 @@
                     }
                     c < p - 1 ? (c += 1) : (y = !1);
                   }
-                  (e._lastPoint = c),
+                  ((e._lastPoint = c),
                     (e._lastAddedLength = I - T.points[c].partialLength),
-                    (e._lastKeyframeIndex = m);
+                    (e._lastKeyframeIndex = m));
                 }
               } else {
                 var R, V, B, O, L;
                 if (((d = a.s.length), (g = s.s || a.e), this.sh && 1 !== a.h))
-                  if (t >= C) (r[0] = g[0]), (r[1] = g[1]), (r[2] = g[2]);
+                  if (t >= C) ((r[0] = g[0]), (r[1] = g[1]), (r[2] = g[2]));
                   else if (t <= k)
-                    (r[0] = a.s[0]), (r[1] = a.s[1]), (r[2] = a.s[2]);
+                    ((r[0] = a.s[0]), (r[1] = a.s[1]), (r[2] = a.s[2]));
                   else {
                     var z = i(a.s),
                       G = i(g);
-                    (v = r),
+                    ((v = r),
                       (b = (function (t, e, r) {
                         var i,
                           n,
@@ -7409,11 +7416,11 @@
                       )),
                       (v[0] = _ / degToRads),
                       (v[1] = w / degToRads),
-                      (v[2] = A / degToRads);
+                      (v[2] = A / degToRads));
                   }
                 else
                   for (m = 0; m < d; m += 1)
-                    1 !== a.h &&
+                    (1 !== a.h &&
                       (t >= C
                         ? (l = 1)
                         : t < k
@@ -7463,9 +7470,9 @@
                       (L = 1 === a.h ? a.s[m] : a.s[m] + (g[m] - a.s[m]) * l),
                       "multidimensional" === this.propType
                         ? (r[m] = L)
-                        : (r = L);
+                        : (r = L));
               }
-              return (e.lastIndex = u), r;
+              return ((e.lastIndex = u), r);
             }
             function i(t) {
               var e = t[0] * degToRads,
@@ -7503,19 +7510,19 @@
                 var n = this.interpolateValue(e, this._caching);
                 this.pv = n;
               }
-              return (this._caching.lastFrame = e), this.pv;
+              return ((this._caching.lastFrame = e), this.pv);
             }
             function a(t) {
               var r;
               if ("unidimensional" === this.propType)
-                (r = t * this.mult),
-                  e(this.v - r) > 1e-5 && ((this.v = r), (this._mdf = !0));
+                ((r = t * this.mult),
+                  e(this.v - r) > 1e-5 && ((this.v = r), (this._mdf = !0)));
               else
                 for (var i = 0, n = this.v.length; i < n; )
-                  (r = t[i] * this.mult),
+                  ((r = t[i] * this.mult),
                     e(this.v[i] - r) > 1e-5 &&
                       ((this.v[i] = r), (this._mdf = !0)),
-                    (i += 1);
+                    (i += 1));
             }
             function s() {
               if (
@@ -7525,22 +7532,22 @@
                 if (this.lock) this.setVValue(this.pv);
                 else {
                   var t;
-                  (this.lock = !0), (this._mdf = this._isFirstFrame);
+                  ((this.lock = !0), (this._mdf = this._isFirstFrame));
                   var e = this.effectsSequence.length,
                     r = this.kf ? this.pv : this.data.k;
                   for (t = 0; t < e; t += 1) r = this.effectsSequence[t](r);
-                  this.setVValue(r),
+                  (this.setVValue(r),
                     (this._isFirstFrame = !1),
                     (this.lock = !1),
-                    (this.frameId = this.elem.globalData.frameId);
+                    (this.frameId = this.elem.globalData.frameId));
                 }
             }
             function o(t) {
-              this.effectsSequence.push(t),
-                this.container.addDynamicProperty(this);
+              (this.effectsSequence.push(t),
+                this.container.addDynamicProperty(this));
             }
             function h(t, e, r, i) {
-              (this.propType = "unidimensional"),
+              ((this.propType = "unidimensional"),
                 (this.mult = r || 1),
                 (this.data = e),
                 (this.v = r ? e.k * r : e.k),
@@ -7556,11 +7563,11 @@
                 (this._isFirstFrame = !0),
                 (this.getValue = s),
                 (this.setVValue = a),
-                (this.addEffect = o);
+                (this.addEffect = o));
             }
             function l(t, e, r, i) {
               var n;
-              (this.propType = "multidimensional"),
+              ((this.propType = "multidimensional"),
                 (this.mult = r || 1),
                 (this.data = e),
                 (this._mdf = !1),
@@ -7569,7 +7576,7 @@
                 (this.comp = t.comp),
                 (this.k = !1),
                 (this.kf = !1),
-                (this.frameId = -1);
+                (this.frameId = -1));
               var h = e.k.length;
               for (
                 this.v = createTypedArray("float32", h),
@@ -7579,15 +7586,15 @@
                 n < h;
                 n += 1
               )
-                (this.v[n] = e.k[n] * this.mult), (this.pv[n] = e.k[n]);
-              (this._isFirstFrame = !0),
+                ((this.v[n] = e.k[n] * this.mult), (this.pv[n] = e.k[n]));
+              ((this._isFirstFrame = !0),
                 (this.effectsSequence = []),
                 (this.getValue = s),
                 (this.setVValue = a),
-                (this.addEffect = o);
+                (this.addEffect = o));
             }
             function p(e, i, h, l) {
-              (this.propType = "unidimensional"),
+              ((this.propType = "unidimensional"),
                 (this.keyframes = i.k),
                 (this.offsetTime = e.data.st),
                 (this.frameId = -1),
@@ -7611,7 +7618,7 @@
                 (this.setVValue = a),
                 (this.interpolateValue = r),
                 (this.effectsSequence = [n.bind(this)]),
-                (this.addEffect = o);
+                (this.addEffect = o));
             }
             function c(e, i, h, l) {
               var p;
@@ -7682,7 +7689,7 @@
                     (2 === c.length ||
                       (c[2] === f[2] && 0 === u[2] && 0 === m[2])) &&
                     ((i.k[p].to = null), (i.k[p].ti = null)));
-              (this.effectsSequence = [n.bind(this)]),
+              ((this.effectsSequence = [n.bind(this)]),
                 (this.data = i),
                 (this.keyframes = i.k),
                 (this.offsetTime = e.data.st),
@@ -7696,7 +7703,7 @@
                 (this.getValue = s),
                 (this.setVValue = a),
                 (this.interpolateValue = r),
-                (this.frameId = -1);
+                (this.frameId = -1));
               var y = i.k[0].s.length;
               for (
                 this.v = createTypedArray("float32", y),
@@ -7705,13 +7712,13 @@
                 p < y;
                 p += 1
               )
-                (this.v[p] = t), (this.pv[p] = t);
-              (this._caching = {
+                ((this.v[p] = t), (this.pv[p] = t));
+              ((this._caching = {
                 lastFrame: t,
                 lastIndex: 0,
                 value: createTypedArray("float32", y),
               }),
-                (this.addEffect = o);
+                (this.addEffect = o));
             }
             return {
               getProp: function (t, e, r, i, n) {
@@ -7727,7 +7734,7 @@
                         a = new c(t, e, i, n);
                     }
                 else a = new h(t, e, i, n);
-                return a.effectsSequence.length && n.addDynamicProperty(a), a;
+                return (a.effectsSequence.length && n.addDynamicProperty(a), a);
               },
             };
           })(),
@@ -7784,16 +7791,16 @@
                   var i,
                     n = e.or.k.length;
                   for (i = 0; i < n; i += 1)
-                    (e.or.k[i].to = null), (e.or.k[i].ti = null);
+                    ((e.or.k[i].to = null), (e.or.k[i].ti = null));
                 }
-                (this.or = PropertyFactory.getProp(
+                ((this.or = PropertyFactory.getProp(
                   t,
                   e.or,
                   1,
                   degToRads,
                   this,
                 )),
-                  (this.or.sh = !0);
+                  (this.or.sh = !0));
               } else
                 this.r = PropertyFactory.getProp(
                   t,
@@ -7802,7 +7809,7 @@
                   degToRads,
                   this,
                 );
-              e.sk &&
+              (e.sk &&
                 ((this.sk = PropertyFactory.getProp(
                   t,
                   e.sk,
@@ -7835,13 +7842,13 @@
                   ? (this.o = PropertyFactory.getProp(t, e.o, 0, 0.01, t))
                   : (this.o = { _mdf: !1, v: 1 }),
                 (this._isDirty = !0),
-                this.dynamicProperties.length || this.getValue(!0);
+                this.dynamicProperties.length || this.getValue(!0));
             }
             return (
               (e.prototype = {
                 applyToMatrix: function (t) {
                   var e = this._mdf;
-                  this.iterateDynamicProperties(),
+                  (this.iterateDynamicProperties(),
                     (this._mdf = this._mdf || e),
                     this.a &&
                       t.translate(-this.a.v[0], -this.a.v[1], this.a.v[2]),
@@ -7860,7 +7867,7 @@
                       ? this.data.p.z
                         ? t.translate(this.px.v, this.py.v, -this.pz.v)
                         : t.translate(this.px.v, this.py.v, 0)
-                      : t.translate(this.p.v[0], this.p.v[1], -this.p.v[2]);
+                      : t.translate(this.p.v[0], this.p.v[1], -this.p.v[2]));
                 },
                 getValue: function (e) {
                   if (this.elem.globalData.frameId !== this.frameId) {
@@ -7941,7 +7948,7 @@
                           this.px.getValueAtTime &&
                           this.py.getValueAtTime
                         ) {
-                          (i = []), (n = []);
+                          ((i = []), (n = []));
                           var a = this.px,
                             s = this.py;
                           a._caching.lastFrame + a.offsetTime <=
@@ -8032,8 +8039,8 @@
                         this.sa.effectsSequence.length
                       )
                         return;
-                      this.pre.skewFromAxis(-this.sk.v, this.sa.v),
-                        (this.appliedTransformations = 3);
+                      (this.pre.skewFromAxis(-this.sk.v, this.sa.v),
+                        (this.appliedTransformations = 3));
                     }
                     this.r
                       ? this.r.effectsSequence.length ||
@@ -8057,9 +8064,9 @@
               }),
               extendPrototype([DynamicPropertyContainer], e),
               (e.prototype.addDynamicProperty = function (t) {
-                this._addDynamicProperty(t),
+                (this._addDynamicProperty(t),
                   this.elem.addDynamicProperty(t),
-                  (this._isDirty = !0);
+                  (this._isDirty = !0));
               }),
               (e.prototype._addDynamicProperty =
                 DynamicPropertyContainer.prototype.addDynamicProperty),
@@ -8071,30 +8078,30 @@
             );
           })();
         function ShapePath() {
-          (this.c = !1),
+          ((this.c = !1),
             (this._length = 0),
             (this._maxLength = 8),
             (this.v = createSizedArray(this._maxLength)),
             (this.o = createSizedArray(this._maxLength)),
-            (this.i = createSizedArray(this._maxLength));
+            (this.i = createSizedArray(this._maxLength)));
         }
-        (ShapePath.prototype.setPathData = function (t, e) {
-          (this.c = t), this.setLength(e);
+        ((ShapePath.prototype.setPathData = function (t, e) {
+          ((this.c = t), this.setLength(e));
           for (var r = 0; r < e; )
-            (this.v[r] = pointPool.newElement()),
+            ((this.v[r] = pointPool.newElement()),
               (this.o[r] = pointPool.newElement()),
               (this.i[r] = pointPool.newElement()),
-              (r += 1);
+              (r += 1));
         }),
           (ShapePath.prototype.setLength = function (t) {
             for (; this._maxLength < t; ) this.doubleArrayLength();
             this._length = t;
           }),
           (ShapePath.prototype.doubleArrayLength = function () {
-            (this.v = this.v.concat(createSizedArray(this._maxLength))),
+            ((this.v = this.v.concat(createSizedArray(this._maxLength))),
               (this.i = this.i.concat(createSizedArray(this._maxLength))),
               (this.o = this.o.concat(createSizedArray(this._maxLength))),
-              (this._maxLength *= 2);
+              (this._maxLength *= 2));
           }),
           (ShapePath.prototype.setXYAt = function (t, e, r, i, n) {
             var a;
@@ -8115,14 +8122,14 @@
               default:
                 a = [];
             }
-            (!a[i] || (a[i] && !n)) && (a[i] = pointPool.newElement()),
+            ((!a[i] || (a[i] && !n)) && (a[i] = pointPool.newElement()),
               (a[i][0] = t),
-              (a[i][1] = e);
+              (a[i][1] = e));
           }),
           (ShapePath.prototype.setTripleAt = function (t, e, r, i, n, a, s, o) {
-            this.setXYAt(t, e, "v", s, o),
+            (this.setXYAt(t, e, "v", s, o),
               this.setXYAt(r, i, "o", s, o),
-              this.setXYAt(n, a, "i", s, o);
+              this.setXYAt(n, a, "i", s, o));
           }),
           (ShapePath.prototype.reverse = function () {
             var t = new ShapePath();
@@ -8147,7 +8154,7 @@
               s = this._length - 1,
               o = this._length;
             for (a = n; a < o; a += 1)
-              t.setTripleAt(
+              (t.setTripleAt(
                 e[s][0],
                 e[s][1],
                 i[s][0],
@@ -8157,9 +8164,9 @@
                 a,
                 !1,
               ),
-                (s -= 1);
+                (s -= 1));
             return t;
-          });
+          }));
         var ShapePropertyFactory = (function () {
             var t = -999999;
             function e(t, e, r) {
@@ -8175,12 +8182,12 @@
                 f = r.lastIndex,
                 u = this.keyframes;
               if (t < u[0].t - this.offsetTime)
-                (i = u[0].s[0]), (a = !0), (f = 0);
+                ((i = u[0].s[0]), (a = !0), (f = 0));
               else if (t >= u[u.length - 1].t - this.offsetTime)
-                (i = u[u.length - 1].s
+                ((i = u[u.length - 1].s
                   ? u[u.length - 1].s[0]
                   : u[u.length - 2].e[0]),
-                  (a = !0);
+                  (a = !0));
               else {
                 for (
                   var m, d, y = f, g = u.length - 1, v = !0;
@@ -8193,7 +8200,7 @@
                   else if (t < m.t - this.offsetTime) p = 0;
                   else {
                     var b;
-                    m.__fnct
+                    (m.__fnct
                       ? (b = m.__fnct)
                       : ((b = BezierFactory.getBezierEasing(
                           m.o.x,
@@ -8205,7 +8212,7 @@
                       (p = b(
                         (t - (m.t - this.offsetTime)) /
                           (d.t - this.offsetTime - (m.t - this.offsetTime)),
-                      ));
+                      )));
                   }
                   n = d.s ? d.s[0] : m.e[0];
                 }
@@ -8217,7 +8224,9 @@
                 s += 1
               )
                 for (o = 0; o < l; o += 1)
-                  (c = a ? i.i[s][o] : i.i[s][o] + (n.i[s][o] - i.i[s][o]) * p),
+                  ((c = a
+                    ? i.i[s][o]
+                    : i.i[s][o] + (n.i[s][o] - i.i[s][o]) * p),
                     (e.i[s][o] = c),
                     (c = a
                       ? i.o[s][o]
@@ -8226,7 +8235,7 @@
                     (c = a
                       ? i.v[s][o]
                       : i.v[s][o] + (n.v[s][o] - i.v[s][o]) * p),
-                    (e.v[s][o] = c);
+                    (e.v[s][o] = c));
             }
             function r() {
               var e = this.comp.renderedFrame - this.offsetTime,
@@ -8275,55 +8284,55 @@
                   if (this.lock) this.setVValue(this.pv);
                   else {
                     var t, e;
-                    (this.lock = !0),
+                    ((this.lock = !0),
                       (this._mdf = !1),
                       (t = this.kf
                         ? this.pv
                         : this.data.ks
                           ? this.data.ks.k
-                          : this.data.pt.k);
+                          : this.data.pt.k));
                     var r = this.effectsSequence.length;
                     for (e = 0; e < r; e += 1) t = this.effectsSequence[e](t);
-                    this.setVValue(t),
+                    (this.setVValue(t),
                       (this.lock = !1),
-                      (this.frameId = this.elem.globalData.frameId);
+                      (this.frameId = this.elem.globalData.frameId));
                   }
                 else this._mdf = !1;
             }
             function s(t, e, r) {
-              (this.propType = "shape"),
+              ((this.propType = "shape"),
                 (this.comp = t.comp),
                 (this.container = t),
                 (this.elem = t),
                 (this.data = e),
                 (this.k = !1),
                 (this.kf = !1),
-                (this._mdf = !1);
+                (this._mdf = !1));
               var n = 3 === r ? e.pt.k : e.ks.k;
-              (this.v = shapePool.clone(n)),
+              ((this.v = shapePool.clone(n)),
                 (this.pv = shapePool.clone(this.v)),
                 (this.localShapeCollection =
                   shapeCollectionPool.newShapeCollection()),
                 (this.paths = this.localShapeCollection),
                 this.paths.addShape(this.v),
                 (this.reset = i),
-                (this.effectsSequence = []);
+                (this.effectsSequence = []));
             }
             function o(t) {
-              this.effectsSequence.push(t),
-                this.container.addDynamicProperty(this);
+              (this.effectsSequence.push(t),
+                this.container.addDynamicProperty(this));
             }
             function h(e, n, a) {
-              (this.propType = "shape"),
+              ((this.propType = "shape"),
                 (this.comp = e.comp),
                 (this.elem = e),
                 (this.container = e),
                 (this.offsetTime = e.data.st),
                 (this.keyframes = 3 === a ? n.pt.k : n.ks.k),
                 (this.k = !0),
-                (this.kf = !0);
+                (this.kf = !0));
               var s = this.keyframes[0].s[0].i.length;
-              (this.v = shapePool.newElement()),
+              ((this.v = shapePool.newElement()),
                 this.v.setPathData(this.keyframes[0].s[0].c, s),
                 (this.pv = shapePool.clone(this.v)),
                 (this.localShapeCollection =
@@ -8333,20 +8342,20 @@
                 (this.lastFrame = t),
                 (this.reset = i),
                 (this._caching = { lastFrame: t, lastIndex: 0 }),
-                (this.effectsSequence = [r.bind(this)]);
+                (this.effectsSequence = [r.bind(this)]));
             }
-            (s.prototype.interpolateShape = e),
+            ((s.prototype.interpolateShape = e),
               (s.prototype.getValue = a),
               (s.prototype.setVValue = n),
               (s.prototype.addEffect = o),
               (h.prototype.getValue = a),
               (h.prototype.interpolateShape = e),
               (h.prototype.setVValue = n),
-              (h.prototype.addEffect = o);
+              (h.prototype.addEffect = o));
             var l = (function () {
                 var t = roundCorner;
                 function e(t, e) {
-                  (this.v = shapePool.newElement()),
+                  ((this.v = shapePool.newElement()),
                     this.v.setPathData(!0, 4),
                     (this.localShapeCollection =
                       shapeCollectionPool.newShapeCollection()),
@@ -8361,7 +8370,7 @@
                     (this.s = PropertyFactory.getProp(t, e.s, 1, 0, this)),
                     this.dynamicProperties.length
                       ? (this.k = !0)
-                      : ((this.k = !1), this.convertEllToPath());
+                      : ((this.k = !1), this.convertEllToPath()));
                 }
                 return (
                   (e.prototype = {
@@ -8379,7 +8388,7 @@
                         n = this.s.v[1] / 2,
                         a = 3 !== this.d,
                         s = this.v;
-                      (s.v[0][0] = e),
+                      ((s.v[0][0] = e),
                         (s.v[0][1] = r - n),
                         (s.v[1][0] = a ? e + i : e - i),
                         (s.v[1][1] = r),
@@ -8402,7 +8411,7 @@
                         (s.o[2][0] = a ? e - i * t : e + i * t),
                         (s.o[2][1] = r + n),
                         (s.o[3][0] = a ? e - i : e + i),
-                        (s.o[3][1] = r - n * t);
+                        (s.o[3][1] = r - n * t));
                     },
                   }),
                   extendPrototype([DynamicPropertyContainer], e),
@@ -8411,7 +8420,7 @@
               })(),
               p = (function () {
                 function t(t, e) {
-                  (this.v = shapePool.newElement()),
+                  ((this.v = shapePool.newElement()),
                     this.v.setPathData(!0, 0),
                     (this.elem = t),
                     (this.comp = t.comp),
@@ -8453,7 +8462,7 @@
                     (this.paths = this.localShapeCollection),
                     this.dynamicProperties.length
                       ? (this.k = !0)
-                      : ((this.k = !1), this.convertToPath());
+                      : ((this.k = !1), this.convertToPath()));
                 }
                 return (
                   (t.prototype = {
@@ -8482,7 +8491,7 @@
                       u += this.r.v;
                       var m = 3 === this.data.d ? -1 : 1;
                       for (this.v._length = 0, t = 0; t < n; t += 1) {
-                        (r = s ? l : p), (i = s ? c : f);
+                        ((r = s ? l : p), (i = s ? c : f));
                         var d = (e = s ? o : h) * Math.cos(u),
                           y = e * Math.sin(u),
                           g =
@@ -8493,7 +8502,7 @@
                             0 === d && 0 === y
                               ? 0
                               : -d / Math.sqrt(d * d + y * y);
-                        (d += +this.p.v[0]),
+                        ((d += +this.p.v[0]),
                           (y += +this.p.v[1]),
                           this.v.setTripleAt(
                             d,
@@ -8506,7 +8515,7 @@
                             !0,
                           ),
                           (s = !s),
-                          (u += a * m);
+                          (u += a * m));
                       }
                     },
                     convertPolygonToPath: function () {
@@ -8533,7 +8542,7 @@
                             0 === h && 0 === l
                               ? 0
                               : -h / Math.sqrt(h * h + l * l);
-                        (h += +this.p.v[0]),
+                        ((h += +this.p.v[0]),
                           (l += +this.p.v[1]),
                           this.v.setTripleAt(
                             h,
@@ -8545,9 +8554,9 @@
                             t,
                             !0,
                           ),
-                          (s += r * o);
+                          (s += r * o));
                       }
-                      (this.paths.length = 0), (this.paths[0] = this.v);
+                      ((this.paths.length = 0), (this.paths[0] = this.v));
                     },
                   }),
                   extendPrototype([DynamicPropertyContainer], t),
@@ -8556,7 +8565,7 @@
               })(),
               c = (function () {
                 function t(t, e) {
-                  (this.v = shapePool.newElement()),
+                  ((this.v = shapePool.newElement()),
                     (this.v.c = !0),
                     (this.localShapeCollection =
                       shapeCollectionPool.newShapeCollection()),
@@ -8572,7 +8581,7 @@
                     (this.r = PropertyFactory.getProp(t, e.r, 0, 0, this)),
                     this.dynamicProperties.length
                       ? (this.k = !0)
-                      : ((this.k = !1), this.convertRectToPath());
+                      : ((this.k = !1), this.convertRectToPath()));
                 }
                 return (
                   (t.prototype = {
@@ -8583,7 +8592,7 @@
                         i = this.s.v[1] / 2,
                         n = bmMin(r, i, this.r.v),
                         a = n * (1 - roundCorner);
-                      (this.v._length = 0),
+                      ((this.v._length = 0),
                         2 === this.d || 1 === this.d
                           ? (this.v.setTripleAt(
                               t + r,
@@ -8794,7 +8803,7 @@
                                   e + i,
                                   3,
                                   !0,
-                                )));
+                                ))));
                     },
                     getValue: function () {
                       this.elem.globalData.frameId !== this.frameId &&
@@ -8853,13 +8862,13 @@
         function PuckerAndBloatModifier() {}
         function RepeaterModifier() {}
         function ShapeCollection() {
-          (this._length = 0),
+          ((this._length = 0),
             (this._maxLength = 4),
-            (this.shapes = createSizedArray(this._maxLength));
+            (this.shapes = createSizedArray(this._maxLength)));
         }
         function DashProperty(t, e, r, i) {
           var n;
-          (this.elem = t),
+          ((this.elem = t),
             (this.frameId = -1),
             (this.dataProps = createSizedArray(e.length)),
             (this.renderer = r),
@@ -8870,21 +8879,21 @@
               e.length ? e.length - 1 : 0,
             )),
             (this.dashoffset = createTypedArray("float32", 1)),
-            this.initDynamicPropertyContainer(i);
+            this.initDynamicPropertyContainer(i));
           var a,
             s = e.length || 0;
           for (n = 0; n < s; n += 1)
-            (a = PropertyFactory.getProp(t, e[n].v, 0, 0, this)),
+            ((a = PropertyFactory.getProp(t, e[n].v, 0, 0, this)),
               (this.k = a.k || this.k),
-              (this.dataProps[n] = { n: e[n].n, p: a });
-          this.k || this.getValue(!0), (this._isAnimated = this.k);
+              (this.dataProps[n] = { n: e[n].n, p: a }));
+          (this.k || this.getValue(!0), (this._isAnimated = this.k));
         }
         function GradientProperty(t, e, r) {
-          (this.data = e), (this.c = createTypedArray("uint8c", 4 * e.p));
+          ((this.data = e), (this.c = createTypedArray("uint8c", 4 * e.p)));
           var i = e.k.k[0].s
             ? e.k.k[0].s.length - 4 * e.p
             : e.k.k.length - 4 * e.p;
-          (this.o = createTypedArray("float32", i)),
+          ((this.o = createTypedArray("float32", i)),
             (this._cmdf = !1),
             (this._omdf = !1),
             (this._collapsable = this.checkCollapsable()),
@@ -8892,9 +8901,9 @@
             this.initDynamicPropertyContainer(r),
             (this.prop = PropertyFactory.getProp(t, e.k, 1, null, this)),
             (this.k = this.prop.k),
-            this.getValue(!0);
+            this.getValue(!0));
         }
-        (ShapeModifier.prototype.initModifierProperties = function () {}),
+        ((ShapeModifier.prototype.initModifierProperties = function () {}),
           (ShapeModifier.prototype.addShapeToModifier = function () {}),
           (ShapeModifier.prototype.addShape = function (t) {
             if (!this.closed) {
@@ -8904,20 +8913,22 @@
                 data: t,
                 localShapeCollection: shapeCollectionPool.newShapeCollection(),
               };
-              this.shapes.push(e),
+              (this.shapes.push(e),
                 this.addShapeToModifier(e),
-                this._isAnimated && t.setAsAnimated();
+                this._isAnimated && t.setAsAnimated());
             }
           }),
           (ShapeModifier.prototype.init = function (t, e) {
-            (this.shapes = []),
+            ((this.shapes = []),
               (this.elem = t),
               this.initDynamicPropertyContainer(t),
               this.initModifierProperties(t, e),
               (this.frameId = initialDefaultFrame),
               (this.closed = !1),
               (this.k = !1),
-              this.dynamicProperties.length ? (this.k = !0) : this.getValue(!0);
+              this.dynamicProperties.length
+                ? (this.k = !0)
+                : this.getValue(!0));
           }),
           (ShapeModifier.prototype.processKeys = function () {
             this.elem.globalData.frameId !== this.frameId &&
@@ -8927,7 +8938,7 @@
           extendPrototype([DynamicPropertyContainer], ShapeModifier),
           extendPrototype([ShapeModifier], TrimModifier),
           (TrimModifier.prototype.initModifierProperties = function (t, e) {
-            (this.s = PropertyFactory.getProp(t, e.s, 0, 0.01, this)),
+            ((this.s = PropertyFactory.getProp(t, e.s, 0, 0.01, this)),
               (this.e = PropertyFactory.getProp(t, e.e, 0, 0.01, this)),
               (this.o = PropertyFactory.getProp(t, e.o, 0, 0, this)),
               (this.sValue = 0),
@@ -8937,7 +8948,7 @@
               (this._isAnimated =
                 !!this.s.effectsSequence.length ||
                 !!this.e.effectsSequence.length ||
-                !!this.o.effectsSequence.length);
+                !!this.o.effectsSequence.length));
           }),
           (TrimModifier.prototype.addShapeToModifier = function (t) {
             t.pathsData = [];
@@ -8962,17 +8973,17 @@
             for (s = 0; s < l; s += 1) {
               var p, c;
               if (!((o = a[s]).e * n < i || o.s * n > i + r))
-                (p = o.s * n <= i ? 0 : (o.s * n - i) / r),
+                ((p = o.s * n <= i ? 0 : (o.s * n - i) / r),
                   (c = o.e * n >= i + r ? 1 : (o.e * n - i) / r),
-                  h.push([p, c]);
+                  h.push([p, c]));
             }
-            return h.length || h.push([0, 0]), h;
+            return (h.length || h.push([0, 0]), h);
           }),
           (TrimModifier.prototype.releasePathsData = function (t) {
             var e,
               r = t.length;
             for (e = 0; e < r; e += 1) segmentsLengthPool.release(t[e]);
-            return (t.length = 0), t;
+            return ((t.length = 0), t);
           }),
           (TrimModifier.prototype.processShapes = function (t) {
             var e, r, i, n;
@@ -8986,13 +8997,13 @@
                     this.e.v > 1 ? 1 + a : this.e.v < 0 ? 0 + a : this.e.v + a))
               ) {
                 var s = e;
-                (e = r), (r = s);
+                ((e = r), (r = s));
               }
-              (e = 1e-4 * Math.round(1e4 * e)),
+              ((e = 1e-4 * Math.round(1e4 * e)),
                 (r = 1e-4 * Math.round(1e4 * r)),
                 (this.sValue = e),
-                (this.eValue = r);
-            } else (e = this.sValue), (r = this.eValue);
+                (this.eValue = r));
+            } else ((e = this.sValue), (r = this.eValue));
             var o,
               h,
               l,
@@ -9002,16 +9013,16 @@
               u = 0;
             if (r === e)
               for (n = 0; n < f; n += 1)
-                this.shapes[n].localShapeCollection.releaseShapes(),
+                (this.shapes[n].localShapeCollection.releaseShapes(),
                   (this.shapes[n].shape._mdf = !0),
                   (this.shapes[n].shape.paths =
                     this.shapes[n].localShapeCollection),
-                  this._mdf && (this.shapes[n].pathsData.length = 0);
+                  this._mdf && (this.shapes[n].pathsData.length = 0));
             else if ((1 === r && 0 === e) || (0 === r && 1 === e)) {
               if (this._mdf)
                 for (n = 0; n < f; n += 1)
-                  (this.shapes[n].pathsData.length = 0),
-                    (this.shapes[n].shape._mdf = !0);
+                  ((this.shapes[n].pathsData.length = 0),
+                    (this.shapes[n].shape._mdf = !0));
             } else {
               var m,
                 d,
@@ -9035,12 +9046,12 @@
                       o < h;
                       o += 1
                     )
-                      (p = bez.getSegmentsLength(i.shapes[o])),
+                      ((p = bez.getSegmentsLength(i.shapes[o])),
                         l.push(p),
-                        (c += p.totalLength);
-                    (m.totalShapeLength = c), (m.pathsData = l);
+                        (c += p.totalLength));
+                    ((m.totalShapeLength = c), (m.pathsData = l));
                   }
-                  (u += c), (m.shape._mdf = !0);
+                  ((u += c), (m.shape._mdf = !0));
                 } else m.shape.paths = m.localShapeCollection;
               var g,
                 v = e,
@@ -9065,7 +9076,7 @@
                     o < h;
                     o += 1
                   ) {
-                    (v = g[o][0]),
+                    ((v = g[o][0]),
                       (b = g[o][1]),
                       (y.length = 0),
                       b <= 1
@@ -9082,15 +9093,16 @@
                               s: m.totalShapeLength * v,
                               e: m.totalShapeLength,
                             }),
-                            y.push({ s: 0, e: m.totalShapeLength * (b - 1) }));
+                            y.push({ s: 0, e: m.totalShapeLength * (b - 1) })));
                     var E = this.addShapes(m, y[0]);
                     if (y[0].s !== y[0].e) {
                       if (y.length > 1)
                         if (m.shape.paths.shapes[m.shape.paths._length - 1].c) {
                           var P = E.pop();
-                          this.addPaths(E, d), (E = this.addShapes(m, y[1], P));
+                          (this.addPaths(E, d),
+                            (E = this.addShapes(m, y[1], P)));
                         } else
-                          this.addPaths(E, d), (E = this.addShapes(m, y[1]));
+                          (this.addPaths(E, d), (E = this.addShapes(m, y[1])));
                       this.addPaths(E, d);
                     }
                   }
@@ -9104,16 +9116,16 @@
             for (r = 0; r < i; r += 1) e.addShape(t[r]);
           }),
           (TrimModifier.prototype.addSegment = function (t, e, r, i, n, a, s) {
-            n.setXYAt(e[0], e[1], "o", a),
+            (n.setXYAt(e[0], e[1], "o", a),
               n.setXYAt(r[0], r[1], "i", a + 1),
               s && n.setXYAt(t[0], t[1], "v", a),
-              n.setXYAt(i[0], i[1], "v", a + 1);
+              n.setXYAt(i[0], i[1], "v", a + 1));
           }),
           (TrimModifier.prototype.addSegmentFromArray = function (t, e, r, i) {
-            e.setXYAt(t[1], t[5], "o", r),
+            (e.setXYAt(t[1], t[5], "o", r),
               e.setXYAt(t[2], t[6], "i", r + 1),
               i && e.setXYAt(t[0], t[4], "v", r),
-              e.setXYAt(t[3], t[7], "v", r + 1);
+              e.setXYAt(t[3], t[7], "v", r + 1));
           }),
           (TrimModifier.prototype.addShapes = function (t, e, r) {
             var i,
@@ -9148,13 +9160,13 @@
                 n += 1
               )
                 if (m + (s = h[n - 1]).addedLength < e.s)
-                  (m += s.addedLength), (r.c = !1);
+                  ((m += s.addedLength), (r.c = !1));
                 else {
                   if (m > e.e) {
                     r.c = !1;
                     break;
                   }
-                  e.s <= m && e.e >= m + s.addedLength
+                  (e.s <= m && e.e >= m + s.addedLength
                     ? (this.addSegment(
                         f[i].v[n - 1],
                         f[i].o[n - 1],
@@ -9178,7 +9190,7 @@
                       (y = !1),
                       (r.c = !1)),
                     (m += s.addedLength),
-                    (o += 1);
+                    (o += 1));
                 }
               if (f[i].c && h.length) {
                 if (((s = h[n - 1]), m <= e.e)) {
@@ -9207,7 +9219,7 @@
                       (y = !1),
                       (r.c = !1));
                 } else r.c = !1;
-                (m += s.addedLength), (o += 1);
+                ((m += s.addedLength), (o += 1));
               }
               if (
                 (r._length &&
@@ -9232,9 +9244,9 @@
             t,
             e,
           ) {
-            (this.getValue = this.processKeys),
+            ((this.getValue = this.processKeys),
               (this.rd = PropertyFactory.getProp(t, e.r, 0, null, this)),
-              (this._isAnimated = !!this.rd.effectsSequence.length);
+              (this._isAnimated = !!this.rd.effectsSequence.length));
           }),
           (RoundCornersModifier.prototype.processPath = function (t, e) {
             var r,
@@ -9255,7 +9267,7 @@
               y = t._length,
               g = 0;
             for (r = 0; r < y; r += 1)
-              (n = t.v[r]),
+              ((n = t.v[r]),
                 (s = t.o[r]),
                 (a = t.i[r]),
                 n[0] === s[0] && n[1] === s[1] && n[0] === a[0] && n[1] === a[1]
@@ -9295,7 +9307,7 @@
                       t.i[r][1],
                       g,
                     ),
-                    (g += 1));
+                    (g += 1)));
             return i;
           }),
           (RoundCornersModifier.prototype.processShapes = function (t) {
@@ -9333,17 +9345,18 @@
             t,
             e,
           ) {
-            (this.getValue = this.processKeys),
+            ((this.getValue = this.processKeys),
               (this.amount = PropertyFactory.getProp(t, e.a, 0, null, this)),
-              (this._isAnimated = !!this.amount.effectsSequence.length);
+              (this._isAnimated = !!this.amount.effectsSequence.length));
           }),
           (PuckerAndBloatModifier.prototype.processPath = function (t, e) {
             var r = e / 100,
               i = [0, 0],
               n = t._length,
               a = 0;
-            for (a = 0; a < n; a += 1) (i[0] += t.v[a][0]), (i[1] += t.v[a][1]);
-            (i[0] /= n), (i[1] /= n);
+            for (a = 0; a < n; a += 1)
+              ((i[0] += t.v[a][0]), (i[1] += t.v[a][1]));
+            ((i[0] /= n), (i[1] /= n));
             var s,
               o,
               h,
@@ -9352,13 +9365,13 @@
               c,
               f = shapePool.newElement();
             for (f.c = t.c, a = 0; a < n; a += 1)
-              (s = t.v[a][0] + (i[0] - t.v[a][0]) * r),
+              ((s = t.v[a][0] + (i[0] - t.v[a][0]) * r),
                 (o = t.v[a][1] + (i[1] - t.v[a][1]) * r),
                 (h = t.o[a][0] + (i[0] - t.o[a][0]) * -r),
                 (l = t.o[a][1] + (i[1] - t.o[a][1]) * -r),
                 (p = t.i[a][0] + (i[0] - t.i[a][0]) * -r),
                 (c = t.i[a][1] + (i[1] - t.i[a][1]) * -r),
-                f.setTripleAt(s, o, h, l, p, c, a);
+                f.setTripleAt(s, o, h, l, p, c, a));
             return f;
           }),
           (PuckerAndBloatModifier.prototype.processShapes = function (t) {
@@ -9393,7 +9406,7 @@
           ShapeModifiers.registerModifier("pb", PuckerAndBloatModifier),
           extendPrototype([ShapeModifier], RepeaterModifier),
           (RepeaterModifier.prototype.initModifierProperties = function (t, e) {
-            (this.getValue = this.processKeys),
+            ((this.getValue = this.processKeys),
               (this.c = PropertyFactory.getProp(t, e.c, 0, null, this)),
               (this.o = PropertyFactory.getProp(t, e.o, 0, null, this)),
               (this.tr = TransformPropertyFactory.getTransformProperty(
@@ -9410,7 +9423,7 @@
               (this.rMatrix = new Matrix()),
               (this.sMatrix = new Matrix()),
               (this.tMatrix = new Matrix()),
-              (this.matrix = new Matrix());
+              (this.matrix = new Matrix()));
           }),
           (RepeaterModifier.prototype.applyTransforms = function (
             t,
@@ -9423,13 +9436,13 @@
             var s = a ? -1 : 1,
               o = i.s.v[0] + (1 - i.s.v[0]) * (1 - n),
               h = i.s.v[1] + (1 - i.s.v[1]) * (1 - n);
-            t.translate(i.p.v[0] * s * n, i.p.v[1] * s * n, i.p.v[2]),
+            (t.translate(i.p.v[0] * s * n, i.p.v[1] * s * n, i.p.v[2]),
               e.translate(-i.a.v[0], -i.a.v[1], i.a.v[2]),
               e.rotate(-i.r.v * s * n),
               e.translate(i.a.v[0], i.a.v[1], i.a.v[2]),
               r.translate(-i.a.v[0], -i.a.v[1], i.a.v[2]),
               r.scale(a ? 1 / o : o, a ? 1 / h : h),
-              r.translate(i.a.v[0], i.a.v[1], i.a.v[2]);
+              r.translate(i.a.v[0], i.a.v[1], i.a.v[2]));
           }),
           (RepeaterModifier.prototype.init = function (t, e, r, i) {
             for (
@@ -9446,26 +9459,26 @@
               r > 0;
 
             )
-              (r -= 1), this._elements.unshift(e[r]);
+              ((r -= 1), this._elements.unshift(e[r]));
             this.dynamicProperties.length ? (this.k = !0) : this.getValue(!0);
           }),
           (RepeaterModifier.prototype.resetElements = function (t) {
             var e,
               r = t.length;
             for (e = 0; e < r; e += 1)
-              (t[e]._processed = !1),
-                "gr" === t[e].ty && this.resetElements(t[e].it);
+              ((t[e]._processed = !1),
+                "gr" === t[e].ty && this.resetElements(t[e].it));
           }),
           (RepeaterModifier.prototype.cloneElements = function (t) {
             var e = JSON.parse(JSON.stringify(t));
-            return this.resetElements(e), e;
+            return (this.resetElements(e), e);
           }),
           (RepeaterModifier.prototype.changeGroupRender = function (t, e) {
             var r,
               i = t.length;
             for (r = 0; r < i; r += 1)
-              (t[r]._render = e),
-                "gr" === t[r].ty && this.changeGroupRender(t[r].it, e);
+              ((t[r]._render = e),
+                "gr" === t[r].ty && this.changeGroupRender(t[r].it, e));
           }),
           (RepeaterModifier.prototype.processShapes = function (t) {
             var e,
@@ -9480,7 +9493,7 @@
               if (this._groups.length < h) {
                 for (; this._groups.length < h; ) {
                   var l = { it: this.cloneElements(this._elements), ty: "gr" };
-                  l.it.push({
+                  (l.it.push({
                     a: { a: 0, ix: 1, k: [0, 0] },
                     nm: "Transform",
                     o: { a: 0, ix: 7, k: 100 },
@@ -9500,9 +9513,9 @@
                   }),
                     this.arr.splice(0, 0, l),
                     this._groups.splice(0, 0, l),
-                    (this._currentCopies += 1);
+                    (this._currentCopies += 1));
                 }
-                this.elem.reloadShapes(), (s = !0);
+                (this.elem.reloadShapes(), (s = !0));
               }
               for (a = 0, i = 0; i <= this._groups.length - 1; i += 1) {
                 if (
@@ -9526,17 +9539,17 @@
                 d = this.pMatrix.props,
                 y = this.rMatrix.props,
                 g = this.sMatrix.props;
-              this.pMatrix.reset(),
+              (this.pMatrix.reset(),
                 this.rMatrix.reset(),
                 this.sMatrix.reset(),
                 this.tMatrix.reset(),
-                this.matrix.reset();
+                this.matrix.reset());
               var v,
                 b,
                 x = 0;
               if (f > 0) {
                 for (; x < m; )
-                  this.applyTransforms(
+                  (this.applyTransforms(
                     this.pMatrix,
                     this.rMatrix,
                     this.sMatrix,
@@ -9544,7 +9557,7 @@
                     1,
                     !1,
                   ),
-                    (x += 1);
+                    (x += 1));
                 u &&
                   (this.applyTransforms(
                     this.pMatrix,
@@ -9557,7 +9570,7 @@
                   (x += u));
               } else if (f < 0) {
                 for (; x > m; )
-                  this.applyTransforms(
+                  (this.applyTransforms(
                     this.pMatrix,
                     this.rMatrix,
                     this.sMatrix,
@@ -9565,7 +9578,7 @@
                     1,
                     !0,
                   ),
-                    (x -= 1);
+                    (x -= 1));
                 u &&
                   (this.applyTransforms(
                     this.pMatrix,
@@ -9671,28 +9684,28 @@
                 } else
                   for (this.matrix.reset(), v = 0; v < b; v += 1)
                     r[v] = this.matrix.props[v];
-                (x += 1), (a -= 1), (i += n);
+                ((x += 1), (a -= 1), (i += n));
               }
             } else
               for (a = this._currentCopies, i = 0, n = 1; a; )
-                (r = (e = this.elemsData[i].it)[e.length - 1].transform.mProps.v
-                  .props),
+                ((r = (e = this.elemsData[i].it)[e.length - 1].transform.mProps
+                  .v.props),
                   (e[e.length - 1].transform.mProps._mdf = !1),
                   (e[e.length - 1].transform.op._mdf = !1),
                   (a -= 1),
-                  (i += n);
+                  (i += n));
             return s;
           }),
           (RepeaterModifier.prototype.addShape = function () {}),
           ShapeModifiers.registerModifier("rp", RepeaterModifier),
           (ShapeCollection.prototype.addShape = function (t) {
-            this._length === this._maxLength &&
+            (this._length === this._maxLength &&
               ((this.shapes = this.shapes.concat(
                 createSizedArray(this._maxLength),
               )),
               (this._maxLength *= 2)),
               (this.shapes[this._length] = t),
-              (this._length += 1);
+              (this._length += 1));
           }),
           (ShapeCollection.prototype.releaseShapes = function () {
             var t;
@@ -9754,22 +9767,22 @@
                 i,
                 n = 4 * this.data.p;
               for (e = 0; e < n; e += 1)
-                (r = e % 4 == 0 ? 100 : 255),
+                ((r = e % 4 == 0 ? 100 : 255),
                   (i = Math.round(this.prop.v[e] * r)),
-                  this.c[e] !== i && ((this.c[e] = i), (this._cmdf = !t));
+                  this.c[e] !== i && ((this.c[e] = i), (this._cmdf = !t)));
               if (this.o.length)
                 for (n = this.prop.v.length, e = 4 * this.data.p; e < n; e += 1)
-                  (r = e % 2 == 0 ? 100 : 1),
+                  ((r = e % 2 == 0 ? 100 : 1),
                     (i =
                       e % 2 == 0
                         ? Math.round(100 * this.prop.v[e])
                         : this.prop.v[e]),
                     this.o[e - 4 * this.data.p] !== i &&
-                      ((this.o[e - 4 * this.data.p] = i), (this._omdf = !t));
+                      ((this.o[e - 4 * this.data.p] = i), (this._omdf = !t)));
               this._mdf = !t;
             }
           }),
-          extendPrototype([DynamicPropertyContainer], GradientProperty);
+          extendPrototype([DynamicPropertyContainer], GradientProperty));
         var buildShapeString = function (t, e, r, i) {
             if (0 === e) return "";
             var n,
@@ -9801,10 +9814,10 @@
           },
           audioControllerFactory = (function () {
             function t(t) {
-              (this.audios = []),
+              ((this.audios = []),
                 (this.audioFactory = t),
                 (this._volume = 1),
-                (this._isMuted = !1);
+                (this._isMuted = !1));
             }
             return (
               (t.prototype = {
@@ -9848,13 +9861,13 @@
                   this.audioFactory = t;
                 },
                 setVolume: function (t) {
-                  (this._volume = t), this._updateVolume();
+                  ((this._volume = t), this._updateVolume());
                 },
                 mute: function () {
-                  (this._isMuted = !0), this._updateVolume();
+                  ((this._isMuted = !0), this._updateVolume());
                 },
                 unmute: function () {
-                  (this._isMuted = !1), this._updateVolume();
+                  ((this._isMuted = !1), this._updateVolume());
                 },
                 getVolume: function () {
                   return this._volume;
@@ -9876,44 +9889,48 @@
           ImagePreloader = (function () {
             var t = (function () {
               var t = createTag("canvas");
-              (t.width = 1), (t.height = 1);
+              ((t.width = 1), (t.height = 1));
               var e = t.getContext("2d");
-              return (e.fillStyle = "rgba(0,0,0,0)"), e.fillRect(0, 0, 1, 1), t;
+              return (
+                (e.fillStyle = "rgba(0,0,0,0)"),
+                e.fillRect(0, 0, 1, 1),
+                t
+              );
             })();
             function e() {
-              (this.loadedAssets += 1),
+              ((this.loadedAssets += 1),
                 this.loadedAssets === this.totalImages &&
                   this.loadedFootagesCount === this.totalFootages &&
                   this.imagesLoadedCb &&
-                  this.imagesLoadedCb(null);
+                  this.imagesLoadedCb(null));
             }
             function r() {
-              (this.loadedFootagesCount += 1),
+              ((this.loadedFootagesCount += 1),
                 this.loadedAssets === this.totalImages &&
                   this.loadedFootagesCount === this.totalFootages &&
                   this.imagesLoadedCb &&
-                  this.imagesLoadedCb(null);
+                  this.imagesLoadedCb(null));
             }
             function i(t, e, r) {
               var i = "";
               if (t.e) i = t.p;
               else if (e) {
                 var n = t.p;
-                -1 !== n.indexOf("images/") && (n = n.split("/")[1]),
-                  (i = e + n);
-              } else (i = r), (i += t.u ? t.u : ""), (i += t.p);
+                (-1 !== n.indexOf("images/") && (n = n.split("/")[1]),
+                  (i = e + n));
+              } else ((i = r), (i += t.u ? t.u : ""), (i += t.p));
               return i;
             }
             function n() {
-              (this._imageLoaded = e.bind(this)),
+              ((this._imageLoaded = e.bind(this)),
                 (this._footageLoaded = r.bind(this)),
                 (this.testImageLoaded = function (t) {
                   var e = 0,
                     r = setInterval(
                       function () {
-                        (t.getBBox().width || e > 500) &&
+                        ((t.getBBox().width || e > 500) &&
                           (this._imageLoaded(), clearInterval(r)),
-                          (e += 1);
+                          (e += 1));
                       }.bind(this),
                       50,
                     );
@@ -9925,10 +9942,10 @@
                     assetLoader.load(
                       r,
                       function (t) {
-                        (e.img = t), this._footageLoaded();
+                        ((e.img = t), this._footageLoaded());
                       }.bind(this),
                       function () {
-                        (e.img = {}), this._footageLoaded();
+                        ((e.img = {}), this._footageLoaded());
                       }.bind(this),
                     ),
                     e
@@ -9941,7 +9958,7 @@
                 (this.loadedAssets = 0),
                 (this.loadedFootagesCount = 0),
                 (this.imagesLoadedCb = null),
-                (this.images = []);
+                (this.images = []));
             }
             return (
               (n.prototype = {
@@ -9971,7 +9988,7 @@
                   return this.totalFootages === this.loadedFootagesCount;
                 },
                 destroy: function () {
-                  (this.imagesLoadedCb = null), (this.images.length = 0);
+                  ((this.imagesLoadedCb = null), (this.images.length = 0));
                 },
                 getAsset: function (t) {
                   for (var e = 0, r = this.images.length; e < r; ) {
@@ -9984,36 +10001,36 @@
                 createImgData: function (e) {
                   var r = i(e, this.assetsPath, this.path),
                     n = createTag("img");
-                  (n.crossOrigin = "anonymous"),
+                  ((n.crossOrigin = "anonymous"),
                     n.addEventListener("load", this._imageLoaded, !1),
                     n.addEventListener(
                       "error",
                       function () {
-                        (a.img = t), this._imageLoaded();
+                        ((a.img = t), this._imageLoaded());
                       }.bind(this),
                       !1,
                     ),
-                    (n.src = r);
+                    (n.src = r));
                   var a = { img: n, assetData: e };
                   return a;
                 },
                 createImageData: function (e) {
                   var r = i(e, this.assetsPath, this.path),
                     n = createNS("image");
-                  isSafari
+                  (isSafari
                     ? this.testImageLoaded(n)
                     : n.addEventListener("load", this._imageLoaded, !1),
                     n.addEventListener(
                       "error",
                       function () {
-                        (a.img = t), this._imageLoaded();
+                        ((a.img = t), this._imageLoaded());
                       }.bind(this),
                       !1,
                     ),
                     n.setAttributeNS("http://www.w3.org/1999/xlink", "href", r),
                     this._elementHelper.append
                       ? this._elementHelper.append(n)
-                      : this._elementHelper.appendChild(n);
+                      : this._elementHelper.appendChild(n));
                   var a = { img: n, assetData: e };
                   return a;
                 },
@@ -10043,13 +10060,13 @@
             return (
               (t.createFilter = function (t, e) {
                 var r = createNS("filter");
-                r.setAttribute("id", t),
+                (r.setAttribute("id", t),
                   !0 !== e &&
                     (r.setAttribute("filterUnits", "objectBoundingBox"),
                     r.setAttribute("x", "0%"),
                     r.setAttribute("y", "0%"),
                     r.setAttribute("width", "100%"),
-                    r.setAttribute("height", "100%"));
+                    r.setAttribute("height", "100%")));
                 return r;
               }),
               (t.createAlphaToLuminanceFilter = function () {
@@ -10084,23 +10101,23 @@
                 try {
                   a.responseType = "json";
                 } catch (t) {}
-                (a.onreadystatechange = function () {
+                ((a.onreadystatechange = function () {
                   if (4 === a.readyState)
-                    if (200 === a.status) (n = t(a)), r(n);
+                    if (200 === a.status) ((n = t(a)), r(n));
                     else
                       try {
-                        (n = t(a)), r(n);
+                        ((n = t(a)), r(n));
                       } catch (t) {
                         i && i(t);
                       }
                 }),
                   a.open("GET", e, !0),
-                  a.send();
+                  a.send());
               },
             };
           })();
         function TextAnimatorProperty(t, e, r) {
-          (this._isFirstFrame = !0),
+          ((this._isFirstFrame = !0),
             (this._hasMaskedPath = !1),
             (this._frameId = -1),
             (this._textData = t),
@@ -10111,13 +10128,13 @@
             (this._moreOptions = { alignment: {} }),
             (this.renderedLetters = []),
             (this.lettersChangedFlag = !1),
-            this.initDynamicPropertyContainer(r);
+            this.initDynamicPropertyContainer(r));
         }
         function TextAnimatorDataProperty(t, e, r) {
           var i = { propType: !1 },
             n = PropertyFactory.getProp,
             a = e.a;
-          (this.a = {
+          ((this.a = {
             r: a.r ? n(t, a.r, 0, degToRads, r) : i,
             rx: a.rx ? n(t, a.rx, 0, degToRads, r) : i,
             ry: a.ry ? n(t, a.ry, 0, degToRads, r) : i,
@@ -10136,19 +10153,19 @@
             t: a.t ? n(t, a.t, 0, 0, r) : i,
           }),
             (this.s = TextSelectorProp.getTextSelectorProp(t, e.s, r)),
-            (this.s.t = e.s.t);
+            (this.s.t = e.s.t));
         }
         function LetterProps(t, e, r, i, n, a) {
-          (this.o = t),
+          ((this.o = t),
             (this.sw = e),
             (this.sc = r),
             (this.fc = i),
             (this.m = n),
             (this.p = a),
-            (this._mdf = { o: !0, sw: !!e, sc: !!r, fc: !!i, m: !0, p: !0 });
+            (this._mdf = { o: !0, sw: !!e, sc: !!r, fc: !!i, m: !0, p: !0 }));
         }
         function TextProperty(t, e) {
-          (this._frameId = initialDefaultFrame),
+          ((this._frameId = initialDefaultFrame),
             (this.pv = ""),
             (this.v = ""),
             (this.kf = !1),
@@ -10192,21 +10209,21 @@
               __complete: !1,
             }),
             this.copyData(this.currentData, this.data.d.k[0].s),
-            this.searchProperty() || this.completeTextData(this.currentData);
+            this.searchProperty() || this.completeTextData(this.currentData));
         }
-        (TextAnimatorProperty.prototype.searchProperties = function () {
+        ((TextAnimatorProperty.prototype.searchProperties = function () {
           var t,
             e,
             r = this._textData.a.length,
             i = PropertyFactory.getProp;
           for (t = 0; t < r; t += 1)
-            (e = this._textData.a[t]),
+            ((e = this._textData.a[t]),
               (this._animatorsData[t] = new TextAnimatorDataProperty(
                 this._elem,
                 e,
                 this,
-              ));
-          this._textData.p && "m" in this._textData.p
+              )));
+          (this._textData.p && "m" in this._textData.p
             ? ((this._pathData = {
                 f: i(this._elem, this._textData.p.f, 0, 0, this),
                 l: i(this._elem, this._textData.p.l, 0, 0, this),
@@ -10221,7 +10238,7 @@
               1,
               0,
               this,
-            ));
+            )));
         }),
           (TextAnimatorProperty.prototype.getMeasures = function (t, e) {
             if (
@@ -10274,7 +10291,7 @@
                     n < a;
                     n += 1
                   )
-                    (k = bez.buildBezierData(
+                    ((k = bez.buildBezierData(
                       T.v[n],
                       T.v[n + 1],
                       [T.o[n][0] - T.v[n][0], T.o[n][1] - T.v[n][1]],
@@ -10285,8 +10302,8 @@
                     )),
                       (s.tLength += k.segmentLength),
                       s.segments.push(k),
-                      (g += k.segmentLength);
-                  (n = a),
+                      (g += k.segmentLength));
+                  ((n = a),
                     x.v.c &&
                       ((k = bez.buildBezierData(
                         T.v[n],
@@ -10297,7 +10314,7 @@
                       (s.tLength += k.segmentLength),
                       s.segments.push(k),
                       (g += k.segmentLength)),
-                    (this._pathData.pi = s);
+                    (this._pathData.pi = s));
                 }
                 if (
                   ((s = this._pathData.pi),
@@ -10315,11 +10332,13 @@
                     o < 0;
 
                   )
-                    (o += m[c].partialLength),
-                      (c -= 1) < 0 && (c = (m = d[(f -= 1)].points).length - 1);
-                (u = (m = d[f].points)[c - 1]), (y = (h = m[c]).partialLength);
+                    ((o += m[c].partialLength),
+                      (c -= 1) < 0 &&
+                        (c = (m = d[(f -= 1)].points).length - 1));
+                ((u = (m = d[f].points)[c - 1]),
+                  (y = (h = m[c]).partialLength));
               }
-              (a = C.length), (r = 0), (i = 0);
+              ((a = C.length), (r = 0), (i = 0));
               var D,
                 M,
                 F,
@@ -10356,8 +10375,8 @@
                 for (n = 0; n < a; n += 1)
                   if (C[n].n) {
                     for (rt && (rt += it); at < n; )
-                      (C[at].animatorJustifyOffset = rt), (at += 1);
-                    (rt = 0), (st = !0);
+                      ((C[at].animatorJustifyOffset = rt), (at += 1));
+                    ((rt = 0), (st = !0));
                   } else {
                     for (M = 0; M < F; M += 1)
                       (D = P[M].a).t.propType &&
@@ -10371,11 +10390,11 @@
                     st = !1;
                   }
                 for (rt && (rt += it); at < n; )
-                  (C[at].animatorJustifyOffset = rt), (at += 1);
+                  ((C[at].animatorJustifyOffset = rt), (at += 1));
               }
               for (n = 0; n < a; n += 1) {
                 if ((_.reset(), (G = 1), C[n].n))
-                  (r = 0),
+                  ((r = 0),
                     (i += t.yOffset),
                     (i += B ? 1 : 0),
                     (o = K),
@@ -10389,7 +10408,7 @@
                     (Y = ""),
                     (W = ""),
                     (X = ""),
-                    (et = this.defaultPropsArray);
+                    (et = this.defaultPropsArray));
                 else {
                   if (this._hasMaskedPath) {
                     if (Q !== C[n].line) {
@@ -10402,14 +10421,14 @@
                       }
                       Q = C[n].line;
                     }
-                    U !== C[n].ind &&
+                    (U !== C[n].ind &&
                       (C[U] && (o += C[U].extra),
                       (o += C[n].an / 2),
                       (U = C[n].ind)),
-                      (o += E[0] * C[n].an * 0.005);
+                      (o += E[0] * C[n].an * 0.005));
                     var ot = 0;
                     for (M = 0; M < F; M += 1)
-                      (D = P[M].a).p.propType &&
+                      ((D = P[M].a).p.propType &&
                         ((R = P[M].s.getMult(
                           C[n].anIndexes[M],
                           S.a[M].s.totalChars,
@@ -10422,7 +10441,7 @@
                             S.a[M].s.totalChars,
                           )).length
                             ? (ot += D.a.v[0] * R[0])
-                            : (ot += D.a.v[0] * R));
+                            : (ot += D.a.v[0] * R)));
                     for (p = !0; p; )
                       l + y >= o + ot || !m
                         ? ((v = (o + ot - l) / h.partialLength),
@@ -10443,11 +10462,15 @@
                                 ? ((c = 0), (m = d[(f = 0)].points))
                                 : ((l -= h.partialLength), (m = null))),
                           m && ((u = h), (y = (h = m[c]).partialLength)));
-                    (O = C[n].an / 2 - C[n].add), _.translate(-O, 0, 0);
+                    ((O = C[n].an / 2 - C[n].add), _.translate(-O, 0, 0));
                   } else
-                    (O = C[n].an / 2 - C[n].add),
+                    ((O = C[n].an / 2 - C[n].add),
                       _.translate(-O, 0, 0),
-                      _.translate(-E[0] * C[n].an * 0.005, -E[1] * V * 0.01, 0);
+                      _.translate(
+                        -E[0] * C[n].an * 0.005,
+                        -E[1] * V * 0.01,
+                        0,
+                      ));
                   for (M = 0; M < F; M += 1)
                     (D = P[M].a).t.propType &&
                       ((R = P[M].s.getMult(
@@ -10546,7 +10569,7 @@
                           R.length
                             ? (H[q] += (D.fc.v[q] - H[q]) * R[0])
                             : (H[q] += (D.fc.v[q] - H[q]) * R);
-                      D.fh.propType &&
+                      (D.fh.propType &&
                         (H = R.length
                           ? addHueToRGB(H, D.fh.v * R[0])
                           : addHueToRGB(H, D.fh.v * R)),
@@ -10557,7 +10580,7 @@
                         D.fb.propType &&
                           (H = R.length
                             ? addBrightnessToRGB(H, D.fb.v * R[0])
-                            : addBrightnessToRGB(H, D.fb.v * R));
+                            : addBrightnessToRGB(H, D.fb.v * R)));
                     }
                   }
                   for (M = 0; M < F; M += 1)
@@ -10611,14 +10634,15 @@
                     ) {
                       b = (h.point[1] - u.point[1]) / (h.point[0] - u.point[0]);
                       var ht = (180 * Math.atan(b)) / Math.PI;
-                      h.point[0] < u.point[0] && (ht += 180),
-                        _.rotate((-ht * Math.PI) / 180);
+                      (h.point[0] < u.point[0] && (ht += 180),
+                        _.rotate((-ht * Math.PI) / 180));
                     }
-                    _.translate(L, z, 0),
+                    (_.translate(L, z, 0),
                       (o -= E[0] * C[n].an * 0.005),
                       C[n + 1] &&
                         U !== C[n + 1].ind &&
-                        ((o += C[n].an / 2), (o += 0.001 * t.tr * t.finalSize));
+                        ((o += C[n].an / 2),
+                        (o += 0.001 * t.tr * t.finalSize)));
                   } else {
                     switch (
                       (_.translate(r, i, 0),
@@ -10643,12 +10667,12 @@
                           0,
                         );
                     }
-                    _.translate(0, -t.ls),
+                    (_.translate(0, -t.ls),
                       _.translate(O, 0, 0),
                       _.translate(E[0] * C[n].an * 0.005, E[1] * V * 0.01, 0),
-                      (r += C[n].l + 0.001 * t.tr * t.finalSize);
+                      (r += C[n].l + 0.001 * t.tr * t.finalSize));
                   }
-                  "html" === w
+                  ("html" === w
                     ? (tt = _.toCSS())
                     : "svg" === w
                       ? (tt = _.to2dCSS())
@@ -10670,7 +10694,7 @@
                           _.props[14],
                           _.props[15],
                         ]),
-                    (X = G);
+                    (X = G));
                 }
                 A <= n
                   ? ((I = new LetterProps(X, W, $, Y, tt, et)),
@@ -10692,12 +10716,12 @@
           (TextAnimatorProperty.prototype.defaultPropsArray = []),
           extendPrototype([DynamicPropertyContainer], TextAnimatorProperty),
           (LetterProps.prototype.update = function (t, e, r, i, n, a) {
-            (this._mdf.o = !1),
+            ((this._mdf.o = !1),
               (this._mdf.sw = !1),
               (this._mdf.sc = !1),
               (this._mdf.fc = !1),
               (this._mdf.m = !1),
-              (this._mdf.p = !1);
+              (this._mdf.p = !1));
             var s = !1;
             return (
               this.o !== t && ((this.o = t), (this._mdf.o = !0), (s = !0)),
@@ -10723,11 +10747,11 @@
             return t;
           }),
           (TextProperty.prototype.setCurrentData = function (t) {
-            t.__complete || this.completeTextData(t),
+            (t.__complete || this.completeTextData(t),
               (this.currentData = t),
               (this.currentData.boxWidth =
                 this.currentData.boxWidth || this.defaultBoxWidth),
-              (this._mdf = !0);
+              (this._mdf = !0));
           }),
           (TextProperty.prototype.searchProperty = function () {
             return this.searchKeyframes();
@@ -10740,7 +10764,7 @@
             );
           }),
           (TextProperty.prototype.addEffect = function (t) {
-            this.effectsSequence.push(t), this.elem.addDynamicProperty(this);
+            (this.effectsSequence.push(t), this.elem.addDynamicProperty(this));
           }),
           (TextProperty.prototype.getValue = function (t) {
             if (
@@ -10754,7 +10778,7 @@
               if (this.lock) this.setCurrentData(this.currentData);
               else {
                 var i;
-                (this.lock = !0), (this._mdf = !1);
+                ((this.lock = !0), (this._mdf = !1));
                 var n = this.effectsSequence.length,
                   a = t || this.data.d.k[this.keysIndex].s;
                 for (i = 0; i < n; i += 1)
@@ -10762,11 +10786,11 @@
                     r !== this.keysIndex
                       ? this.effectsSequence[i](a, a.t)
                       : this.effectsSequence[i](this.currentData, a.t);
-                e !== a && this.setCurrentData(a),
+                (e !== a && this.setCurrentData(a),
                   (this.v = this.currentData),
                   (this.pv = this.v),
                   (this.lock = !1),
-                  (this.frameId = this.elem.globalData.frameId);
+                  (this.frameId = this.elem.globalData.frameId));
               }
             }
           }),
@@ -10795,7 +10819,7 @@
               n < a;
 
             )
-              (e = t.charCodeAt(n)),
+              ((e = t.charCodeAt(n)),
                 -1 !== r.indexOf(e)
                   ? (i[i.length - 1] += t.charAt(n))
                   : e >= 55296 &&
@@ -10804,7 +10828,7 @@
                       e <= 57343
                     ? (i.push(t.substr(n, 2)), (n += 1))
                     : i.push(t.charAt(n)),
-                (n += 1);
+                (n += 1));
             return i;
           }),
           (TextProperty.prototype.completeTextData = function (t) {
@@ -10830,23 +10854,23 @@
               b = h.getFontByName(t.f),
               x = 0,
               E = getFontProperties(b);
-            (t.fWeight = E.weight),
+            ((t.fWeight = E.weight),
               (t.fStyle = E.style),
               (t.finalSize = t.s),
               (t.finalText = this.buildFinalText(t.t)),
               (r = t.finalText.length),
-              (t.finalLineHeight = t.lh);
+              (t.finalLineHeight = t.lh));
             var P,
               S = (t.tr / 1e3) * t.finalSize;
             if (t.sz)
               for (var _, w, A = !0, C = t.sz[0], k = t.sz[1]; A; ) {
-                (_ = 0),
+                ((_ = 0),
                   (g = 0),
                   (r = (w = this.buildFinalText(t.t)).length),
-                  (S = (t.tr / 1e3) * t.finalSize);
+                  (S = (t.tr / 1e3) * t.finalSize));
                 var T = -1;
                 for (e = 0; e < r; e += 1)
-                  (P = w[e].charCodeAt(0)),
+                  ((P = w[e].charCodeAt(0)),
                     (i = !1),
                     " " === w[e]
                       ? (T = e)
@@ -10864,14 +10888,14 @@
                         w.splice(e, T === e ? 1 : 0, "\r"),
                         (T = -1),
                         (g = 0))
-                      : ((g += x), (g += S));
-                (_ += (b.ascent * t.finalSize) / 100),
+                      : ((g += x), (g += S)));
+                ((_ += (b.ascent * t.finalSize) / 100),
                   this.canResize && t.finalSize > this.minimumFontSize && k < _
                     ? ((t.finalSize -= 1),
                       (t.finalLineHeight = (t.finalSize * t.lh) / t.s))
-                    : ((t.finalText = w), (r = t.finalText.length), (A = !1));
+                    : ((t.finalText = w), (r = t.finalText.length), (A = !1)));
               }
-            (g = -S), (x = 0);
+            ((g = -S), (x = 0));
             var D,
               M = 0;
             for (e = 0; e < r; e += 1)
@@ -10909,18 +10933,18 @@
               ) {
                 if (((u += x), "" === n || " " === n || e === r - 1)) {
                   for (("" !== n && " " !== n) || (u -= x); m <= e; )
-                    (p[m].an = u), (p[m].ind = c), (p[m].extra = x), (m += 1);
-                  (c += 1), (u = 0);
+                    ((p[m].an = u), (p[m].ind = c), (p[m].extra = x), (m += 1));
+                  ((c += 1), (u = 0));
                 }
               } else if (3 == f) {
                 if (((u += x), "" === n || e === r - 1)) {
                   for ("" === n && (u -= x); m <= e; )
-                    (p[m].an = u), (p[m].ind = c), (p[m].extra = x), (m += 1);
-                  (u = 0), (c += 1);
+                    ((p[m].an = u), (p[m].ind = c), (p[m].extra = x), (m += 1));
+                  ((u = 0), (c += 1));
                 }
-              } else (p[c].ind = c), (p[c].extra = 0), (c += 1);
+              } else ((p[c].ind = c), (p[c].extra = 0), (c += 1));
             if (((t.l = p), (v = g > v ? g : v), y.push(g), t.sz))
-              (t.boxWidth = t.sz[0]), (t.justifyOffset = 0);
+              ((t.boxWidth = t.sz[0]), (t.justifyOffset = 0));
             else
               switch (((t.boxWidth = v), t.j)) {
                 case 1:
@@ -10952,57 +10976,57 @@
                 e < r;
                 e += 1
               )
-                ((I = p[e]).anIndexes[a] = V),
+                (((I = p[e]).anIndexes[a] = V),
                   ((1 == R && "" !== I.val) ||
                     (2 == R && "" !== I.val && " " !== I.val) ||
                     (3 == R && (I.n || " " == I.val || e == r - 1)) ||
                     (4 == R && (I.n || e == r - 1))) &&
-                    (1 === F.s.rn && O.push(V), (V += 1));
+                    (1 === F.s.rn && O.push(V), (V += 1)));
               l.a[a].s.totalChars = V;
               var L,
                 z = -1;
               if (1 === F.s.rn)
                 for (e = 0; e < r; e += 1)
-                  z != (I = p[e]).anIndexes[a] &&
+                  (z != (I = p[e]).anIndexes[a] &&
                     ((z = I.anIndexes[a]),
                     (L = O.splice(Math.floor(Math.random() * O.length), 1)[0])),
-                    (I.anIndexes[a] = L);
+                    (I.anIndexes[a] = L));
             }
-            (t.yOffset = t.finalLineHeight || 1.2 * t.finalSize),
+            ((t.yOffset = t.finalLineHeight || 1.2 * t.finalSize),
               (t.ls = t.ls || 0),
-              (t.ascent = (b.ascent * t.finalSize) / 100);
+              (t.ascent = (b.ascent * t.finalSize) / 100));
           }),
           (TextProperty.prototype.updateDocumentData = function (t, e) {
             e = void 0 === e ? this.keysIndex : e;
             var r = this.copyData({}, this.data.d.k[e].s);
-            (r = this.copyData(r, t)),
+            ((r = this.copyData(r, t)),
               (this.data.d.k[e].s = r),
               this.recalculate(e),
-              this.elem.addDynamicProperty(this);
+              this.elem.addDynamicProperty(this));
           }),
           (TextProperty.prototype.recalculate = function (t) {
             var e = this.data.d.k[t].s;
-            (e.__complete = !1),
+            ((e.__complete = !1),
               (this.keysIndex = 0),
               (this._isFirstFrame = !0),
-              this.getValue(e);
+              this.getValue(e));
           }),
           (TextProperty.prototype.canResizeFont = function (t) {
-            (this.canResize = t),
+            ((this.canResize = t),
               this.recalculate(this.keysIndex),
-              this.elem.addDynamicProperty(this);
+              this.elem.addDynamicProperty(this));
           }),
           (TextProperty.prototype.setMinimumFontSize = function (t) {
-            (this.minimumFontSize = Math.floor(t) || 1),
+            ((this.minimumFontSize = Math.floor(t) || 1),
               this.recalculate(this.keysIndex),
-              this.elem.addDynamicProperty(this);
-          });
+              this.elem.addDynamicProperty(this));
+          }));
         var TextSelectorProp = (function () {
             var t = Math.max,
               e = Math.min,
               r = Math.floor;
             function i(t, e) {
-              (this._currentTextLength = -1),
+              ((this._currentTextLength = -1),
                 (this.k = !1),
                 (this.data = e),
                 (this.elem = t),
@@ -11043,7 +11067,7 @@
                   this,
                 )),
                 (this.a = PropertyFactory.getProp(t, e.a, 0, 0.01, this)),
-                this.dynamicProperties.length || this.getValue();
+                this.dynamicProperties.length || this.getValue());
             }
             return (
               (i.prototype = {
@@ -11055,12 +11079,12 @@
                     a = 0,
                     s = 1,
                     o = 1;
-                  this.ne.v > 0
+                  (this.ne.v > 0
                     ? (n = this.ne.v / 100)
                     : (a = -this.ne.v / 100),
                     this.xe.v > 0
                       ? (s = 1 - this.xe.v / 100)
-                      : (o = 1 + this.xe.v / 100);
+                      : (o = 1 + this.xe.v / 100));
                   var h = BezierFactory.getBezierEasing(n, a, s, o).get,
                     l = 0,
                     p = this.finalS,
@@ -11085,13 +11109,13 @@
                           : 1 - t(0, e(0.5 / (c - p) + (i - p) / (c - p), 1))),
                     );
                   else if (4 === f)
-                    c === p
+                    (c === p
                       ? (l = 0)
                       : (l = t(0, e(0.5 / (c - p) + (i - p) / (c - p), 1))) <
                           0.5
                         ? (l *= 2)
                         : (l = 1 - 2 * (l - 0.5)),
-                      (l = h(l));
+                      (l = h(l)));
                   else if (5 === f) {
                     if (c === p) l = 0;
                     else {
@@ -11122,22 +11146,22 @@
                   return l * this.a.v;
                 },
                 getValue: function (t) {
-                  this.iterateDynamicProperties(),
+                  (this.iterateDynamicProperties(),
                     (this._mdf = t || this._mdf),
                     (this._currentTextLength =
                       this.elem.textProperty.currentData.l.length || 0),
                     t &&
                       2 === this.data.r &&
-                      (this.e.v = this._currentTextLength);
+                      (this.e.v = this._currentTextLength));
                   var e = 2 === this.data.r ? 1 : 100 / this.data.totalChars,
                     r = this.o.v / e,
                     i = this.s.v / e + r,
                     n = this.e.v / e + r;
                   if (i > n) {
                     var a = i;
-                    (i = n), (n = a);
+                    ((i = n), (n = a));
                   }
-                  (this.finalS = i), (this.finalE = n);
+                  ((this.finalS = i), (this.finalE = n));
                 },
               }),
               extendPrototype([DynamicPropertyContainer], i),
@@ -11157,10 +11181,10 @@
                 return i ? a[(i -= 1)] : e();
               },
               release: function (t) {
-                i === n && ((a = pooling.double(a)), (n *= 2)),
+                (i === n && ((a = pooling.double(a)), (n *= 2)),
                   r && r(t),
                   (a[i] = t),
-                  (i += 1);
+                  (i += 1));
               },
             };
           },
@@ -11186,13 +11210,13 @@
                 var e,
                   r = t._length;
                 for (e = 0; e < r; e += 1)
-                  pointPool.release(t.v[e]),
+                  (pointPool.release(t.v[e]),
                     pointPool.release(t.i[e]),
                     pointPool.release(t.o[e]),
                     (t.v[e] = null),
                     (t.i[e] = null),
-                    (t.o[e] = null);
-                (t._length = 0), (t.c = !1);
+                    (t.o[e] = null));
+                ((t._length = 0), (t.c = !1));
               },
             );
             return (
@@ -11226,9 +11250,9 @@
                   var n,
                     a = t._length;
                   for (n = 0; n < a; n += 1) shapePool.release(t.shapes[n]);
-                  (t._length = 0),
-                    e === r && ((i = pooling.double(i)), (r *= 2));
-                  (i[e] = t), (e += 1);
+                  ((t._length = 0),
+                    e === r && ((i = pooling.double(i)), (r *= 2)));
+                  ((i[e] = t), (e += 1));
                 },
               },
               e = 0,
@@ -11292,32 +11316,32 @@
           })();
         function BaseRenderer() {}
         function SVGRenderer(t, e) {
-          (this.animationItem = t),
+          ((this.animationItem = t),
             (this.layers = null),
             (this.renderedFrame = -1),
-            (this.svgElement = createNS("svg"));
+            (this.svgElement = createNS("svg")));
           var r = "";
           if (e && e.title) {
             var i = createNS("title"),
               n = createElementID();
-            i.setAttribute("id", n),
+            (i.setAttribute("id", n),
               (i.textContent = e.title),
               this.svgElement.appendChild(i),
-              (r += n);
+              (r += n));
           }
           if (e && e.description) {
             var a = createNS("desc"),
               s = createElementID();
-            a.setAttribute("id", s),
+            (a.setAttribute("id", s),
               (a.textContent = e.description),
               this.svgElement.appendChild(a),
-              (r += " " + s);
+              (r += " " + s));
           }
           r && this.svgElement.setAttribute("aria-labelledby", r);
           var o = createNS("defs");
           this.svgElement.appendChild(o);
           var h = createNS("g");
-          this.svgElement.appendChild(h),
+          (this.svgElement.appendChild(h),
             (this.layerElement = h),
             (this.renderConfig = {
               preserveAspectRatio:
@@ -11347,10 +11371,10 @@
             (this.elements = []),
             (this.pendingElements = []),
             (this.destroyed = !1),
-            (this.rendererType = "svg");
+            (this.rendererType = "svg"));
         }
         function CanvasRenderer(t, e) {
-          (this.animationItem = t),
+          ((this.animationItem = t),
             (this.renderConfig = {
               clearCanvas: !e || void 0 === e.clearCanvas || e.clearCanvas,
               context: (e && e.context) || null,
@@ -11378,10 +11402,10 @@
             (this.pendingElements = []),
             (this.transformMat = new Matrix()),
             (this.completeLayers = !1),
-            (this.rendererType = "canvas");
+            (this.rendererType = "canvas"));
         }
         function HybridRenderer(t, e) {
-          (this.animationItem = t),
+          ((this.animationItem = t),
             (this.layers = null),
             (this.renderedFrame = -1),
             (this.renderConfig = {
@@ -11407,20 +11431,20 @@
             (this.destroyed = !1),
             (this.camera = null),
             (this.supports3d = !0),
-            (this.rendererType = "html");
+            (this.rendererType = "html"));
         }
         function MaskElement(t, e, r) {
-          (this.data = t),
+          ((this.data = t),
             (this.element = e),
             (this.globalData = r),
             (this.storedData = []),
             (this.masksProperties = this.data.masksProperties || []),
-            (this.maskElement = null);
+            (this.maskElement = null));
           var i,
             n,
             a = this.globalData.defs,
             s = this.masksProperties ? this.masksProperties.length : 0;
-          (this.viewData = createSizedArray(s)), (this.solidPath = "");
+          ((this.viewData = createSizedArray(s)), (this.solidPath = ""));
           var o,
             h,
             l,
@@ -11449,7 +11473,7 @@
               (n = createNS("path")),
               "n" === u[i].mode)
             )
-              (this.viewData[i] = {
+              ((this.viewData[i] = {
                 op: PropertyFactory.getProp(
                   this.element,
                   u[i].o,
@@ -11461,7 +11485,7 @@
                 elem: n,
                 lastPath: "",
               }),
-                a.appendChild(n);
+                a.appendChild(n));
             else {
               var b;
               if (
@@ -11511,7 +11535,7 @@
                 var x = createNS("g");
                 for (o = 0; o < h; o += 1) x.appendChild(d[o]);
                 var E = createNS("mask");
-                E.setAttribute("mask-type", "alpha"),
+                (E.setAttribute("mask-type", "alpha"),
                   E.setAttribute("id", y + "_" + m),
                   E.appendChild(n),
                   a.appendChild(E),
@@ -11520,9 +11544,9 @@
                     "url(" + locationHref + "#" + y + "_" + m + ")",
                   ),
                   (d.length = 0),
-                  d.push(x);
+                  d.push(x));
               } else d.push(n);
-              u[i].inv &&
+              (u[i].inv &&
                 !this.solidPath &&
                 (this.solidPath = this.createLayerSolidPath()),
                 (this.viewData[i] = {
@@ -11547,7 +11571,7 @@
                     u[i],
                     this.viewData[i].prop.v,
                     this.viewData[i],
-                  );
+                  ));
             }
           for (
             this.maskElement = createNS(g), s = d.length, i = 0;
@@ -11555,14 +11579,14 @@
             i += 1
           )
             this.maskElement.appendChild(d[i]);
-          m > 0 &&
+          (m > 0 &&
             (this.maskElement.setAttribute("id", y),
             this.element.maskedElement.setAttribute(
               v,
               "url(" + locationHref + "#" + y + ")",
             ),
             a.appendChild(this.maskElement)),
-            this.viewData.length && this.element.addRenderableComponent(this);
+            this.viewData.length && this.element.addRenderableComponent(this));
         }
         function HierarchyElement() {}
         function FrameElement() {}
@@ -11570,26 +11594,26 @@
         function RenderableElement() {}
         function RenderableDOMElement() {}
         function ProcessedElement(t, e) {
-          (this.elem = t), (this.pos = e);
+          ((this.elem = t), (this.pos = e));
         }
         function SVGStyleData(t, e) {
-          (this.data = t),
+          ((this.data = t),
             (this.type = t.ty),
             (this.d = ""),
             (this.lvl = e),
             (this._mdf = !1),
             (this.closed = !0 === t.hd),
             (this.pElem = createNS("path")),
-            (this.msElem = null);
+            (this.msElem = null));
         }
         function SVGShapeData(t, e, r) {
-          (this.caches = []),
+          ((this.caches = []),
             (this.styles = []),
             (this.transformers = t),
             (this.lStr = ""),
             (this.sh = r),
             (this.lvl = e),
-            (this._isAnimated = !!r.k);
+            (this._isAnimated = !!r.k));
           for (var i = 0, n = t.length; i < n; ) {
             if (t[i].mProps.dynamicProperties.length) {
               this._isAnimated = !0;
@@ -11599,55 +11623,56 @@
           }
         }
         function SVGTransformData(t, e, r) {
-          (this.transform = { mProps: t, op: e, container: r }),
+          ((this.transform = { mProps: t, op: e, container: r }),
             (this.elements = []),
             (this._isAnimated =
               this.transform.mProps.dynamicProperties.length ||
-              this.transform.op.effectsSequence.length);
+              this.transform.op.effectsSequence.length));
         }
         function SVGStrokeStyleData(t, e, r) {
-          this.initDynamicPropertyContainer(t),
+          (this.initDynamicPropertyContainer(t),
             (this.getValue = this.iterateDynamicProperties),
             (this.o = PropertyFactory.getProp(t, e.o, 0, 0.01, this)),
             (this.w = PropertyFactory.getProp(t, e.w, 0, null, this)),
             (this.d = new DashProperty(t, e.d || {}, "svg", this)),
             (this.c = PropertyFactory.getProp(t, e.c, 1, 255, this)),
             (this.style = r),
-            (this._isAnimated = !!this._isAnimated);
+            (this._isAnimated = !!this._isAnimated));
         }
         function SVGFillStyleData(t, e, r) {
-          this.initDynamicPropertyContainer(t),
+          (this.initDynamicPropertyContainer(t),
             (this.getValue = this.iterateDynamicProperties),
             (this.o = PropertyFactory.getProp(t, e.o, 0, 0.01, this)),
             (this.c = PropertyFactory.getProp(t, e.c, 1, 255, this)),
-            (this.style = r);
+            (this.style = r));
         }
         function SVGGradientFillStyleData(t, e, r) {
-          this.initDynamicPropertyContainer(t),
+          (this.initDynamicPropertyContainer(t),
             (this.getValue = this.iterateDynamicProperties),
-            this.initGradientData(t, e, r);
+            this.initGradientData(t, e, r));
         }
         function SVGGradientStrokeStyleData(t, e, r) {
-          this.initDynamicPropertyContainer(t),
+          (this.initDynamicPropertyContainer(t),
             (this.getValue = this.iterateDynamicProperties),
             (this.w = PropertyFactory.getProp(t, e.w, 0, null, this)),
             (this.d = new DashProperty(t, e.d || {}, "svg", this)),
             this.initGradientData(t, e, r),
-            (this._isAnimated = !!this._isAnimated);
+            (this._isAnimated = !!this._isAnimated));
         }
         function ShapeGroupData() {
-          (this.it = []), (this.prevViewData = []), (this.gr = createNS("g"));
+          ((this.it = []), (this.prevViewData = []), (this.gr = createNS("g")));
         }
-        (BaseRenderer.prototype.checkLayers = function (t) {
+        ((BaseRenderer.prototype.checkLayers = function (t) {
           var e,
             r,
             i = this.layers.length;
           for (this.completeLayers = !0, e = i - 1; e >= 0; e -= 1)
-            this.elements[e] ||
+            (this.elements[e] ||
               ((r = this.layers[e]).ip - r.st <= t - this.layers[e].st &&
                 r.op - r.st > t - this.layers[e].st &&
                 this.buildItem(e)),
-              (this.completeLayers = !!this.elements[e] && this.completeLayers);
+              (this.completeLayers =
+                !!this.elements[e] && this.completeLayers));
           this.checkPendingElements();
         }),
           (BaseRenderer.prototype.createItem = function (t) {
@@ -11716,7 +11741,7 @@
               a < s;
 
             )
-              n[a].ind == e &&
+              (n[a].ind == e &&
                 (i[a] && !0 !== i[a]
                   ? (r.push(i[a]),
                     i[a].setAsParent(),
@@ -11724,7 +11749,7 @@
                       ? this.buildElementParenting(t, n[a].parent, r)
                       : t.setHierarchy(r))
                   : (this.buildItem(a), this.addPendingElement(t))),
-                (a += 1);
+                (a += 1));
           }),
           (BaseRenderer.prototype.addPendingElement = function (t) {
             this.pendingElements.push(t);
@@ -11735,12 +11760,12 @@
             for (e = 0; e < r; e += 1)
               if (t[e].xt) {
                 var i = this.createComp(t[e]);
-                i.initExpressions(),
-                  this.globalData.projectInterface.registerComposition(i);
+                (i.initExpressions(),
+                  this.globalData.projectInterface.registerComposition(i));
               }
           }),
           (BaseRenderer.prototype.setupGlobalData = function (t, e) {
-            (this.globalData.fontManager = new FontManager()),
+            ((this.globalData.fontManager = new FontManager()),
               this.globalData.fontManager.addChars(t.chars),
               this.globalData.fontManager.addFonts(t.fonts, e),
               (this.globalData.getAssetData =
@@ -11753,7 +11778,7 @@
               (this.globalData.frameId = 0),
               (this.globalData.frameRate = t.fr),
               (this.globalData.nm = t.nm),
-              (this.globalData.compSize = { w: t.w, h: t.h });
+              (this.globalData.compSize = { w: t.w, h: t.h }));
           }),
           extendPrototype([BaseRenderer], SVGRenderer),
           (SVGRenderer.prototype.createNull = function (t) {
@@ -11775,7 +11800,10 @@
             return new ISolidElement(t, this.globalData, this);
           }),
           (SVGRenderer.prototype.configAnimation = function (t) {
-            this.svgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg"),
+            (this.svgElement.setAttribute(
+              "xmlns",
+              "http://www.w3.org/2000/svg",
+            ),
               this.renderConfig.viewBoxSize
                 ? this.svgElement.setAttribute(
                     "viewBox",
@@ -11807,20 +11835,20 @@
                 "preserveAspectRatio",
                 this.renderConfig.preserveAspectRatio,
               ),
-              this.animationItem.wrapper.appendChild(this.svgElement);
+              this.animationItem.wrapper.appendChild(this.svgElement));
             var e = this.globalData.defs;
-            this.setupGlobalData(t, e),
+            (this.setupGlobalData(t, e),
               (this.globalData.progressiveLoad =
                 this.renderConfig.progressiveLoad),
-              (this.data = t);
+              (this.data = t));
             var r = createNS("clipPath"),
               i = createNS("rect");
-            i.setAttribute("width", t.w),
+            (i.setAttribute("width", t.w),
               i.setAttribute("height", t.h),
               i.setAttribute("x", 0),
-              i.setAttribute("y", 0);
+              i.setAttribute("y", 0));
             var n = createElementID();
-            r.setAttribute("id", n),
+            (r.setAttribute("id", n),
               r.appendChild(i),
               this.layerElement.setAttribute(
                 "clip-path",
@@ -11828,20 +11856,20 @@
               ),
               e.appendChild(r),
               (this.layers = t.layers),
-              (this.elements = createSizedArray(t.layers.length));
+              (this.elements = createSizedArray(t.layers.length)));
           }),
           (SVGRenderer.prototype.destroy = function () {
             var t;
-            this.animationItem.wrapper &&
+            (this.animationItem.wrapper &&
               (this.animationItem.wrapper.innerText = ""),
               (this.layerElement = null),
-              (this.globalData.defs = null);
+              (this.globalData.defs = null));
             var e = this.layers ? this.layers.length : 0;
             for (t = 0; t < e; t += 1)
               this.elements[t] && this.elements[t].destroy();
-            (this.elements.length = 0),
+            ((this.elements.length = 0),
               (this.destroyed = !0),
-              (this.animationItem = null);
+              (this.animationItem = null));
           }),
           (SVGRenderer.prototype.updateContainerSize = function () {}),
           (SVGRenderer.prototype.buildItem = function (t) {
@@ -11849,7 +11877,7 @@
             if (!e[t] && 99 !== this.layers[t].ty) {
               e[t] = !0;
               var r = this.createItem(this.layers[t]);
-              (e[t] = r),
+              ((e[t] = r),
                 expressionsPlugin &&
                   (0 === this.layers[t].ty &&
                     this.globalData.projectInterface.registerComposition(r),
@@ -11858,7 +11886,7 @@
                 this.layers[t].tt &&
                   (this.elements[t - 1] && !0 !== this.elements[t - 1]
                     ? r.setMatte(e[t - 1].layerId)
-                    : (this.buildItem(t - 1), this.addPendingElement(r)));
+                    : (this.buildItem(t - 1), this.addPendingElement(r))));
             }
           }),
           (SVGRenderer.prototype.checkPendingElements = function () {
@@ -11877,11 +11905,11 @@
           (SVGRenderer.prototype.renderFrame = function (t) {
             if (this.renderedFrame !== t && !this.destroyed) {
               var e;
-              null === t ? (t = this.renderedFrame) : (this.renderedFrame = t),
+              (null === t ? (t = this.renderedFrame) : (this.renderedFrame = t),
                 (this.globalData.frameNum = t),
                 (this.globalData.frameId += 1),
                 (this.globalData.projectInterface.currentFrame = t),
-                (this.globalData._mdf = !1);
+                (this.globalData._mdf = !1));
               var r = this.layers.length;
               for (
                 this.completeLayers || this.checkLayers(t), e = r - 1;
@@ -11900,11 +11928,11 @@
             var r = t.getBaseElement();
             if (r) {
               for (var i, n = 0; n < e; )
-                this.elements[n] &&
+                (this.elements[n] &&
                   !0 !== this.elements[n] &&
                   this.elements[n].getBaseElement() &&
                   (i = this.elements[n].getBaseElement()),
-                  (n += 1);
+                  (n += 1));
               i
                 ? this.layerElement.insertBefore(r, i)
                 : this.layerElement.appendChild(r);
@@ -11946,7 +11974,7 @@
               if (this.renderConfig.clearCanvas) {
                 this.transformMat.cloneFromProps(t);
                 var e = this.contextData.cTr.props;
-                this.transformMat.transform(
+                (this.transformMat.transform(
                   e[0],
                   e[1],
                   e[2],
@@ -11964,7 +11992,7 @@
                   e[14],
                   e[15],
                 ),
-                  this.contextData.cTr.cloneFromProps(this.transformMat.props);
+                  this.contextData.cTr.cloneFromProps(this.transformMat.props));
                 var r = this.contextData.cTr.props;
                 this.canvasContext.setTransform(
                   r[0],
@@ -11990,10 +12018,10 @@
                 (this.canvasContext.globalAlpha *= t < 0 ? 0 : t),
                 void (this.globalData.currentGlobalAlpha = this.contextData.cO)
               );
-            (this.contextData.cO *= t < 0 ? 0 : t),
+            ((this.contextData.cO *= t < 0 ? 0 : t),
               this.globalData.currentGlobalAlpha !== this.contextData.cO &&
                 ((this.canvasContext.globalAlpha = this.contextData.cO),
-                (this.globalData.currentGlobalAlpha = this.contextData.cO));
+                (this.globalData.currentGlobalAlpha = this.contextData.cO)));
           }),
           (CanvasRenderer.prototype.reset = function () {
             this.renderConfig.clearCanvas
@@ -12009,22 +12037,22 @@
                 this.contextData.duplicate();
               var i = this.contextData.saved[this.contextData.cArrPos];
               for (e = 0; e < 16; e += 1) i[e] = r[e];
-              (this.contextData.savedOp[this.contextData.cArrPos] =
+              ((this.contextData.savedOp[this.contextData.cArrPos] =
                 this.contextData.cO),
-                (this.contextData.cArrPos += 1);
+                (this.contextData.cArrPos += 1));
             } else this.canvasContext.save();
           }),
           (CanvasRenderer.prototype.restore = function (t) {
             if (this.renderConfig.clearCanvas) {
-              t &&
+              (t &&
                 (this.canvasContext.restore(),
                 (this.globalData.blendMode = "source-over")),
-                (this.contextData.cArrPos -= 1);
+                (this.contextData.cArrPos -= 1));
               var e,
                 r = this.contextData.saved[this.contextData.cArrPos],
                 i = this.contextData.cTr.props;
               for (e = 0; e < 16; e += 1) i[e] = r[e];
-              this.canvasContext.setTransform(
+              (this.canvasContext.setTransform(
                 r[0],
                 r[1],
                 r[4],
@@ -12036,16 +12064,16 @@
                 (this.contextData.cO = r),
                 this.globalData.currentGlobalAlpha !== r &&
                   ((this.canvasContext.globalAlpha = r),
-                  (this.globalData.currentGlobalAlpha = r));
+                  (this.globalData.currentGlobalAlpha = r)));
             } else this.canvasContext.restore();
           }),
           (CanvasRenderer.prototype.configAnimation = function (t) {
             if (this.animationItem.wrapper) {
               this.animationItem.container = createTag("canvas");
               var e = this.animationItem.container.style;
-              (e.width = "100%"), (e.height = "100%");
+              ((e.width = "100%"), (e.height = "100%"));
               var r = "0px 0px 0px";
-              (e.transformOrigin = r),
+              ((e.transformOrigin = r),
                 (e.mozTransformOrigin = r),
                 (e.webkitTransformOrigin = r),
                 (e["-webkit-transform"] = r),
@@ -12063,9 +12091,9 @@
                   this.animationItem.container.setAttribute(
                     "id",
                     this.renderConfig.id,
-                  );
+                  ));
             } else this.canvasContext = this.renderConfig.context;
-            (this.data = t),
+            ((this.data = t),
               (this.layers = t.layers),
               (this.transformCanvas = {
                 w: t.w,
@@ -12083,7 +12111,7 @@
                 this.renderConfig.progressiveLoad),
               (this.globalData.transformCanvas = this.transformCanvas),
               (this.elements = createSizedArray(t.layers.length)),
-              this.updateContainerSize();
+              this.updateContainerSize());
           }),
           (CanvasRenderer.prototype.updateContainerSize = function () {
             var t, e, r, i;
@@ -12112,7 +12140,7 @@
                 s = n[0] || "xMidYMid",
                 o = s.substr(0, 4),
                 h = s.substr(4);
-              (r = t / e),
+              ((r = t / e),
                 ((i = this.transformCanvas.w / this.transformCanvas.h) > r &&
                   "meet" === a) ||
                 (i < r && "slice" === a)
@@ -12151,7 +12179,7 @@
                           this.transformCanvas.h *
                             (t / this.transformCanvas.w)) *
                         this.renderConfig.dpr
-                      : 0);
+                      : 0));
             } else
               "none" === this.renderConfig.preserveAspectRatio
                 ? ((this.transformCanvas.sx =
@@ -12164,7 +12192,7 @@
                   (this.transformCanvas.sy = this.renderConfig.dpr),
                   (this.transformCanvas.tx = 0),
                   (this.transformCanvas.ty = 0));
-            (this.transformCanvas.props = [
+            ((this.transformCanvas.props = [
               this.transformCanvas.sx,
               0,
               0,
@@ -12192,7 +12220,7 @@
               ),
               this.canvasContext.closePath(),
               this.canvasContext.clip(),
-              this.renderFrame(this.renderedFrame, !0);
+              this.renderFrame(this.renderedFrame, !0));
           }),
           (CanvasRenderer.prototype.destroy = function () {
             var t;
@@ -12205,10 +12233,10 @@
               t -= 1
             )
               this.elements[t] && this.elements[t].destroy();
-            (this.elements.length = 0),
+            ((this.elements.length = 0),
               (this.globalData.canvasContext = null),
               (this.animationItem.container = null),
-              (this.destroyed = !0);
+              (this.destroyed = !0));
           }),
           (CanvasRenderer.prototype.renderFrame = function (t, e) {
             if (
@@ -12219,12 +12247,12 @@
               -1 !== t
             ) {
               var r;
-              (this.renderedFrame = t),
+              ((this.renderedFrame = t),
                 (this.globalData.frameNum =
                   t - this.animationItem._isFirstFrame),
                 (this.globalData.frameId += 1),
                 (this.globalData._mdf = !this.renderConfig.clearCanvas || e),
-                (this.globalData.projectInterface.currentFrame = t);
+                (this.globalData.projectInterface.currentFrame = t));
               var i = this.layers.length;
               for (
                 this.completeLayers || this.checkLayers(t), r = 0;
@@ -12257,7 +12285,7 @@
             var e = this.elements;
             if (!e[t] && 99 !== this.layers[t].ty) {
               var r = this.createItem(this.layers[t], this, this.globalData);
-              (e[t] = r), r.initExpressions();
+              ((e[t] = r), r.initExpressions());
             }
           }),
           (CanvasRenderer.prototype.checkPendingElements = function () {
@@ -12287,7 +12315,7 @@
               else if (this.threeDElements) this.addTo3dContainer(r, e);
               else {
                 for (var n, a, s = 0; s < e; )
-                  this.elements[s] &&
+                  (this.elements[s] &&
                     !0 !== this.elements[s] &&
                     this.elements[s].getBaseElement &&
                     ((a = this.elements[s]),
@@ -12295,7 +12323,7 @@
                       (this.layers[s].ddd
                         ? this.getThreeDContainerByPos(s)
                         : a.getBaseElement()) || n)),
-                    (s += 1);
+                    (s += 1));
                 n
                   ? (i.ddd && this.supports3d) ||
                     this.layerElement.insertBefore(r, n)
@@ -12355,13 +12383,13 @@
             styleDiv(n);
             var a = createTag("div");
             if ((styleDiv(a), "3d" === e)) {
-              ((r = n.style).width = this.globalData.compSize.w + "px"),
-                (r.height = this.globalData.compSize.h + "px");
-              (r.webkitTransformOrigin = "50% 50%"),
+              (((r = n.style).width = this.globalData.compSize.w + "px"),
+                (r.height = this.globalData.compSize.h + "px"));
+              ((r.webkitTransformOrigin = "50% 50%"),
                 (r.mozTransformOrigin = "50% 50%"),
-                (r.transformOrigin = "50% 50%");
+                (r.transformOrigin = "50% 50%"));
               var s = "matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)";
-              ((i = a.style).transform = s), (i.webkitTransform = s);
+              (((i = a.style).transform = s), (i.webkitTransform = s));
             }
             n.appendChild(a);
             var o = {
@@ -12371,7 +12399,7 @@
               endPos: t,
               type: e,
             };
-            return this.threeDElements.push(o), o;
+            return (this.threeDElements.push(o), o);
           }),
           (HybridRenderer.prototype.build3dContainers = function () {
             var t,
@@ -12395,10 +12423,10 @@
             for (var r = 0, i = this.threeDElements.length; r < i; ) {
               if (e <= this.threeDElements[r].endPos) {
                 for (var n, a = this.threeDElements[r].startPos; a < e; )
-                  this.elements[a] &&
+                  (this.elements[a] &&
                     this.elements[a].getBaseElement &&
                     (n = this.elements[a].getBaseElement()),
-                    (a += 1);
+                    (a += 1));
                 n
                   ? this.threeDElements[r].container.insertBefore(t, n)
                   : this.threeDElements[r].container.appendChild(t);
@@ -12411,7 +12439,7 @@
             var e = createTag("div"),
               r = this.animationItem.wrapper,
               i = e.style;
-            (i.width = t.w + "px"),
+            ((i.width = t.w + "px"),
               (i.height = t.h + "px"),
               (this.resizerElem = e),
               styleDiv(e),
@@ -12421,33 +12449,33 @@
               this.renderConfig.className &&
                 e.setAttribute("class", this.renderConfig.className),
               r.appendChild(e),
-              (i.overflow = "hidden");
+              (i.overflow = "hidden"));
             var n = createNS("svg");
-            n.setAttribute("width", "1"),
+            (n.setAttribute("width", "1"),
               n.setAttribute("height", "1"),
               styleDiv(n),
-              this.resizerElem.appendChild(n);
+              this.resizerElem.appendChild(n));
             var a = createNS("defs");
-            n.appendChild(a),
+            (n.appendChild(a),
               (this.data = t),
               this.setupGlobalData(t, n),
               (this.globalData.defs = a),
               (this.layers = t.layers),
               (this.layerElement = this.resizerElem),
               this.build3dContainers(),
-              this.updateContainerSize();
+              this.updateContainerSize());
           }),
           (HybridRenderer.prototype.destroy = function () {
             var t;
-            this.animationItem.wrapper &&
+            (this.animationItem.wrapper &&
               (this.animationItem.wrapper.innerText = ""),
               (this.animationItem.container = null),
-              (this.globalData.defs = null);
+              (this.globalData.defs = null));
             var e = this.layers ? this.layers.length : 0;
             for (t = 0; t < e; t += 1) this.elements[t].destroy();
-            (this.elements.length = 0),
+            ((this.elements.length = 0),
               (this.destroyed = !0),
-              (this.animationItem = null);
+              (this.animationItem = null));
           }),
           (HybridRenderer.prototype.updateContainerSize = function () {
             var t,
@@ -12475,7 +12503,7 @@
                   2),
                 (i = 0));
             var o = this.resizerElem.style;
-            (o.webkitTransform =
+            ((o.webkitTransform =
               "matrix3d(" +
               t +
               ",0,0,0,0," +
@@ -12485,7 +12513,7 @@
               "," +
               i +
               ",0,1)"),
-              (o.transform = o.webkitTransform);
+              (o.transform = o.webkitTransform));
           }),
           (HybridRenderer.prototype.renderFrame =
             SVGRenderer.prototype.renderFrame),
@@ -12504,9 +12532,9 @@
                 i = this.threeDElements.length;
               for (t = 0; t < i; t += 1) {
                 var n = this.threeDElements[t].perspectiveElem.style;
-                (n.webkitPerspective =
+                ((n.webkitPerspective =
                   Math.sqrt(Math.pow(e, 2) + Math.pow(r, 2)) + "px"),
-                  (n.perspective = n.webkitPerspective);
+                  (n.perspective = n.webkitPerspective));
               }
             }
           }),
@@ -12517,8 +12545,8 @@
             for (e = 0; e < r; e += 1)
               if (t[e].xt) {
                 var n = this.createComp(t[e], i, this.globalData.comp, null);
-                n.initExpressions(),
-                  this.globalData.projectInterface.registerComposition(n);
+                (n.initExpressions(),
+                  this.globalData.projectInterface.registerComposition(n));
               }
           }),
           (MaskElement.prototype.getMaskProperty = function (t) {
@@ -12621,24 +12649,24 @@
               r.lastPath !== a)
             ) {
               var s = "";
-              r.elem &&
+              (r.elem &&
                 (e.c && (s = t.inv ? this.solidPath + a : a),
                 r.elem.setAttribute("d", s)),
-                (r.lastPath = a);
+                (r.lastPath = a));
             }
           }),
           (MaskElement.prototype.destroy = function () {
-            (this.element = null),
+            ((this.element = null),
               (this.globalData = null),
               (this.maskElement = null),
               (this.data = null),
-              (this.masksProperties = null);
+              (this.masksProperties = null));
           }),
           (HierarchyElement.prototype = {
             initHierarchy: function () {
-              (this.hierarchy = []),
+              ((this.hierarchy = []),
                 (this._isParent = !1),
-                this.checkParenting();
+                this.checkParenting());
             },
             setHierarchy: function (t) {
               this.hierarchy = t;
@@ -12653,9 +12681,9 @@
           }),
           (FrameElement.prototype = {
             initFrame: function () {
-              (this._isFirstFrame = !1),
+              ((this._isFirstFrame = !1),
                 (this.dynamicProperties = []),
-                (this._mdf = !1);
+                (this._mdf = !1));
             },
             prepareProperties: function (t, e) {
               var r,
@@ -12675,7 +12703,7 @@
           }),
           (TransformElement.prototype = {
             initTransform: function () {
-              (this.finalTransform = {
+              ((this.finalTransform = {
                 mProp: this.data.ks
                   ? TransformPropertyFactory.getTransformProperty(
                       this,
@@ -12688,7 +12716,7 @@
                 mat: new Matrix(),
               }),
                 this.data.ao && (this.finalTransform.mProp.autoOriented = !0),
-                this.data.ty;
+                this.data.ty);
             },
             renderTransform: function () {
               if (
@@ -12718,7 +12746,7 @@
                     r < i;
                     r += 1
                   )
-                    (t = this.hierarchy[r].finalTransform.mProp.v.props),
+                    ((t = this.hierarchy[r].finalTransform.mProp.v.props),
                       e.transform(
                         t[0],
                         t[1],
@@ -12736,7 +12764,7 @@
                         t[13],
                         t[14],
                         t[15],
-                      );
+                      ));
               }
             },
             globalToLocal: function (t) {
@@ -12750,18 +12778,18 @@
               var a,
                 s = e.length;
               for (r = 0; r < s; r += 1)
-                (a = e[r].mat.applyToPointArray(0, 0, 0)),
-                  (t = [t[0] - a[0], t[1] - a[1], 0]);
+                ((a = e[r].mat.applyToPointArray(0, 0, 0)),
+                  (t = [t[0] - a[0], t[1] - a[1], 0]));
               return t;
             },
             mHelper: new Matrix(),
           }),
           (RenderableElement.prototype = {
             initRenderable: function () {
-              (this.isInRange = !1),
+              ((this.isInRange = !1),
                 (this.hidden = !1),
                 (this.isTransparent = !1),
-                (this.renderableComponents = []);
+                (this.renderableComponents = []));
             },
             addRenderableComponent: function (t) {
               -1 === this.renderableComponents.indexOf(t) &&
@@ -12818,7 +12846,7 @@
               RenderableElement,
               createProxyFunction({
                 initElement: function (t, e, r) {
-                  this.initFrame(),
+                  (this.initFrame(),
                     this.initBaseData(t, e, r),
                     this.initTransform(t, e, r),
                     this.initHierarchy(),
@@ -12827,7 +12855,7 @@
                     this.createContainerElements(),
                     this.createRenderableComponents(),
                     this.createContent(),
-                    this.hide();
+                    this.hide());
                 },
                 hide: function () {
                   this.hidden ||
@@ -12856,20 +12884,20 @@
                 },
                 renderInnerContent: function () {},
                 prepareFrame: function (t) {
-                  (this._mdf = !1),
+                  ((this._mdf = !1),
                     this.prepareRenderableFrame(t),
                     this.prepareProperties(t, this.isInRange),
-                    this.checkTransparency();
+                    this.checkTransparency());
                 },
                 destroy: function () {
-                  (this.innerElem = null), this.destroyBaseElement();
+                  ((this.innerElem = null), this.destroyBaseElement());
                 },
               }),
             ],
             RenderableDOMElement,
           ),
           (SVGStyleData.prototype.reset = function () {
-            (this.d = ""), (this._mdf = !1);
+            ((this.d = ""), (this._mdf = !1));
           }),
           (SVGShapeData.prototype.setAsAnimated = function () {
             this._isAnimated = !0;
@@ -12881,7 +12909,7 @@
             e,
             r,
           ) {
-            (this.o = PropertyFactory.getProp(t, e.o, 0, 0.01, this)),
+            ((this.o = PropertyFactory.getProp(t, e.o, 0, 0.01, this)),
               (this.s = PropertyFactory.getProp(t, e.s, 1, null, this)),
               (this.e = PropertyFactory.getProp(t, e.e, 1, null, this)),
               (this.h = PropertyFactory.getProp(
@@ -12903,7 +12931,7 @@
               (this.stops = []),
               this.setGradientData(r.pElem, e),
               this.setGradientOpacity(e, r),
-              (this._isAnimated = !!this._isAnimated);
+              (this._isAnimated = !!this._isAnimated));
           }),
           (SVGGradientFillStyleData.prototype.setGradientData = function (
             t,
@@ -12911,21 +12939,21 @@
           ) {
             var r = createElementID(),
               i = createNS(1 === e.t ? "linearGradient" : "radialGradient");
-            i.setAttribute("id", r),
+            (i.setAttribute("id", r),
               i.setAttribute("spreadMethod", "pad"),
-              i.setAttribute("gradientUnits", "userSpaceOnUse");
+              i.setAttribute("gradientUnits", "userSpaceOnUse"));
             var n,
               a,
               s,
               o = [];
             for (s = 4 * e.g.p, a = 0; a < s; a += 4)
-              (n = createNS("stop")), i.appendChild(n), o.push(n);
-            t.setAttribute(
+              ((n = createNS("stop")), i.appendChild(n), o.push(n));
+            (t.setAttribute(
               "gf" === e.ty ? "fill" : "stroke",
               "url(" + locationHref + "#" + r + ")",
             ),
               (this.gf = i),
-              (this.cst = o);
+              (this.cst = o));
           }),
           (SVGGradientFillStyleData.prototype.setGradientOpacity = function (
             t,
@@ -12942,19 +12970,19 @@
                 h = createElementID();
               a.setAttribute("id", h);
               var l = createNS(1 === t.t ? "linearGradient" : "radialGradient");
-              l.setAttribute("id", o),
+              (l.setAttribute("id", o),
                 l.setAttribute("spreadMethod", "pad"),
                 l.setAttribute("gradientUnits", "userSpaceOnUse"),
-                (n = t.g.k.k[0].s ? t.g.k.k[0].s.length : t.g.k.k.length);
+                (n = t.g.k.k[0].s ? t.g.k.k[0].s.length : t.g.k.k.length));
               var p = this.stops;
               for (i = 4 * t.g.p; i < n; i += 2)
-                (r = createNS("stop")).setAttribute(
+                ((r = createNS("stop")).setAttribute(
                   "stop-color",
                   "rgb(255,255,255)",
                 ),
                   l.appendChild(r),
-                  p.push(r);
-              s.setAttribute(
+                  p.push(r));
+              (s.setAttribute(
                 "gf" === t.ty ? "fill" : "stroke",
                 "url(" + locationHref + "#" + o + ")",
               ),
@@ -12962,25 +12990,25 @@
                 (this.ms = a),
                 (this.ost = p),
                 (this.maskId = h),
-                (e.msElem = s);
+                (e.msElem = s));
             }
           }),
           extendPrototype([DynamicPropertyContainer], SVGGradientFillStyleData),
           extendPrototype(
             [SVGGradientFillStyleData, DynamicPropertyContainer],
             SVGGradientStrokeStyleData,
-          );
+          ));
         var SVGElementsRenderer = (function () {
           var t = new Matrix(),
             e = new Matrix();
           function r(t, e, r) {
-            (r || e.transform.op._mdf) &&
+            ((r || e.transform.op._mdf) &&
               e.transform.container.setAttribute("opacity", e.transform.op.v),
               (r || e.transform.mProps._mdf) &&
                 e.transform.container.setAttribute(
                   "transform",
                   e.transform.mProps.v.to2dCSS(),
-                );
+                ));
           }
           function i(r, i, n) {
             var a,
@@ -13005,14 +13033,16 @@
                   !h && m > 0;
 
                 )
-                  (h = i.transformers[d].mProps._mdf || h), (m -= 1), (d -= 1);
+                  ((h = i.transformers[d].mProps._mdf || h),
+                    (m -= 1),
+                    (d -= 1));
                 if (h)
                   for (
                     m = g - i.styles[p].lvl, d = i.transformers.length - 1;
                     m > 0;
 
                   )
-                    (u = i.transformers[d].mProps.v.props),
+                    ((u = i.transformers[d].mProps.v.props),
                       f.transform(
                         u[0],
                         u[1],
@@ -13032,7 +13062,7 @@
                         u[15],
                       ),
                       (m -= 1),
-                      (d -= 1);
+                      (d -= 1));
               } else f = t;
               if (((s = (c = i.sh.paths)._length), h)) {
                 for (o = "", a = 0; a < s; a += 1)
@@ -13041,13 +13071,13 @@
                     (o += buildShapeString(l, l._length, l.c, f));
                 i.caches[p] = o;
               } else o = i.caches[p];
-              (i.styles[p].d += !0 === r.hd ? "" : o),
-                (i.styles[p]._mdf = h || i.styles[p]._mdf);
+              ((i.styles[p].d += !0 === r.hd ? "" : o),
+                (i.styles[p]._mdf = h || i.styles[p]._mdf));
             }
           }
           function n(t, e, r) {
             var i = e.style;
-            (e.c._mdf || r) &&
+            ((e.c._mdf || r) &&
               i.pElem.setAttribute(
                 "fill",
                 "rgb(" +
@@ -13058,10 +13088,10 @@
                   bmFloor(e.c.v[2]) +
                   ")",
               ),
-              (e.o._mdf || r) && i.pElem.setAttribute("fill-opacity", e.o.v);
+              (e.o._mdf || r) && i.pElem.setAttribute("fill-opacity", e.o.v));
           }
           function a(t, e, r) {
-            s(t, e, r), o(t, e, r);
+            (s(t, e, r), o(t, e, r));
           }
           function s(t, e, r) {
             var i,
@@ -13080,17 +13110,17 @@
             if (e.s._mdf || r) {
               var u = 1 === t.t ? "x1" : "cx",
                 m = "x1" === u ? "y1" : "cy";
-              h.setAttribute(u, p[0]),
+              (h.setAttribute(u, p[0]),
                 h.setAttribute(m, p[1]),
                 l &&
                   !e.g._collapsable &&
-                  (e.of.setAttribute(u, p[0]), e.of.setAttribute(m, p[1]));
+                  (e.of.setAttribute(u, p[0]), e.of.setAttribute(m, p[1])));
             }
             if (e.g._cmdf || r) {
               i = e.cst;
               var d = e.g.c;
               for (a = i.length, n = 0; n < a; n += 1)
-                (s = i[n]).setAttribute("offset", d[4 * n] + "%"),
+                ((s = i[n]).setAttribute("offset", d[4 * n] + "%"),
                   s.setAttribute(
                     "stop-color",
                     "rgb(" +
@@ -13100,7 +13130,7 @@
                       "," +
                       d[4 * n + 3] +
                       ")",
-                  );
+                  ));
             }
             if (l && (e.g._omdf || r)) {
               var y = e.g.o;
@@ -13109,9 +13139,9 @@
                 n < a;
                 n += 1
               )
-                (s = i[n]),
+                ((s = i[n]),
                   e.g._collapsable || s.setAttribute("offset", y[2 * n] + "%"),
-                  s.setAttribute("stop-opacity", y[2 * n + 1]);
+                  s.setAttribute("stop-opacity", y[2 * n + 1]));
             }
             if (1 === t.t)
               (e.e._mdf || r) &&
@@ -13140,17 +13170,17 @@
               var b = o * v,
                 x = Math.cos(g + e.a.v) * b + p[0],
                 E = Math.sin(g + e.a.v) * b + p[1];
-              h.setAttribute("fx", x),
+              (h.setAttribute("fx", x),
                 h.setAttribute("fy", E),
                 l &&
                   !e.g._collapsable &&
-                  (e.of.setAttribute("fx", x), e.of.setAttribute("fy", E));
+                  (e.of.setAttribute("fx", x), e.of.setAttribute("fy", E)));
             }
           }
           function o(t, e, r) {
             var i = e.style,
               n = e.d;
-            n &&
+            (n &&
               (n._mdf || r) &&
               n.dashStr &&
               (i.pElem.setAttribute("stroke-dasharray", n.dashStr),
@@ -13170,7 +13200,7 @@
               (e.o._mdf || r) && i.pElem.setAttribute("stroke-opacity", e.o.v),
               (e.w._mdf || r) &&
                 (i.pElem.setAttribute("stroke-width", e.w.v),
-                i.msElem && i.msElem.setAttribute("stroke-width", e.w.v));
+                i.msElem && i.msElem.setAttribute("stroke-width", e.w.v)));
           }
           return {
             createRenderFunction: function (t) {
@@ -13197,20 +13227,20 @@
           };
         })();
         function ShapeTransformManager() {
-          (this.sequences = {}),
+          ((this.sequences = {}),
             (this.sequenceList = []),
-            (this.transform_key_count = 0);
+            (this.transform_key_count = 0));
         }
         function CVShapeData(t, e, r, i) {
-          (this.styledShapes = []), (this.tr = [0, 0, 0, 0, 0, 0]);
+          ((this.styledShapes = []), (this.tr = [0, 0, 0, 0, 0, 0]));
           var n,
             a = 4;
-          "rc" === e.ty
+          ("rc" === e.ty
             ? (a = 5)
             : "el" === e.ty
               ? (a = 6)
               : "sr" === e.ty && (a = 7),
-            (this.sh = ShapePropertyFactory.getShapeProp(t, e, a, t));
+            (this.sh = ShapePropertyFactory.getShapeProp(t, e, a, t)));
           var s,
             o = r.length;
           for (n = 0; n < o; n += 1)
@@ -13224,53 +13254,53 @@
         }
         function BaseElement() {}
         function NullElement(t, e, r) {
-          this.initFrame(),
+          (this.initFrame(),
             this.initBaseData(t, e, r),
             this.initFrame(),
             this.initTransform(t, e, r),
-            this.initHierarchy();
+            this.initHierarchy());
         }
         function SVGBaseElement() {}
         function IShapeElement() {}
         function ITextElement() {}
         function ICompElement() {}
         function IImageElement(t, e, r) {
-          (this.assetData = e.getAssetData(t.refId)),
+          ((this.assetData = e.getAssetData(t.refId)),
             this.initElement(t, e, r),
             (this.sourceRect = {
               top: 0,
               left: 0,
               width: this.assetData.w,
               height: this.assetData.h,
-            });
+            }));
         }
         function ISolidElement(t, e, r) {
           this.initElement(t, e, r);
         }
         function AudioElement(t, e, r) {
-          this.initFrame(),
+          (this.initFrame(),
             this.initRenderable(),
             (this.assetData = e.getAssetData(t.refId)),
             this.initBaseData(t, e, r),
             (this._isPlaying = !1),
-            (this._canPlay = !1);
+            (this._canPlay = !1));
           var i = this.globalData.getAssetsPath(this.assetData);
-          (this.audio = this.globalData.audioController.createAudio(i)),
+          ((this.audio = this.globalData.audioController.createAudio(i)),
             (this._currentTime = 0),
             this.globalData.audioController.addAudio(this),
             (this.tm = t.tm
               ? PropertyFactory.getProp(this, t.tm, 0, e.frameRate, this)
-              : { _placeholder: !0 });
+              : { _placeholder: !0 }));
         }
         function FootageElement(t, e, r) {
-          this.initFrame(),
+          (this.initFrame(),
             this.initRenderable(),
             (this.assetData = e.getAssetData(t.refId)),
             (this.footageData = e.imageLoader.getAsset(this.assetData)),
-            this.initBaseData(t, e, r);
+            this.initBaseData(t, e, r));
         }
         function SVGCompElement(t, e, r) {
-          (this.layers = t.layers),
+          ((this.layers = t.layers),
             (this.supports3d = !0),
             (this.completeLayers = !1),
             (this.pendingElements = []),
@@ -13280,15 +13310,15 @@
             this.initElement(t, e, r),
             (this.tm = t.tm
               ? PropertyFactory.getProp(this, t.tm, 0, e.frameRate, this)
-              : { _placeholder: !0 });
+              : { _placeholder: !0 }));
         }
         function SVGTextLottieElement(t, e, r) {
-          (this.textSpans = []),
+          ((this.textSpans = []),
             (this.renderType = "svg"),
-            this.initElement(t, e, r);
+            this.initElement(t, e, r));
         }
         function SVGShapeElement(t, e, r) {
-          (this.shapes = []),
+          ((this.shapes = []),
             (this.shapesData = t.shapes),
             (this.stylesList = []),
             (this.shapeModifiers = []),
@@ -13296,7 +13326,7 @@
             (this.processedElements = []),
             (this.animatedContents = []),
             this.initElement(t, e, r),
-            (this.prevViewData = []);
+            (this.prevViewData = []));
         }
         function SVGTintFilter(t, e) {
           this.filterManager = e;
@@ -13320,64 +13350,70 @@
           ) {
             var i,
               n = createNS("feMerge");
-            t.appendChild(n),
+            (t.appendChild(n),
               (i = createNS("feMergeNode")).setAttribute("in", "SourceGraphic"),
               n.appendChild(i),
               (i = createNS("feMergeNode")).setAttribute("in", "f2"),
-              n.appendChild(i);
+              n.appendChild(i));
           }
         }
         function SVGFillFilter(t, e) {
           this.filterManager = e;
           var r = createNS("feColorMatrix");
-          r.setAttribute("type", "matrix"),
+          (r.setAttribute("type", "matrix"),
             r.setAttribute("color-interpolation-filters", "sRGB"),
             r.setAttribute("values", "1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"),
             t.appendChild(r),
-            (this.matrixFilter = r);
+            (this.matrixFilter = r));
         }
         function SVGGaussianBlurEffect(t, e) {
-          t.setAttribute("x", "-100%"),
+          (t.setAttribute("x", "-100%"),
             t.setAttribute("y", "-100%"),
             t.setAttribute("width", "300%"),
             t.setAttribute("height", "300%"),
-            (this.filterManager = e);
+            (this.filterManager = e));
           var r = createNS("feGaussianBlur");
-          t.appendChild(r), (this.feGaussianBlur = r);
+          (t.appendChild(r), (this.feGaussianBlur = r));
         }
         function SVGStrokeEffect(t, e) {
-          (this.initialized = !1),
+          ((this.initialized = !1),
             (this.filterManager = e),
             (this.elem = t),
-            (this.paths = []);
+            (this.paths = []));
         }
         function SVGTritoneFilter(t, e) {
           this.filterManager = e;
           var r = createNS("feColorMatrix");
-          r.setAttribute("type", "matrix"),
+          (r.setAttribute("type", "matrix"),
             r.setAttribute("color-interpolation-filters", "linearRGB"),
             r.setAttribute(
               "values",
               "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0",
             ),
             r.setAttribute("result", "f1"),
-            t.appendChild(r);
+            t.appendChild(r));
           var i = createNS("feComponentTransfer");
-          i.setAttribute("color-interpolation-filters", "sRGB"),
+          (i.setAttribute("color-interpolation-filters", "sRGB"),
             t.appendChild(i),
-            (this.matrixFilter = i);
+            (this.matrixFilter = i));
           var n = createNS("feFuncR");
-          n.setAttribute("type", "table"), i.appendChild(n), (this.feFuncR = n);
+          (n.setAttribute("type", "table"),
+            i.appendChild(n),
+            (this.feFuncR = n));
           var a = createNS("feFuncG");
-          a.setAttribute("type", "table"), i.appendChild(a), (this.feFuncG = a);
+          (a.setAttribute("type", "table"),
+            i.appendChild(a),
+            (this.feFuncG = a));
           var s = createNS("feFuncB");
-          s.setAttribute("type", "table"), i.appendChild(s), (this.feFuncB = s);
+          (s.setAttribute("type", "table"),
+            i.appendChild(s),
+            (this.feFuncB = s));
         }
         function SVGProLevelsFilter(t, e) {
           this.filterManager = e;
           var r = this.filterManager.effectElements,
             i = createNS("feComponentTransfer");
-          (r[10].p.k ||
+          ((r[10].p.k ||
             0 !== r[10].p.v ||
             r[11].p.k ||
             1 !== r[11].p.v ||
@@ -13439,52 +13475,52 @@
               t.appendChild(i),
               (this.feFuncRComposed = this.createFeFunc("feFuncR", i)),
               (this.feFuncGComposed = this.createFeFunc("feFuncG", i)),
-              (this.feFuncBComposed = this.createFeFunc("feFuncB", i)));
+              (this.feFuncBComposed = this.createFeFunc("feFuncB", i))));
         }
         function SVGDropShadowEffect(t, e) {
           var r = e.container.globalData.renderConfig.filterSize;
-          t.setAttribute("x", r.x),
+          (t.setAttribute("x", r.x),
             t.setAttribute("y", r.y),
             t.setAttribute("width", r.width),
             t.setAttribute("height", r.height),
-            (this.filterManager = e);
+            (this.filterManager = e));
           var i = createNS("feGaussianBlur");
-          i.setAttribute("in", "SourceAlpha"),
+          (i.setAttribute("in", "SourceAlpha"),
             i.setAttribute("result", "drop_shadow_1"),
             i.setAttribute("stdDeviation", "0"),
             (this.feGaussianBlur = i),
-            t.appendChild(i);
+            t.appendChild(i));
           var n = createNS("feOffset");
-          n.setAttribute("dx", "25"),
+          (n.setAttribute("dx", "25"),
             n.setAttribute("dy", "0"),
             n.setAttribute("in", "drop_shadow_1"),
             n.setAttribute("result", "drop_shadow_2"),
             (this.feOffset = n),
-            t.appendChild(n);
+            t.appendChild(n));
           var a = createNS("feFlood");
-          a.setAttribute("flood-color", "#00ff00"),
+          (a.setAttribute("flood-color", "#00ff00"),
             a.setAttribute("flood-opacity", "1"),
             a.setAttribute("result", "drop_shadow_3"),
             (this.feFlood = a),
-            t.appendChild(a);
+            t.appendChild(a));
           var s = createNS("feComposite");
-          s.setAttribute("in", "drop_shadow_3"),
+          (s.setAttribute("in", "drop_shadow_3"),
             s.setAttribute("in2", "drop_shadow_2"),
             s.setAttribute("operator", "in"),
             s.setAttribute("result", "drop_shadow_4"),
-            t.appendChild(s);
+            t.appendChild(s));
           var o,
             h = createNS("feMerge");
-          t.appendChild(h),
+          (t.appendChild(h),
             (o = createNS("feMergeNode")),
             h.appendChild(o),
             (o = createNS("feMergeNode")).setAttribute("in", "SourceGraphic"),
             (this.feMergeNode = o),
             (this.feMerge = h),
             (this.originalNodeAdded = !1),
-            h.appendChild(o);
+            h.appendChild(o));
         }
-        (ShapeTransformManager.prototype = {
+        ((ShapeTransformManager.prototype = {
           addTransformSequence: function (t) {
             var e,
               r = t.length,
@@ -13513,7 +13549,7 @@
             }
             if (a)
               for (t.finalTransform.reset(), i = n - 1; i >= 0; i -= 1)
-                (r = t.transforms[i].transform.mProps.v.props),
+                ((r = t.transforms[i].transform.mProps.v.props),
                   t.finalTransform.transform(
                     r[0],
                     r[1],
@@ -13531,7 +13567,7 @@
                     r[13],
                     r[14],
                     r[15],
-                  );
+                  ));
             t._mdf = a;
           },
           processSequences: function (t) {
@@ -13542,7 +13578,8 @@
           },
           getNewKey: function () {
             return (
-              (this.transform_key_count += 1), "_" + this.transform_key_count
+              (this.transform_key_count += 1),
+              "_" + this.transform_key_count
             );
           },
         }),
@@ -13562,15 +13599,15 @@
               return !1;
             },
             initExpressions: function () {
-              (this.layerInterface = LayerExpressionInterface(this)),
+              ((this.layerInterface = LayerExpressionInterface(this)),
                 this.data.hasMask &&
                   this.maskManager &&
-                  this.layerInterface.registerMaskInterface(this.maskManager);
+                  this.layerInterface.registerMaskInterface(this.maskManager));
               var t = EffectsExpressionInterface.createEffectsInterface(
                 this,
                 this.layerInterface,
               );
-              this.layerInterface.registerEffectsInterface(t),
+              (this.layerInterface.registerEffectsInterface(t),
                 0 === this.data.ty || this.data.xt
                   ? (this.compInterface = CompExpressionInterface(this))
                   : 4 === this.data.ty
@@ -13586,7 +13623,7 @@
                       ((this.layerInterface.textInterface =
                         TextExpressionInterface(this)),
                       (this.layerInterface.text =
-                        this.layerInterface.textInterface));
+                        this.layerInterface.textInterface)));
             },
             setBlendMode: function () {
               var t = getBlendMode(this.data.bm);
@@ -13594,7 +13631,7 @@
                 t;
             },
             initBaseData: function (t, e, r) {
-              (this.globalData = e),
+              ((this.globalData = e),
                 (this.comp = r),
                 (this.data = t),
                 (this.layerId = createElementID()),
@@ -13603,7 +13640,7 @@
                   this.data,
                   this,
                   this.dynamicProperties,
-                ));
+                )));
             },
             getType: function () {
               return this.type;
@@ -13629,10 +13666,10 @@
               this.layerElement = createNS("g");
             },
             createContainerElements: function () {
-              (this.matteElement = createNS("g")),
+              ((this.matteElement = createNS("g")),
                 (this.transformedElement = this.layerElement),
                 (this.maskedElement = this.layerElement),
-                (this._sizeChanged = !1);
+                (this._sizeChanged = !1));
               var t,
                 e,
                 r,
@@ -13640,7 +13677,7 @@
               if (this.data.td) {
                 if (3 == this.data.td || 1 == this.data.td) {
                   var n = createNS("mask");
-                  n.setAttribute("id", this.layerId),
+                  (n.setAttribute("id", this.layerId),
                     n.setAttribute(
                       "mask-type",
                       3 == this.data.td ? "luminance" : "alpha",
@@ -13663,24 +13700,24 @@
                       r.setAttribute(
                         "filter",
                         "url(" + locationHref + "#" + t + ")",
-                      ));
+                      )));
                 } else if (2 == this.data.td) {
                   var a = createNS("mask");
-                  a.setAttribute("id", this.layerId),
-                    a.setAttribute("mask-type", "alpha");
+                  (a.setAttribute("id", this.layerId),
+                    a.setAttribute("mask-type", "alpha"));
                   var s = createNS("g");
-                  a.appendChild(s),
+                  (a.appendChild(s),
                     (t = createElementID()),
-                    (e = filtersFactory.createFilter(t));
+                    (e = filtersFactory.createFilter(t)));
                   var o = createNS("feComponentTransfer");
-                  o.setAttribute("in", "SourceGraphic"), e.appendChild(o);
+                  (o.setAttribute("in", "SourceGraphic"), e.appendChild(o));
                   var h = createNS("feFuncA");
-                  h.setAttribute("type", "table"),
+                  (h.setAttribute("type", "table"),
                     h.setAttribute("tableValues", "1.0 0.0"),
                     o.appendChild(h),
-                    this.globalData.defs.appendChild(e);
+                    this.globalData.defs.appendChild(e));
                   var l = createNS("rect");
-                  l.setAttribute("width", this.comp.data.w),
+                  (l.setAttribute("width", this.comp.data.w),
                     l.setAttribute("height", this.comp.data.h),
                     l.setAttribute("x", "0"),
                     l.setAttribute("y", "0"),
@@ -13703,7 +13740,7 @@
                       r.appendChild(this.layerElement),
                       (i = r),
                       s.appendChild(r)),
-                    this.globalData.defs.appendChild(a);
+                    this.globalData.defs.appendChild(a));
                 }
               } else
                 this.data.tt
@@ -13740,7 +13777,7 @@
                   this.checkMasks())
                 ) {
                   var u = createNS("g");
-                  u.setAttribute(
+                  (u.setAttribute(
                     "clip-path",
                     "url(" + locationHref + "#" + f + ")",
                   ),
@@ -13748,7 +13785,7 @@
                     (this.transformedElement = u),
                     i
                       ? i.appendChild(this.transformedElement)
-                      : (this.baseElement = this.transformedElement);
+                      : (this.baseElement = this.transformedElement));
                 } else
                   this.layerElement.setAttribute(
                     "clip-path",
@@ -13758,7 +13795,7 @@
               0 !== this.data.bm && this.setBlendMode();
             },
             renderElement: function () {
-              this.finalTransform._matMdf &&
+              (this.finalTransform._matMdf &&
                 this.transformedElement.setAttribute(
                   "transform",
                   this.finalTransform.mat.to2dCSS(),
@@ -13767,23 +13804,23 @@
                   this.transformedElement.setAttribute(
                     "opacity",
                     this.finalTransform.mProp.o.v,
-                  );
+                  ));
             },
             destroyBaseElement: function () {
-              (this.layerElement = null),
+              ((this.layerElement = null),
                 (this.matteElement = null),
-                this.maskManager.destroy();
+                this.maskManager.destroy());
             },
             getBaseElement: function () {
               return this.data.hd ? null : this.baseElement;
             },
             createRenderableComponents: function () {
-              (this.maskManager = new MaskElement(
+              ((this.maskManager = new MaskElement(
                 this.data,
                 this,
                 this.globalData,
               )),
-                (this.renderableEffectsManager = new SVGEffects(this));
+                (this.renderableEffectsManager = new SVGEffects(this)));
             },
             setMatte: function (t) {
               this.matteElement &&
@@ -13836,12 +13873,12 @@
               r.push(new ProcessedElement(t, e));
             },
             prepareFrame: function (t) {
-              this.prepareRenderableFrame(t),
-                this.prepareProperties(t, this.isInRange);
+              (this.prepareRenderableFrame(t),
+                this.prepareProperties(t, this.isInRange));
             },
           }),
           (ITextElement.prototype.initElement = function (t, e, r) {
-            (this.lettersChangedFlag = !0),
+            ((this.lettersChangedFlag = !0),
               this.initFrame(),
               this.initBaseData(t, e, r),
               (this.textProperty = new TextProperty(
@@ -13862,16 +13899,16 @@
               this.createRenderableComponents(),
               this.createContent(),
               this.hide(),
-              this.textAnimator.searchProperties(this.dynamicProperties);
+              this.textAnimator.searchProperties(this.dynamicProperties));
           }),
           (ITextElement.prototype.prepareFrame = function (t) {
-            (this._mdf = !1),
+            ((this._mdf = !1),
               this.prepareRenderableFrame(t),
               this.prepareProperties(t, this.isInRange),
               (this.textProperty._mdf || this.textProperty._isFirstFrame) &&
                 (this.buildNewText(),
                 (this.textProperty._isFirstFrame = !1),
-                (this.textProperty._mdf = !1));
+                (this.textProperty._mdf = !1)));
           }),
           (ITextElement.prototype.createPathShape = function (t, e) {
             var r,
@@ -13879,7 +13916,7 @@
               n = e.length,
               a = "";
             for (r = 0; r < n; r += 1)
-              (i = e[r].ks.k), (a += buildShapeString(i, i.i.length, !0, t));
+              ((i = e[r].ks.k), (a += buildShapeString(i, i.i.length, !0, t)));
             return a;
           }),
           (ITextElement.prototype.updateDocumentData = function (t, e) {
@@ -13943,7 +13980,7 @@
             ICompElement,
           ),
           (ICompElement.prototype.initElement = function (t, e, r) {
-            this.initFrame(),
+            (this.initFrame(),
               this.initBaseData(t, e, r),
               this.initTransform(t, e, r),
               this.initRenderable(),
@@ -13952,7 +13989,7 @@
               this.createContainerElements(),
               this.createRenderableComponents(),
               (!this.data.xt && e.progressiveLoad) || this.buildAllItems(),
-              this.hide();
+              this.hide());
           }),
           (ICompElement.prototype.prepareFrame = function (t) {
             if (
@@ -13964,8 +14001,8 @@
               if (this.tm._placeholder) this.renderedFrame = t / this.data.sr;
               else {
                 var e = this.tm.v;
-                e === this.data.op && (e = this.data.op - 1),
-                  (this.renderedFrame = e);
+                (e === this.data.op && (e = this.data.op - 1),
+                  (this.renderedFrame = e));
               }
               var r,
                 i = this.elements.length;
@@ -14002,7 +14039,7 @@
               this.elements[t] && this.elements[t].destroy();
           }),
           (ICompElement.prototype.destroy = function () {
-            this.destroyElements(), this.destroyBaseElement();
+            (this.destroyElements(), this.destroyBaseElement());
           }),
           extendPrototype(
             [
@@ -14017,7 +14054,7 @@
           ),
           (IImageElement.prototype.createContent = function () {
             var t = this.globalData.getAssetsPath(this.assetData);
-            (this.innerElem = createNS("image")),
+            ((this.innerElem = createNS("image")),
               this.innerElem.setAttribute("width", this.assetData.w + "px"),
               this.innerElem.setAttribute("height", this.assetData.h + "px"),
               this.innerElem.setAttribute(
@@ -14030,7 +14067,7 @@
                 "href",
                 t,
               ),
-              this.layerElement.appendChild(this.innerElem);
+              this.layerElement.appendChild(this.innerElem));
           }),
           (IImageElement.prototype.sourceRectAtTime = function () {
             return this.sourceRect;
@@ -14038,10 +14075,10 @@
           extendPrototype([IImageElement], ISolidElement),
           (ISolidElement.prototype.createContent = function () {
             var t = createNS("rect");
-            t.setAttribute("width", this.data.sw),
+            (t.setAttribute("width", this.data.sw),
               t.setAttribute("height", this.data.sh),
               t.setAttribute("fill", this.data.sc),
-              this.layerElement.appendChild(t);
+              this.layerElement.appendChild(t));
           }),
           (AudioElement.prototype.prepareFrame = function (t) {
             if (
@@ -14077,10 +14114,10 @@
           }),
           (AudioElement.prototype.show = function () {}),
           (AudioElement.prototype.hide = function () {
-            this.audio.pause(), (this._isPlaying = !1);
+            (this.audio.pause(), (this._isPlaying = !1));
           }),
           (AudioElement.prototype.pause = function () {
-            this.audio.pause(), (this._isPlaying = !1), (this._canPlay = !1);
+            (this.audio.pause(), (this._isPlaying = !1), (this._canPlay = !1));
           }),
           (AudioElement.prototype.resume = function () {
             this._canPlay = !0;
@@ -14136,18 +14173,18 @@
           }),
           (SVGTextLottieElement.prototype.buildTextContents = function (t) {
             for (var e = 0, r = t.length, i = [], n = ""; e < r; )
-              t[e] === String.fromCharCode(13) ||
+              (t[e] === String.fromCharCode(13) ||
               t[e] === String.fromCharCode(3)
                 ? (i.push(n), (n = ""))
                 : (n += t[e]),
-                (e += 1);
-            return i.push(n), i;
+                (e += 1));
+            return (i.push(n), i);
           }),
           (SVGTextLottieElement.prototype.buildNewText = function () {
             var t,
               e,
               r = this.textProperty.currentData;
-            (this.renderedLetters = createSizedArray(r ? r.l.length : 0)),
+            ((this.renderedLetters = createSizedArray(r ? r.l.length : 0)),
               r.fc
                 ? this.layerElement.setAttribute("fill", this.buildColor(r.fc))
                 : this.layerElement.setAttribute("fill", "rgba(0,0,0,0)"),
@@ -14157,15 +14194,15 @@
                   this.buildColor(r.sc),
                 ),
                 this.layerElement.setAttribute("stroke-width", r.sw)),
-              this.layerElement.setAttribute("font-size", r.finalSize);
+              this.layerElement.setAttribute("font-size", r.finalSize));
             var i = this.globalData.fontManager.getFontByName(r.f);
             if (i.fClass) this.layerElement.setAttribute("class", i.fClass);
             else {
               this.layerElement.setAttribute("font-family", i.fFamily);
               var n = r.fWeight,
                 a = r.fStyle;
-              this.layerElement.setAttribute("font-style", a),
-                this.layerElement.setAttribute("font-weight", n);
+              (this.layerElement.setAttribute("font-style", a),
+                this.layerElement.setAttribute("font-weight", n));
             }
             this.layerElement.setAttribute("aria-label", r.t);
             var s,
@@ -14185,7 +14222,7 @@
                 v,
                 b = this.textSpans.length;
               for (t = 0; t < e; t += 1)
-                (h && f && 0 !== t) ||
+                ((h && f && 0 !== t) ||
                   ((s =
                     b > t ? this.textSpans[t] : createNS(h ? "path" : "text")),
                   b <= t &&
@@ -14228,7 +14265,7 @@
                         "http://www.w3.org/XML/1998/namespace",
                         "xml:space",
                         "preserve",
-                      ));
+                      )));
               f && s && s.setAttribute("d", c);
             } else {
               var x = this.textContainer,
@@ -14243,26 +14280,26 @@
                 default:
                   E = "start";
               }
-              x.setAttribute("text-anchor", E),
-                x.setAttribute("letter-spacing", y);
+              (x.setAttribute("text-anchor", E),
+                x.setAttribute("letter-spacing", y));
               var P = this.buildTextContents(r.finalText);
               for (
                 e = P.length, m = r.ps ? r.ps[1] + r.ascent : 0, t = 0;
                 t < e;
                 t += 1
               )
-                ((s = this.textSpans[t] || createNS("tspan")).textContent =
+                (((s = this.textSpans[t] || createNS("tspan")).textContent =
                   P[t]),
                   s.setAttribute("x", 0),
                   s.setAttribute("y", m),
                   (s.style.display = "inherit"),
                   x.appendChild(s),
                   (this.textSpans[t] = s),
-                  (m += r.finalLineHeight);
+                  (m += r.finalLineHeight));
               this.layerElement.appendChild(x);
             }
             for (; t < this.textSpans.length; )
-              (this.textSpans[t].style.display = "none"), (t += 1);
+              ((this.textSpans[t].style.display = "none"), (t += 1));
             this._sizeChanged = !0;
           }),
           (SVGTextLottieElement.prototype.sourceRectAtTime = function () {
@@ -14324,7 +14361,7 @@
           (SVGShapeElement.prototype.identityMatrix = new Matrix()),
           (SVGShapeElement.prototype.buildExpressionInterface = function () {}),
           (SVGShapeElement.prototype.createContent = function () {
-            this.searchShapes(
+            (this.searchShapes(
               this.shapesData,
               this.itemsData,
               this.prevViewData,
@@ -14333,7 +14370,7 @@
               [],
               !0,
             ),
-              this.filterUniqueShapes();
+              this.filterUniqueShapes());
           }),
           (SVGShapeElement.prototype.filterUniqueShapes = function () {
             var t,
@@ -14367,7 +14404,7 @@
             if ("st" === t.ty) r = new SVGStrokeStyleData(this, t, i);
             else if ("fl" === t.ty) r = new SVGFillStyleData(this, t, i);
             else if ("gf" === t.ty || "gs" === t.ty) {
-              (r = new (
+              ((r = new (
                 "gf" === t.ty
                   ? SVGGradientFillStyleData
                   : SVGGradientStrokeStyleData
@@ -14379,7 +14416,7 @@
                   n.setAttribute(
                     "mask",
                     "url(" + locationHref + "#" + r.maskId + ")",
-                  ));
+                  )));
             }
             return (
               ("st" !== t.ty && "gs" !== t.ty) ||
@@ -14412,7 +14449,7 @@
                 this,
               ),
               i = new SVGTransformData(r, r.o, e);
-            return this.addToAnimatedContents(t, i), i;
+            return (this.addToAnimatedContents(t, i), i);
           }),
           (SVGShapeElement.prototype.createShapeElement = function (t, e, r) {
             var i = 4;
@@ -14504,17 +14541,17 @@
                   "gf" === t[o].ty ||
                   "gs" === t[o].ty)
               )
-                f
+                (f
                   ? (e[o].style.closed = !1)
                   : (e[o] = this.createStyleElement(t[o], n)),
                   t[o]._render && i.appendChild(e[o].style.pElem),
-                  d.push(e[o].style);
+                  d.push(e[o].style));
               else if ("gr" === t[o].ty) {
                 if (f)
                   for (l = e[o].it.length, h = 0; h < l; h += 1)
                     e[o].prevViewData[h] = e[o].it[h];
                 else e[o] = this.createGroupElement(t[o]);
-                this.searchShapes(
+                (this.searchShapes(
                   t[o].it,
                   e[o].it,
                   e[o].prevViewData,
@@ -14523,7 +14560,7 @@
                   u,
                   s,
                 ),
-                  t[o]._render && i.appendChild(e[o].gr);
+                  t[o]._render && i.appendChild(e[o].gr));
               } else
                 "tr" === t[o].ty
                   ? (f || (e[o] = this.createTransformElement(t[o], i)),
@@ -14585,15 +14622,15 @@
               e,
               r = this.animatedContents.length;
             for (t = 0; t < r; t += 1)
-              (e = this.animatedContents[t]),
+              ((e = this.animatedContents[t]),
                 (this._isFirstFrame || e.element._isAnimated) &&
                   !0 !== e.data &&
-                  e.fn(e.data, e.element, this._isFirstFrame);
+                  e.fn(e.data, e.element, this._isFirstFrame));
           }),
           (SVGShapeElement.prototype.destroy = function () {
-            this.destroyBaseElement(),
+            (this.destroyBaseElement(),
               (this.shapesData = null),
-              (this.itemsData = null);
+              (this.itemsData = null));
           }),
           (SVGTintFilter.prototype.renderFrame = function (t) {
             if (t || this.filterManager._mdf) {
@@ -14670,16 +14707,16 @@
               r < i;
               r += 1
             )
-              (t = createNS("path")),
+              ((t = createNS("path")),
                 e.appendChild(t),
-                this.paths.push({ p: t, m: r });
+                this.paths.push({ p: t, m: r }));
             if (3 === this.filterManager.effectElements[10].p.v) {
               var a = createNS("mask"),
                 s = createElementID();
-              a.setAttribute("id", s),
+              (a.setAttribute("id", s),
                 a.setAttribute("mask-type", "alpha"),
                 a.appendChild(e),
-                this.elem.globalData.defs.appendChild(a);
+                this.elem.globalData.defs.appendChild(a));
               var o = createNS("g");
               for (
                 o.setAttribute("mask", "url(" + locationHref + "#" + s + ")");
@@ -14687,9 +14724,9 @@
 
               )
                 o.appendChild(n[0]);
-              this.elem.layerElement.appendChild(o),
+              (this.elem.layerElement.appendChild(o),
                 (this.masker = a),
-                e.setAttribute("stroke", "#fff");
+                e.setAttribute("stroke", "#fff"));
             } else if (
               1 === this.filterManager.effectElements[10].p.v ||
               2 === this.filterManager.effectElements[10].p.v
@@ -14703,11 +14740,11 @@
 
                 )
                   this.elem.layerElement.removeChild(n[0]);
-              this.elem.layerElement.appendChild(e),
+              (this.elem.layerElement.appendChild(e),
                 this.elem.layerElement.removeAttribute("mask"),
-                e.setAttribute("stroke", "#fff");
+                e.setAttribute("stroke", "#fff"));
             }
-            (this.initialized = !0), (this.pathMasker = e);
+            ((this.initialized = !0), (this.pathMasker = e));
           }),
           (SVGStrokeEffect.prototype.renderFrame = function (t) {
             var e;
@@ -14811,14 +14848,14 @@
                 n = i[0] + " " + r[0] + " " + e[0],
                 a = i[1] + " " + r[1] + " " + e[1],
                 s = i[2] + " " + r[2] + " " + e[2];
-              this.feFuncR.setAttribute("tableValues", n),
+              (this.feFuncR.setAttribute("tableValues", n),
                 this.feFuncG.setAttribute("tableValues", a),
-                this.feFuncB.setAttribute("tableValues", s);
+                this.feFuncB.setAttribute("tableValues", s));
             }
           }),
           (SVGProLevelsFilter.prototype.createFeFunc = function (t, e) {
             var r = createNS(t);
-            return r.setAttribute("type", "table"), e.appendChild(r), r;
+            return (r.setAttribute("type", "table"), e.appendChild(r), r);
           }),
           (SVGProLevelsFilter.prototype.getTableValue = function (
             t,
@@ -14840,7 +14877,7 @@
               o <= 256;
 
             )
-              (s =
+              ((s =
                 (a = o / 256) <= h
                   ? u < 0
                     ? n
@@ -14852,14 +14889,14 @@
                     : i + f * Math.pow((a - t) / u, 1 / r)),
                 (p[c] = s),
                 (c += 1),
-                (o += 256 / 255);
+                (o += 256 / 255));
             return p.join(" ");
           }),
           (SVGProLevelsFilter.prototype.renderFrame = function (t) {
             if (t || this.filterManager._mdf) {
               var e,
                 r = this.filterManager.effectElements;
-              this.feFuncRComposed &&
+              (this.feFuncRComposed &&
                 (t ||
                   r[3].p._mdf ||
                   r[4].p._mdf ||
@@ -14935,7 +14972,7 @@
                     r[34].p.v,
                     r[35].p.v,
                   )),
-                  this.feFuncA.setAttribute("tableValues", e));
+                  this.feFuncA.setAttribute("tableValues", e)));
             }
           }),
           (SVGDropShadowEffect.prototype.renderFrame = function (t) {
@@ -14973,21 +15010,21 @@
                     (this.filterManager.effectElements[2].p.v - 90) * degToRads,
                   n = r * Math.cos(i),
                   a = r * Math.sin(i);
-                this.feOffset.setAttribute("dx", n),
-                  this.feOffset.setAttribute("dy", a);
+                (this.feOffset.setAttribute("dx", n),
+                  this.feOffset.setAttribute("dy", a));
               }
             }
-          });
+          }));
         var _svgMatteSymbols = [];
         function SVGMatte3Effect(t, e, r) {
-          (this.initialized = !1),
+          ((this.initialized = !1),
             (this.filterManager = e),
             (this.filterElem = t),
             (this.elem = r),
             (r.matteElement = createNS("g")),
             r.matteElement.appendChild(r.layerElement),
             r.matteElement.appendChild(r.transformedElement),
-            (r.baseElement = r.matteElement);
+            (r.baseElement = r.matteElement));
         }
         function SVGEffects(t) {
           var e,
@@ -14997,7 +15034,7 @@
             a = filtersFactory.createFilter(n, !0),
             s = 0;
           for (this.filters = [], e = 0; e < i; e += 1)
-            (r = null),
+            ((r = null),
               20 === t.data.ef[e].ty
                 ? ((s += 1),
                   (r = new SVGTintFilter(
@@ -15045,21 +15082,21 @@
                                 a,
                                 t.effectsManager.effectElements[e],
                               ))),
-              r && this.filters.push(r);
-          s &&
+              r && this.filters.push(r));
+          (s &&
             (t.globalData.defs.appendChild(a),
             t.layerElement.setAttribute(
               "filter",
               "url(" + locationHref + "#" + n + ")",
             )),
-            this.filters.length && t.addRenderableComponent(this);
+            this.filters.length && t.addRenderableComponent(this));
         }
         function CVContextData() {
           var t;
-          (this.saved = []),
+          ((this.saved = []),
             (this.cArrPos = 0),
             (this.cTr = new Matrix()),
-            (this.cO = 1);
+            (this.cO = 1));
           for (
             this.savedOp = createTypedArray("float32", 15), t = 0;
             t < 15;
@@ -15070,39 +15107,39 @@
         }
         function CVBaseElement() {}
         function CVImageElement(t, e, r) {
-          (this.assetData = e.getAssetData(t.refId)),
+          ((this.assetData = e.getAssetData(t.refId)),
             (this.img = e.imageLoader.getAsset(this.assetData)),
-            this.initElement(t, e, r);
+            this.initElement(t, e, r));
         }
         function CVCompElement(t, e, r) {
-          (this.completeLayers = !1),
+          ((this.completeLayers = !1),
             (this.layers = t.layers),
             (this.pendingElements = []),
             (this.elements = createSizedArray(this.layers.length)),
             this.initElement(t, e, r),
             (this.tm = t.tm
               ? PropertyFactory.getProp(this, t.tm, 0, e.frameRate, this)
-              : { _placeholder: !0 });
+              : { _placeholder: !0 }));
         }
         function CVMaskElement(t, e) {
           var r;
-          (this.data = t),
+          ((this.data = t),
             (this.element = e),
             (this.masksProperties = this.data.masksProperties || []),
-            (this.viewData = createSizedArray(this.masksProperties.length));
+            (this.viewData = createSizedArray(this.masksProperties.length)));
           var i = this.masksProperties.length,
             n = !1;
           for (r = 0; r < i; r += 1)
-            "n" !== this.masksProperties[r].mode && (n = !0),
+            ("n" !== this.masksProperties[r].mode && (n = !0),
               (this.viewData[r] = ShapePropertyFactory.getShapeProp(
                 this.element,
                 this.masksProperties[r],
                 3,
-              ));
-          (this.hasMasks = n), n && this.element.addRenderableComponent(this);
+              )));
+          ((this.hasMasks = n), n && this.element.addRenderableComponent(this));
         }
         function CVShapeElement(t, e, r) {
-          (this.shapes = []),
+          ((this.shapes = []),
             (this.shapesData = t.shapes),
             (this.stylesList = []),
             (this.itemsData = []),
@@ -15110,13 +15147,13 @@
             (this.shapeModifiers = []),
             (this.processedElements = []),
             (this.transformsManager = new ShapeTransformManager()),
-            this.initElement(t, e, r);
+            this.initElement(t, e, r));
         }
         function CVSolidElement(t, e, r) {
           this.initElement(t, e, r);
         }
         function CVTextElement(t, e, r) {
-          (this.textSpans = []),
+          ((this.textSpans = []),
             (this.yOffset = 0),
             (this.fillColorAnim = !1),
             (this.strokeColorAnim = !1),
@@ -15132,7 +15169,7 @@
               sWidth: 0,
               fValue: "",
             }),
-            this.initElement(t, e, r);
+            this.initElement(t, e, r));
         }
         function CVEffects() {}
         function HBaseElement() {}
@@ -15140,7 +15177,7 @@
           this.initElement(t, e, r);
         }
         function HCompElement(t, e, r) {
-          (this.layers = t.layers),
+          ((this.layers = t.layers),
             (this.supports3d = !t.hasMask),
             (this.completeLayers = !1),
             (this.pendingElements = []),
@@ -15150,10 +15187,10 @@
             this.initElement(t, e, r),
             (this.tm = t.tm
               ? PropertyFactory.getProp(this, t.tm, 0, e.frameRate, this)
-              : { _placeholder: !0 });
+              : { _placeholder: !0 }));
         }
         function HShapeElement(t, e, r) {
-          (this.shapes = []),
+          ((this.shapes = []),
             (this.shapesData = t.shapes),
             (this.stylesList = []),
             (this.shapeModifiers = []),
@@ -15163,21 +15200,22 @@
             (this.shapesContainer = createNS("g")),
             this.initElement(t, e, r),
             (this.prevViewData = []),
-            (this.currentBBox = { x: 999999, y: -999999, h: 0, w: 0 });
+            (this.currentBBox = { x: 999999, y: -999999, h: 0, w: 0 }));
         }
         function HTextElement(t, e, r) {
-          (this.textSpans = []),
+          ((this.textSpans = []),
             (this.textPaths = []),
             (this.currentBBox = { x: 999999, y: -999999, h: 0, w: 0 }),
             (this.renderType = "svg"),
             (this.isMasked = !1),
-            this.initElement(t, e, r);
+            this.initElement(t, e, r));
         }
         function HImageElement(t, e, r) {
-          (this.assetData = e.getAssetData(t.refId)), this.initElement(t, e, r);
+          ((this.assetData = e.getAssetData(t.refId)),
+            this.initElement(t, e, r));
         }
         function HCameraElement(t, e, r) {
-          this.initFrame(), this.initBaseData(t, e, r), this.initHierarchy();
+          (this.initFrame(), this.initBaseData(t, e, r), this.initHierarchy());
           var i = PropertyFactory.getProp;
           if (
             ((this.pe = i(this, t.pe, 0, 0, this)),
@@ -15192,9 +15230,9 @@
             var n,
               a = t.ks.or.k.length;
             for (n = 0; n < a; n += 1)
-              (t.ks.or.k[n].to = null), (t.ks.or.k[n].ti = null);
+              ((t.ks.or.k[n].to = null), (t.ks.or.k[n].ti = null));
           }
-          (this.or = i(this, t.ks.or, 1, degToRads, this)),
+          ((this.or = i(this, t.ks.or, 1, degToRads, this)),
             (this.or.sh = !0),
             (this.rx = i(this, t.ks.rx, 0, degToRads, this)),
             (this.ry = i(this, t.ks.ry, 0, degToRads, this)),
@@ -15202,10 +15240,10 @@
             (this.mat = new Matrix()),
             (this._prevMat = new Matrix()),
             (this._isFirstFrame = !0),
-            (this.finalTransform = { mProp: this });
+            (this.finalTransform = { mProp: this }));
         }
         function HEffects() {}
-        (SVGMatte3Effect.prototype.findSymbol = function (t) {
+        ((SVGMatte3Effect.prototype.findSymbol = function (t) {
           for (var e = 0, r = _svgMatteSymbols.length; e < r; ) {
             if (_svgMatteSymbols[e] === t) return _svgMatteSymbols[e];
             e += 1;
@@ -15223,29 +15261,29 @@
                 a += 1;
               a <= s - 2 && (i = n[a + 1]);
               var o = createNS("use");
-              o.setAttribute("href", "#" + e),
-                i ? r.insertBefore(o, i) : r.appendChild(o);
+              (o.setAttribute("href", "#" + e),
+                i ? r.insertBefore(o, i) : r.appendChild(o));
             }
           }),
           (SVGMatte3Effect.prototype.setElementAsMask = function (t, e) {
             if (!this.findSymbol(e)) {
               var r = createElementID(),
                 i = createNS("mask");
-              i.setAttribute("id", e.layerId),
+              (i.setAttribute("id", e.layerId),
                 i.setAttribute("mask-type", "alpha"),
-                _svgMatteSymbols.push(e);
+                _svgMatteSymbols.push(e));
               var n = t.globalData.defs;
               n.appendChild(i);
               var a = createNS("symbol");
-              a.setAttribute("id", r),
+              (a.setAttribute("id", r),
                 this.replaceInParent(e, r),
                 a.appendChild(e.layerElement),
-                n.appendChild(a);
+                n.appendChild(a));
               var s = createNS("use");
-              s.setAttribute("href", "#" + r),
+              (s.setAttribute("href", "#" + r),
                 i.appendChild(s),
                 (e.data.hd = !1),
-                e.show();
+                e.show());
             }
             t.setMatte(e.layerId);
           }),
@@ -15258,10 +15296,10 @@
               r < i;
 
             )
-              e[r] &&
+              (e[r] &&
                 e[r].data.ind === t &&
                 this.setElementAsMask(this.elem, e[r]),
-                (r += 1);
+                (r += 1));
             this.initialized = !0;
           }),
           (SVGMatte3Effect.prototype.renderFrame = function () {
@@ -15275,22 +15313,22 @@
           (CVContextData.prototype.duplicate = function () {
             var t = 2 * this._length,
               e = this.savedOp;
-            (this.savedOp = createTypedArray("float32", t)),
-              this.savedOp.set(e);
+            ((this.savedOp = createTypedArray("float32", t)),
+              this.savedOp.set(e));
             var r = 0;
             for (r = this._length; r < t; r += 1)
               this.saved[r] = createTypedArray("float32", 16);
             this._length = t;
           }),
           (CVContextData.prototype.reset = function () {
-            (this.cArrPos = 0), this.cTr.reset(), (this.cO = 1);
+            ((this.cArrPos = 0), this.cTr.reset(), (this.cO = 1));
           }),
           (CVBaseElement.prototype = {
             createElements: function () {},
             initRendererElement: function () {},
             createContainerElements: function () {
-              (this.canvasContext = this.globalData.canvasContext),
-                (this.renderableEffectsManager = new CVEffects(this));
+              ((this.canvasContext = this.globalData.canvasContext),
+                (this.renderableEffectsManager = new CVEffects(this)));
             },
             createContent: function () {},
             setBlendMode: function () {
@@ -15318,11 +15356,11 @@
             },
             renderFrame: function () {
               if (!this.hidden && !this.data.hd) {
-                this.renderTransform(),
+                (this.renderTransform(),
                   this.renderRenderable(),
-                  this.setBlendMode();
+                  this.setBlendMode());
                 var t = 0 === this.data.ty;
-                this.globalData.renderer.save(t),
+                (this.globalData.renderer.save(t),
                   this.globalData.renderer.ctxTransform(
                     this.finalTransform.mat.props,
                   ),
@@ -15333,14 +15371,14 @@
                   this.globalData.renderer.restore(t),
                   this.maskManager.hasMasks &&
                     this.globalData.renderer.restore(!0),
-                  this._isFirstFrame && (this._isFirstFrame = !1);
+                  this._isFirstFrame && (this._isFirstFrame = !1));
               }
             },
             destroy: function () {
-              (this.canvasContext = null),
+              ((this.canvasContext = null),
                 (this.data = null),
                 (this.globalData = null),
-                this.maskManager.destroy();
+                this.maskManager.destroy());
             },
             mHelper: new Matrix(),
           }),
@@ -15368,7 +15406,7 @@
                 this.assetData.h !== this.img.height)
             ) {
               var t = createTag("canvas");
-              (t.width = this.assetData.w), (t.height = this.assetData.h);
+              ((t.width = this.assetData.w), (t.height = this.assetData.h));
               var e,
                 r,
                 i = t.getContext("2d"),
@@ -15379,7 +15417,7 @@
                 h =
                   this.assetData.pr ||
                   this.globalData.renderConfig.imagePreserveAspectRatio;
-              (s > o && "xMidYMid slice" === h) ||
+              ((s > o && "xMidYMid slice" === h) ||
               (s < o && "xMidYMid slice" !== h)
                 ? (e = (r = a) * o)
                 : (r = (e = n) / o),
@@ -15394,7 +15432,7 @@
                   this.assetData.w,
                   this.assetData.h,
                 ),
-                (this.img = t);
+                (this.img = t));
             }
           }),
           (CVImageElement.prototype.renderInnerContent = function () {
@@ -15429,7 +15467,7 @@
             var t;
             for (t = this.layers.length - 1; t >= 0; t -= 1)
               this.elements[t] && this.elements[t].destroy();
-            (this.layers = null), (this.elements = null);
+            ((this.layers = null), (this.elements = null));
           }),
           (CVMaskElement.prototype.renderFrame = function () {
             if (this.hasMasks) {
@@ -15443,7 +15481,7 @@
               for (a.beginPath(), t = 0; t < s; t += 1)
                 if ("n" !== this.masksProperties[t].mode) {
                   var o;
-                  this.masksProperties[t].inv &&
+                  (this.masksProperties[t].inv &&
                     (a.moveTo(0, 0),
                     a.lineTo(this.element.globalData.compSize.w, 0),
                     a.lineTo(
@@ -15454,15 +15492,15 @@
                     a.lineTo(0, 0)),
                     (i = this.viewData[t].v),
                     (e = n.applyToPointArray(i.v[0][0], i.v[0][1], 0)),
-                    a.moveTo(e[0], e[1]);
+                    a.moveTo(e[0], e[1]));
                   var h = i._length;
                   for (o = 1; o < h; o += 1)
-                    (r = n.applyToTriplePoints(i.o[o - 1], i.i[o], i.v[o])),
-                      a.bezierCurveTo(r[0], r[1], r[2], r[3], r[4], r[5]);
-                  (r = n.applyToTriplePoints(i.o[o - 1], i.i[0], i.v[0])),
-                    a.bezierCurveTo(r[0], r[1], r[2], r[3], r[4], r[5]);
+                    ((r = n.applyToTriplePoints(i.o[o - 1], i.i[o], i.v[o])),
+                      a.bezierCurveTo(r[0], r[1], r[2], r[3], r[4], r[5]));
+                  ((r = n.applyToTriplePoints(i.o[o - 1], i.i[0], i.v[0])),
+                    a.bezierCurveTo(r[0], r[1], r[2], r[3], r[4], r[5]));
                 }
-              this.element.globalData.renderer.save(!0), a.clip();
+              (this.element.globalData.renderer.save(!0), a.clip());
             }
           }),
           (CVMaskElement.prototype.getMaskProperty =
@@ -15550,11 +15588,12 @@
                 t.d)
               ) {
                 var n = new DashProperty(this, t.d, "canvas", this);
-                (i.d = n),
-                  i.d.k || ((r.da = i.d.dashArray), (r.do = i.d.dashoffset[0]));
+                ((i.d = n),
+                  i.d.k ||
+                    ((r.da = i.d.dashArray), (r.do = i.d.dashoffset[0])));
               }
             } else r.r = 2 === t.r ? "evenodd" : "nonzero";
-            return this.stylesList.push(r), (i.style = r), i;
+            return (this.stylesList.push(r), (i.style = r), i);
           }),
           (CVShapeElement.prototype.createGroupElement = function () {
             return { it: [], prevViewData: [] };
@@ -15581,7 +15620,7 @@
               this.stylesList,
               this.transformsManager,
             );
-            return this.shapes.push(e), this.addShapeToModifiers(e), e;
+            return (this.shapes.push(e), this.addShapeToModifiers(e), e);
           }),
           (CVShapeElement.prototype.reloadShapes = function () {
             var t;
@@ -15602,8 +15641,8 @@
               t += 1
             )
               this.dynamicProperties[t].getValue();
-            this.renderModifiers(),
-              this.transformsManager.processSequences(this._isFirstFrame);
+            (this.renderModifiers(),
+              this.transformsManager.processSequences(this._isFirstFrame));
           }),
           (CVShapeElement.prototype.addTransformToStyleList = function (t) {
             var e,
@@ -15644,10 +15683,10 @@
                   "gf" === t[a].ty ||
                   "gs" === t[a].ty)
               )
-                h
+                (h
                   ? (e[a].style.closed = !1)
                   : (e[a] = this.createStyleElement(t[a], m)),
-                  f.push(e[a].style);
+                  f.push(e[a].style));
               else if ("gr" === t[a].ty) {
                 if (h)
                   for (o = e[a].it.length, s = 0; s < o; s += 1)
@@ -15696,7 +15735,7 @@
               u[a].closed = !0;
           }),
           (CVShapeElement.prototype.renderInnerContent = function () {
-            (this.transformHelper.opacity = 1),
+            ((this.transformHelper.opacity = 1),
               (this.transformHelper._opMdf = !1),
               this.renderModifiers(),
               this.transformsManager.processSequences(this._isFirstFrame),
@@ -15705,7 +15744,7 @@
                 this.shapesData,
                 this.itemsData,
                 !0,
-              );
+              ));
           }),
           (CVShapeElement.prototype.renderShapeTransform = function (t, e) {
             (t._opMdf || e.op._mdf || this._isFirstFrame) &&
@@ -15774,7 +15813,7 @@
                   ("st" !== o && "gs" !== o) ||
                     (c.stroke(), h.da && c.setLineDash(this.dashResetter));
                 }
-                "st" !== o && "gs" !== o && c.fill(h.r), p.restore();
+                ("st" !== o && "gs" !== o && c.fill(h.r), p.restore());
               }
           }),
           (CVShapeElement.prototype.renderShape = function (t, e, r, i) {
@@ -15812,7 +15851,7 @@
                 var l = s.shapes[n];
                 if (l && l.v) {
                   for (i = l._length, r = 1; r < i; r += 1)
-                    1 === r &&
+                    (1 === r &&
                       a.push({
                         t: "m",
                         p: h.applyToPointArray(l.v[0][0], l.v[0][1], 0),
@@ -15820,8 +15859,8 @@
                       a.push({
                         t: "c",
                         pts: h.applyToTriplePoints(l.o[r - 1], l.i[r], l.v[r]),
-                      });
-                  1 === i &&
+                      }));
+                  (1 === i &&
                     a.push({
                       t: "m",
                       p: h.applyToPointArray(l.v[0][0], l.v[0][1], 0),
@@ -15832,7 +15871,7 @@
                         t: "c",
                         pts: h.applyToTriplePoints(l.o[r - 1], l.i[0], l.v[0]),
                       }),
-                      a.push({ t: "z" }));
+                      a.push({ t: "z" })));
                 }
               }
               t.trNodes = a;
@@ -15848,7 +15887,7 @@
           }),
           (CVShapeElement.prototype.renderFill = function (t, e, r) {
             var i = e.style;
-            (e.c._mdf || this._isFirstFrame) &&
+            ((e.c._mdf || this._isFirstFrame) &&
               (i.co =
                 "rgb(" +
                 bmFloor(e.c.v[0]) +
@@ -15858,7 +15897,7 @@
                 bmFloor(e.c.v[2]) +
                 ")"),
               (e.o._mdf || r._opMdf || this._isFirstFrame) &&
-                (i.coOp = e.o.v * r.opacity);
+                (i.coOp = e.o.v * r.opacity));
           }),
           (CVShapeElement.prototype.renderGradientFill = function (t, e, r) {
             var i,
@@ -15891,7 +15930,7 @@
                 y = e.g.c,
                 g = 1;
               for (a = 0; a < d; a += 1)
-                e.g._hasOpacity && e.g._collapsable && (g = e.g.o[2 * a + 1]),
+                (e.g._hasOpacity && e.g._collapsable && (g = e.g.o[2 * a + 1]),
                   i.addColorStop(
                     y[4 * a] / 100,
                     "rgba(" +
@@ -15903,7 +15942,7 @@
                       "," +
                       g +
                       ")",
-                  );
+                  ));
               n.grd = i;
             }
             n.coOp = e.o.v * r.opacity;
@@ -15911,7 +15950,7 @@
           (CVShapeElement.prototype.renderStroke = function (t, e, r) {
             var i = e.style,
               n = e.d;
-            n &&
+            (n &&
               (n._mdf || this._isFirstFrame) &&
               ((i.da = n.dashArray), (i.do = n.dashoffset[0])),
               (e.c._mdf || this._isFirstFrame) &&
@@ -15925,14 +15964,14 @@
                   ")"),
               (e.o._mdf || r._opMdf || this._isFirstFrame) &&
                 (i.coOp = e.o.v * r.opacity),
-              (e.w._mdf || this._isFirstFrame) && (i.wi = e.w.v);
+              (e.w._mdf || this._isFirstFrame) && (i.wi = e.w.v));
           }),
           (CVShapeElement.prototype.destroy = function () {
-            (this.shapesData = null),
+            ((this.shapesData = null),
               (this.globalData = null),
               (this.canvasContext = null),
               (this.stylesList.length = 0),
-              (this.itemsData.length = 0);
+              (this.itemsData.length = 0));
           }),
           extendPrototype(
             [
@@ -15951,8 +15990,8 @@
             IImageElement.prototype.prepareFrame),
           (CVSolidElement.prototype.renderInnerContent = function () {
             var t = this.canvasContext;
-            (t.fillStyle = this.data.sc),
-              t.fillRect(0, 0, this.data.sw, this.data.sh);
+            ((t.fillStyle = this.data.sc),
+              t.fillRect(0, 0, this.data.sw, this.data.sh));
           }),
           extendPrototype(
             [
@@ -15972,10 +16011,10 @@
             var t = this.textProperty.currentData;
             this.renderedLetters = createSizedArray(t.l ? t.l.length : 0);
             var e = !1;
-            t.fc
+            (t.fc
               ? ((e = !0), (this.values.fill = this.buildColor(t.fc)))
               : (this.values.fill = "rgba(0,0,0,0)"),
-              (this.fill = e);
+              (this.fill = e));
             var r = !1;
             t.sc &&
               ((r = !0),
@@ -15996,12 +16035,12 @@
               d = this.globalData.fontManager.getFontByName(t.f),
               y = t.l,
               g = this.mHelper;
-            (this.stroke = r),
+            ((this.stroke = r),
               (this.values.fValue =
                 t.finalSize +
                 "px " +
                 this.globalData.fontManager.getFontByName(t.f).fFamily),
-              (n = t.finalText.length);
+              (n = t.finalText.length));
             var v = this.data.singleShape,
               b = 0.001 * t.tr * t.finalSize,
               x = 0,
@@ -16035,7 +16074,7 @@
                   o < h;
                   o += 1
                 )
-                  1 === o &&
+                  (1 === o &&
                     m.push(
                       g.applyToX(f.v[0][0], f.v[0][1], 0),
                       g.applyToY(f.v[0][0], f.v[0][1], 0),
@@ -16047,8 +16086,8 @@
                       g.applyToY(f.i[o][0], f.i[o][1], 0),
                       g.applyToX(f.v[o][0], f.v[o][1], 0),
                       g.applyToY(f.v[o][0], f.v[o][1], 0),
-                    );
-                m.push(
+                    ));
+                (m.push(
                   g.applyToX(f.o[o - 1][0], f.o[o - 1][1], 0),
                   g.applyToY(f.o[o - 1][0], f.o[o - 1][1], 0),
                   g.applyToX(f.i[0][0], f.i[0][1], 0),
@@ -16056,13 +16095,13 @@
                   g.applyToX(f.v[0][0], f.v[0][1], 0),
                   g.applyToY(f.v[0][0], f.v[0][1], 0),
                 ),
-                  (u[p] = m);
+                  (u[p] = m));
               }
-              v && ((x += y[i].l), (x += b)),
+              (v && ((x += y[i].l), (x += b)),
                 this.textSpans[S]
                   ? (this.textSpans[S].elem = u)
                   : (this.textSpans[S] = { elem: u }),
-                (S += 1);
+                (S += 1));
             }
           }),
           (CVTextElement.prototype.renderInnerContent = function () {
@@ -16073,7 +16112,7 @@
               n,
               a,
               s = this.canvasContext;
-            (s.font = this.values.fValue),
+            ((s.font = this.values.fValue),
               (s.lineCap = "butt"),
               (s.lineJoin = "miter"),
               (s.miterLimit = 4),
@@ -16081,7 +16120,7 @@
                 this.textAnimator.getMeasures(
                   this.textProperty.currentData,
                   this.lettersChangedFlag,
-                );
+                ));
             var o,
               h = this.textAnimator.renderedLetters,
               l = this.textProperty.currentData.l;
@@ -16127,8 +16166,8 @@
                         c[n + 4],
                         c[n + 5],
                       );
-                  this.globalData.canvasContext.closePath(),
-                    this.globalData.canvasContext.fill();
+                  (this.globalData.canvasContext.closePath(),
+                    this.globalData.canvasContext.fill());
                 }
                 if (this.stroke) {
                   for (
@@ -16163,8 +16202,8 @@
                         c[n + 4],
                         c[n + 5],
                       );
-                  this.globalData.canvasContext.closePath(),
-                    this.globalData.canvasContext.stroke();
+                  (this.globalData.canvasContext.closePath(),
+                    this.globalData.canvasContext.stroke());
                 }
                 o && this.globalData.renderer.restore();
               }
@@ -16173,7 +16212,7 @@
           (HBaseElement.prototype = {
             checkBlendMode: function () {},
             initRendererElement: function () {
-              (this.baseElement = createTag(this.data.tg || "div")),
+              ((this.baseElement = createTag(this.data.tg || "div")),
                 this.data.hasMask
                   ? ((this.svgElement = createNS("svg")),
                     (this.layerElement = createNS("g")),
@@ -16181,17 +16220,17 @@
                     this.svgElement.appendChild(this.layerElement),
                     this.baseElement.appendChild(this.svgElement))
                   : (this.layerElement = this.baseElement),
-                styleDiv(this.baseElement);
+                styleDiv(this.baseElement));
             },
             createContainerElements: function () {
-              (this.renderableEffectsManager = new CVEffects(this)),
+              ((this.renderableEffectsManager = new CVEffects(this)),
                 (this.transformedElement = this.baseElement),
                 (this.maskedElement = this.layerElement),
                 this.data.ln &&
                   this.layerElement.setAttribute("id", this.data.ln),
                 this.data.cl &&
                   this.layerElement.setAttribute("class", this.data.cl),
-                0 !== this.data.bm && this.setBlendMode();
+                0 !== this.data.bm && this.setBlendMode());
             },
             renderElement: function () {
               var t = this.transformedElement
@@ -16199,7 +16238,7 @@
                 : {};
               if (this.finalTransform._matMdf) {
                 var e = this.finalTransform.mat.toCSS();
-                (t.transform = e), (t.webkitTransform = e);
+                ((t.transform = e), (t.webkitTransform = e));
               }
               this.finalTransform._opMdf &&
                 (t.opacity = this.finalTransform.mProp.o.v);
@@ -16214,11 +16253,11 @@
                 this._isFirstFrame && (this._isFirstFrame = !1));
             },
             destroy: function () {
-              (this.layerElement = null),
+              ((this.layerElement = null),
                 (this.transformedElement = null),
                 this.matteElement && (this.matteElement = null),
                 this.maskManager &&
-                  (this.maskManager.destroy(), (this.maskManager = null));
+                  (this.maskManager.destroy(), (this.maskManager = null)));
             },
             createRenderableComponents: function () {
               this.maskManager = new MaskElement(
@@ -16249,7 +16288,7 @@
           ),
           (HSolidElement.prototype.createContent = function () {
             var t;
-            this.data.hasMask
+            (this.data.hasMask
               ? ((t = createNS("rect")).setAttribute("width", this.data.sw),
                 t.setAttribute("height", this.data.sh),
                 t.setAttribute("fill", this.data.sc),
@@ -16258,7 +16297,7 @@
               : (((t = createTag("div")).style.width = this.data.sw + "px"),
                 (t.style.height = this.data.sh + "px"),
                 (t.style.backgroundColor = this.data.sc)),
-              this.layerElement.appendChild(t);
+              this.layerElement.appendChild(t));
           }),
           extendPrototype(
             [HybridRenderer, ICompElement, HBaseElement],
@@ -16267,19 +16306,19 @@
           (HCompElement.prototype._createBaseContainerElements =
             HCompElement.prototype.createContainerElements),
           (HCompElement.prototype.createContainerElements = function () {
-            this._createBaseContainerElements(),
+            (this._createBaseContainerElements(),
               this.data.hasMask
                 ? (this.svgElement.setAttribute("width", this.data.w),
                   this.svgElement.setAttribute("height", this.data.h),
                   (this.transformedElement = this.baseElement))
-                : (this.transformedElement = this.layerElement);
+                : (this.transformedElement = this.layerElement));
           }),
           (HCompElement.prototype.addTo3dContainer = function (t, e) {
             for (var r, i = 0; i < e; )
-              this.elements[i] &&
+              (this.elements[i] &&
                 this.elements[i].getBaseElement &&
                 (r = this.elements[i].getBaseElement()),
-                (i += 1);
+                (i += 1));
             r
               ? this.layerElement.insertBefore(t, r)
               : this.layerElement.appendChild(t);
@@ -16302,19 +16341,19 @@
           (HShapeElement.prototype.createContent = function () {
             var t;
             if (((this.baseElement.style.fontSize = 0), this.data.hasMask))
-              this.layerElement.appendChild(this.shapesContainer),
-                (t = this.svgElement);
+              (this.layerElement.appendChild(this.shapesContainer),
+                (t = this.svgElement));
             else {
               t = createNS("svg");
               var e = this.comp.data
                 ? this.comp.data
                 : this.globalData.compSize;
-              t.setAttribute("width", e.w),
+              (t.setAttribute("width", e.w),
                 t.setAttribute("height", e.h),
                 t.appendChild(this.shapesContainer),
-                this.layerElement.appendChild(t);
+                this.layerElement.appendChild(t));
             }
-            this.searchShapes(
+            (this.searchShapes(
               this.shapesData,
               this.itemsData,
               this.prevViewData,
@@ -16324,7 +16363,7 @@
               !0,
             ),
               this.filterUniqueShapes(),
-              (this.shapeCont = t);
+              (this.shapeCont = t));
           }),
           (HShapeElement.prototype.getTransformedPoint = function (t, e) {
             var r,
@@ -16344,11 +16383,11 @@
               l = o._length;
             if (!(l <= 1)) {
               for (r = 0; r < l - 1; r += 1)
-                (i = this.getTransformedPoint(h, o.v[r])),
+                ((i = this.getTransformedPoint(h, o.v[r])),
                   (n = this.getTransformedPoint(h, o.o[r])),
                   (a = this.getTransformedPoint(h, o.i[r + 1])),
                   (s = this.getTransformedPoint(h, o.v[r + 1])),
-                  this.checkBounds(i, n, a, s, e);
+                  this.checkBounds(i, n, a, s, e));
               o.c &&
                 ((i = this.getTransformedPoint(h, o.v[r])),
                 (n = this.getTransformedPoint(h, o.o[r])),
@@ -16360,10 +16399,10 @@
           (HShapeElement.prototype.checkBounds = function (t, e, r, i, n) {
             this.getBoundsOfCurve(t, e, r, i);
             var a = this.shapeBoundingBox;
-            (n.x = bmMin(a.left, n.x)),
+            ((n.x = bmMin(a.left, n.x)),
               (n.xMax = bmMax(a.right, n.xMax)),
               (n.y = bmMin(a.top, n.y)),
-              (n.yMax = bmMax(a.bottom, n.yMax));
+              (n.yMax = bmMax(a.bottom, n.yMax)));
           }),
           (HShapeElement.prototype.shapeBoundingBox = {
             left: 0,
@@ -16396,7 +16435,7 @@
               f < 2;
               ++f
             )
-              (a = 6 * t[f] - 12 * e[f] + 6 * r[f]),
+              ((a = 6 * t[f] - 12 * e[f] + 6 * r[f]),
                 (n = -3 * t[f] + 9 * e[f] - 9 * r[f] + 3 * i[f]),
                 (s = 3 * e[f] - 3 * t[f]),
                 (a |= 0),
@@ -16412,11 +16451,11 @@
                         c[f].push(this.calculateF(l, t, e, r, i, f)),
                       (p = (-a - bmSqrt(h)) / (2 * n)) > 0 &&
                         p < 1 &&
-                        c[f].push(this.calculateF(p, t, e, r, i, f))));
-            (this.shapeBoundingBox.left = bmMin.apply(null, c[0])),
+                        c[f].push(this.calculateF(p, t, e, r, i, f)))));
+            ((this.shapeBoundingBox.left = bmMin.apply(null, c[0])),
               (this.shapeBoundingBox.top = bmMin.apply(null, c[1])),
               (this.shapeBoundingBox.right = bmMax.apply(null, c[0])),
-              (this.shapeBoundingBox.bottom = bmMax.apply(null, c[1]));
+              (this.shapeBoundingBox.bottom = bmMax.apply(null, c[1])));
           }),
           (HShapeElement.prototype.calculateF = function (t, e, r, i, n, a) {
             return (
@@ -16472,7 +16511,7 @@
                   (r = !0)),
                 r || this.currentBBox.x !== t.x || this.currentBBox.y !== t.y)
               ) {
-                (this.currentBBox.w = t.width),
+                ((this.currentBBox.w = t.width),
                   (this.currentBBox.h = t.height),
                   (this.currentBBox.x = t.x),
                   (this.currentBBox.y = t.y),
@@ -16485,7 +16524,7 @@
                       this.currentBBox.w +
                       " " +
                       this.currentBBox.h,
-                  );
+                  ));
                 var i = this.shapeCont.style,
                   n =
                     "translate(" +
@@ -16493,7 +16532,7 @@
                     "px," +
                     this.currentBBox.y +
                     "px)";
-                (i.transform = n), (i.webkitTransform = n);
+                ((i.transform = n), (i.webkitTransform = n));
               }
             }
           }),
@@ -16511,15 +16550,16 @@
           ),
           (HTextElement.prototype.createContent = function () {
             if (((this.isMasked = this.checkMasks()), this.isMasked)) {
-              (this.renderType = "svg"),
+              ((this.renderType = "svg"),
                 (this.compW = this.comp.data.w),
                 (this.compH = this.comp.data.h),
                 this.svgElement.setAttribute("width", this.compW),
-                this.svgElement.setAttribute("height", this.compH);
+                this.svgElement.setAttribute("height", this.compH));
               var t = createNS("g");
-              this.maskedElement.appendChild(t), (this.innerElem = t);
+              (this.maskedElement.appendChild(t), (this.innerElem = t));
             } else
-              (this.renderType = "html"), (this.innerElem = this.layerElement);
+              ((this.renderType = "html"),
+                (this.innerElem = this.layerElement));
             this.checkParenting();
           }),
           (HTextElement.prototype.buildNewText = function () {
@@ -16527,11 +16567,11 @@
             this.renderedLetters = createSizedArray(t.l ? t.l.length : 0);
             var e = this.innerElem.style,
               r = t.fc ? this.buildColor(t.fc) : "rgba(0,0,0,0)";
-            (e.fill = r),
+            ((e.fill = r),
               (e.color = r),
               t.sc &&
                 ((e.stroke = this.buildColor(t.sc)),
-                (e.strokeWidth = t.sw + "px"));
+                (e.strokeWidth = t.sw + "px")));
             var i,
               n,
               a = this.globalData.fontManager.getFontByName(t.f);
@@ -16546,7 +16586,7 @@
                 e.fontFamily = a.fFamily;
                 var s = t.fWeight,
                   o = t.fStyle;
-                (e.fontStyle = o), (e.fontWeight = s);
+                ((e.fontStyle = o), (e.fontWeight = s));
               }
             var h,
               l,
@@ -16607,7 +16647,7 @@
                   if ((this.innerElem.appendChild(l), y && y.shapes)) {
                     document.body.appendChild(p);
                     var v = p.getBBox();
-                    p.setAttribute("width", v.width + 2),
+                    (p.setAttribute("width", v.width + 2),
                       p.setAttribute("height", v.height + 2),
                       p.setAttribute(
                         "viewBox",
@@ -16619,14 +16659,14 @@
                           (v.width + 2) +
                           " " +
                           (v.height + 2),
-                      );
+                      ));
                     var b = p.style,
                       x = "translate(" + (v.x - 1) + "px," + (v.y - 1) + "px)";
-                    (b.transform = x),
+                    ((b.transform = x),
                       (b.webkitTransform = x),
-                      (c[i].yOffset = v.y - 1);
+                      (c[i].yOffset = v.y - 1));
                   } else
-                    p.setAttribute("width", 1), p.setAttribute("height", 1);
+                    (p.setAttribute("width", 1), p.setAttribute("height", 1));
                   l.appendChild(p);
                 }
               } else if (
@@ -16643,22 +16683,24 @@
                 this.innerElem.appendChild(l);
                 var E = h.style,
                   P = "translate3d(0," + -t.finalSize / 1.2 + "px,0)";
-                (E.transform = P), (E.webkitTransform = P);
+                ((E.transform = P), (E.webkitTransform = P));
               }
-              this.isMasked ? (this.textSpans[d] = h) : (this.textSpans[d] = l),
+              (this.isMasked
+                ? (this.textSpans[d] = h)
+                : (this.textSpans[d] = l),
                 (this.textSpans[d].style.display = "block"),
                 (this.textPaths[d] = h),
-                (d += 1);
+                (d += 1));
             }
             for (; d < this.textSpans.length; )
-              (this.textSpans[d].style.display = "none"), (d += 1);
+              ((this.textSpans[d].style.display = "none"), (d += 1));
           }),
           (HTextElement.prototype.renderInnerContent = function () {
             var t;
             if (this.data.singleShape) {
               if (!this._isFirstFrame && !this.lettersChangedFlag) return;
               if (this.isMasked && this.finalTransform._matMdf) {
-                this.svgElement.setAttribute(
+                (this.svgElement.setAttribute(
                   "viewBox",
                   -this.finalTransform.mProp.p.v[0] +
                     " " +
@@ -16668,14 +16710,14 @@
                     " " +
                     this.compH,
                 ),
-                  (t = this.svgElement.style);
+                  (t = this.svgElement.style));
                 var e =
                   "translate(" +
                   -this.finalTransform.mProp.p.v[0] +
                   "px," +
                   -this.finalTransform.mProp.p.v[1] +
                   "px)";
-                (t.transform = e), (t.webkitTransform = e);
+                ((t.transform = e), (t.webkitTransform = e));
               }
             }
             if (
@@ -16717,19 +16759,19 @@
                 (this._isFirstFrame || this._mdf)
               ) {
                 var p = this.innerElem.getBBox();
-                this.currentBBox.w !== p.width &&
+                (this.currentBBox.w !== p.width &&
                   ((this.currentBBox.w = p.width),
                   this.svgElement.setAttribute("width", p.width)),
                   this.currentBBox.h !== p.height &&
                     ((this.currentBBox.h = p.height),
-                    this.svgElement.setAttribute("height", p.height));
+                    this.svgElement.setAttribute("height", p.height)));
                 if (
                   this.currentBBox.w !== p.width + 2 ||
                   this.currentBBox.h !== p.height + 2 ||
                   this.currentBBox.x !== p.x - 1 ||
                   this.currentBBox.y !== p.y - 1
                 ) {
-                  (this.currentBBox.w = p.width + 2),
+                  ((this.currentBBox.w = p.width + 2),
                     (this.currentBBox.h = p.height + 2),
                     (this.currentBBox.x = p.x - 1),
                     (this.currentBBox.y = p.y - 1),
@@ -16743,14 +16785,14 @@
                         " " +
                         this.currentBBox.h,
                     ),
-                    (t = this.svgElement.style);
+                    (t = this.svgElement.style));
                   var c =
                     "translate(" +
                     this.currentBBox.x +
                     "px," +
                     this.currentBBox.y +
                     "px)";
-                  (t.transform = c), (t.webkitTransform = c);
+                  ((t.transform = c), (t.webkitTransform = c));
                 }
               }
             }
@@ -16770,7 +16812,7 @@
           (HImageElement.prototype.createContent = function () {
             var t = this.globalData.getAssetsPath(this.assetData),
               e = new Image();
-            this.data.hasMask
+            (this.data.hasMask
               ? ((this.imageElem = createNS("image")),
                 this.imageElem.setAttribute("width", this.assetData.w + "px"),
                 this.imageElem.setAttribute("height", this.assetData.h + "px"),
@@ -16785,7 +16827,8 @@
               : this.layerElement.appendChild(e),
               (e.crossOrigin = "anonymous"),
               (e.src = t),
-              this.data.ln && this.baseElement.setAttribute("id", this.data.ln);
+              this.data.ln &&
+                this.baseElement.setAttribute("id", this.data.ln));
           }),
           extendPrototype(
             [BaseElement, FrameElement, HierarchyElement],
@@ -16799,16 +16842,16 @@
               n = this.comp.threeDElements.length;
             for (t = 0; t < n; t += 1)
               if ("3d" === (e = this.comp.threeDElements[t]).type) {
-                (r = e.perspectiveElem.style), (i = e.container.style);
+                ((r = e.perspectiveElem.style), (i = e.container.style));
                 var a = this.pe.v + "px",
                   s = "matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)";
-                (r.perspective = a),
+                ((r.perspective = a),
                   (r.webkitPerspective = a),
                   (i.transformOrigin = "0px 0px 0px"),
                   (i.mozTransformOrigin = "0px 0px 0px"),
                   (i.webkitTransformOrigin = "0px 0px 0px"),
                   (r.transform = s),
-                  (r.webkitTransform = s);
+                  (r.webkitTransform = s));
               }
           }),
           (HCameraElement.prototype.createElements = function () {}),
@@ -16834,14 +16877,14 @@
               if ((this.mat.reset(), this.hierarchy))
                 for (t = e = this.hierarchy.length - 1; t >= 0; t -= 1) {
                   var i = this.hierarchy[t].finalTransform.mProp;
-                  this.mat.translate(-i.p.v[0], -i.p.v[1], i.p.v[2]),
+                  (this.mat.translate(-i.p.v[0], -i.p.v[1], i.p.v[2]),
                     this.mat
                       .rotateX(-i.or.v[0])
                       .rotateY(-i.or.v[1])
                       .rotateZ(i.or.v[2]),
                     this.mat.rotateX(-i.rx.v).rotateY(-i.ry.v).rotateZ(i.rz.v),
                     this.mat.scale(1 / i.s.v[0], 1 / i.s.v[1], 1 / i.s.v[2]),
-                    this.mat.translate(i.a.v[0], i.a.v[1], i.a.v[2]);
+                    this.mat.translate(i.a.v[0], i.a.v[1], i.a.v[2]));
                 }
               if (
                 (this.p
@@ -16870,7 +16913,7 @@
                   l = Math.atan2(s[0], -s[2]);
                 this.mat.rotateY(l).rotateX(-h);
               }
-              this.mat
+              (this.mat
                 .rotateX(-this.rx.v)
                 .rotateY(-this.ry.v)
                 .rotateZ(this.rz.v),
@@ -16883,7 +16926,7 @@
                   this.globalData.compSize.h / 2,
                   0,
                 ),
-                this.mat.translate(0, 0, this.pe.v);
+                this.mat.translate(0, 0, this.pe.v));
               var p = !this._prevMat.equals(this.mat);
               if ((p || this.pe._mdf) && this.comp.threeDElements) {
                 var c, f, u;
@@ -16891,8 +16934,8 @@
                   if ("3d" === (c = this.comp.threeDElements[t]).type) {
                     if (p) {
                       var m = this.mat.toCSS();
-                      ((u = c.container.style).transform = m),
-                        (u.webkitTransform = m);
+                      (((u = c.container.style).transform = m),
+                        (u.webkitTransform = m));
                     }
                     this.pe._mdf &&
                       (((f = c.perspectiveElem.style).perspective =
@@ -16911,7 +16954,7 @@
           (HCameraElement.prototype.getBaseElement = function () {
             return null;
           }),
-          (HEffects.prototype.renderFrame = function () {});
+          (HEffects.prototype.renderFrame = function () {}));
         var animationManager = (function () {
             var t = {},
               e = [],
@@ -16922,9 +16965,9 @@
               s = !1;
             function o(t) {
               for (var r = 0, n = t.target; r < i; )
-                e[r].animation === n &&
+                (e[r].animation === n &&
                   (e.splice(r, 1), (r -= 1), (i -= 1), n.isPaused || p()),
-                  (r += 1);
+                  (r += 1));
             }
             function h(t, r) {
               if (!t) return null;
@@ -16934,29 +16977,29 @@
                 n += 1;
               }
               var a = new AnimationItem();
-              return c(a, t), a.setData(t, r), a;
+              return (c(a, t), a.setData(t, r), a);
             }
             function l() {
-              (n += 1), m();
+              ((n += 1), m());
             }
             function p() {
               n -= 1;
             }
             function c(t, r) {
-              t.addEventListener("destroy", o),
+              (t.addEventListener("destroy", o),
                 t.addEventListener("_active", l),
                 t.addEventListener("_idle", p),
                 e.push({ elem: r, animation: t }),
-                (i += 1);
+                (i += 1));
             }
             function f(t) {
               var o,
                 h = t - r;
               for (o = 0; o < i; o += 1) e[o].animation.advanceTime(h);
-              (r = t), n && !s ? window.requestAnimationFrame(f) : (a = !0);
+              ((r = t), n && !s ? window.requestAnimationFrame(f) : (a = !0));
             }
             function u(t) {
-              (r = t), window.requestAnimationFrame(f);
+              ((r = t), window.requestAnimationFrame(f));
             }
             function m() {
               !s && n && a && (window.requestAnimationFrame(u), (a = !1));
@@ -16965,7 +17008,7 @@
               (t.registerAnimation = h),
               (t.loadAnimation = function (t) {
                 var e = new AnimationItem();
-                return c(e, null), e.setParams(t), e;
+                return (c(e, null), e.setParams(t), e);
               }),
               (t.setSpeed = function (t, r) {
                 var n;
@@ -16999,17 +17042,17 @@
                   ),
                   a = n.length;
                 for (i = 0; i < a; i += 1)
-                  r && n[i].setAttribute("data-bm-type", r), h(n[i], t);
+                  (r && n[i].setAttribute("data-bm-type", r), h(n[i], t));
                 if (e && 0 === a) {
                   r || (r = "svg");
                   var s = document.getElementsByTagName("body")[0];
                   s.innerText = "";
                   var o = createTag("div");
-                  (o.style.width = "100%"),
+                  ((o.style.width = "100%"),
                     (o.style.height = "100%"),
                     o.setAttribute("data-bm-type", r),
                     s.appendChild(o),
-                    h(o, t);
+                    h(o, t));
                 }
               }),
               (t.resize = function () {
@@ -17028,7 +17071,7 @@
                 s = !0;
               }),
               (t.unfreeze = function () {
-                (s = !1), m();
+                ((s = !1), m());
               }),
               (t.setVolume = function (t, r) {
                 var n;
@@ -17053,7 +17096,7 @@
             );
           })(),
           AnimationItem = function () {
-            (this._cbs = []),
+            ((this._cbs = []),
               (this.name = ""),
               (this.path = ""),
               (this.isLoaded = !1),
@@ -17083,9 +17126,9 @@
               (this.projectInterface = ProjectInterface()),
               (this.imagePreloader = new ImagePreloader()),
               (this.audioController = audioControllerFactory()),
-              (this.markers = []);
+              (this.markers = []));
           };
-        extendPrototype([BaseEvent], AnimationItem),
+        (extendPrototype([BaseEvent], AnimationItem),
           (AnimationItem.prototype.setParams = function (t) {
             (t.wrapper || t.container) &&
               (this.wrapper = t.wrapper || t.container);
@@ -17103,7 +17146,7 @@
               default:
                 this.renderer = new HybridRenderer(this, t.rendererSettings);
             }
-            this.imagePreloader.setCacheType(e, this.renderer.globalData.defs),
+            (this.imagePreloader.setCacheType(e, this.renderer.globalData.defs),
               this.renderer.setProjectInterface(this.projectInterface),
               (this.animType = e),
               "" === t.loop ||
@@ -17146,13 +17189,13 @@
                     function () {
                       this.trigger("data_failed");
                     }.bind(this),
-                  ));
+                  )));
           }),
           (AnimationItem.prototype.setData = function (t, e) {
             e && "object" != typeof e && (e = JSON.parse(e));
             var r = { wrapper: t, animationData: e },
               i = t.attributes;
-            (r.path = i.getNamedItem("data-animation-path")
+            ((r.path = i.getNamedItem("data-animation-path")
               ? i.getNamedItem("data-animation-path").value
               : i.getNamedItem("data-bm-path")
                 ? i.getNamedItem("data-bm-path").value
@@ -17169,7 +17212,7 @@
                       ? i.getNamedItem("data-bm-renderer").value
                       : i.getNamedItem("bm-renderer")
                         ? i.getNamedItem("bm-renderer").value
-                        : "canvas");
+                        : "canvas"));
             var n = i.getNamedItem("data-anim-loop")
               ? i.getNamedItem("data-anim-loop").value
               : i.getNamedItem("data-bm-loop")
@@ -17188,7 +17231,7 @@
                 ? i.getNamedItem("data-bm-autoplay").value
                 : !i.getNamedItem("bm-autoplay") ||
                   i.getNamedItem("bm-autoplay").value;
-            (r.autoplay = "false" !== a),
+            ((r.autoplay = "false" !== a),
               (r.name = i.getNamedItem("data-name")
                 ? i.getNamedItem("data-name").value
                 : i.getNamedItem("data-bm-name")
@@ -17204,7 +17247,7 @@
                     : i.getNamedItem("bm-prerender")
                       ? i.getNamedItem("bm-prerender").value
                       : "") && (r.prerender = !1),
-              this.setParams(r);
+              this.setParams(r));
           }),
           (AnimationItem.prototype.includeLayers = function (t) {
             t.op > this.animationData.op &&
@@ -17235,14 +17278,14 @@
             )
               for (n = t.assets.length, e = 0; e < n; e += 1)
                 this.animationData.assets.push(t.assets[e]);
-            (this.animationData.__complete = !1),
+            ((this.animationData.__complete = !1),
               dataManager.completeData(
                 this.animationData,
                 this.renderer.globalData.fontManager,
               ),
               this.renderer.includeLayers(t.layers),
               expressionsPlugin && expressionsPlugin.initExpressions(this),
-              this.loadNextSegment();
+              this.loadNextSegment());
           }),
           (AnimationItem.prototype.loadNextSegment = function () {
             var t = this.animationData.segments;
@@ -17254,35 +17297,35 @@
             var e = t.shift();
             this.timeCompleted = e.time * this.frameRate;
             var r = this.path + this.fileName + "_" + this.segmentPos + ".json";
-            (this.segmentPos += 1),
+            ((this.segmentPos += 1),
               assetLoader.load(
                 r,
                 this.includeLayers.bind(this),
                 function () {
                   this.trigger("data_failed");
                 }.bind(this),
-              );
+              ));
           }),
           (AnimationItem.prototype.loadSegments = function () {
-            this.animationData.segments ||
+            (this.animationData.segments ||
               (this.timeCompleted = this.totalFrames),
-              this.loadNextSegment();
+              this.loadNextSegment());
           }),
           (AnimationItem.prototype.imagesLoaded = function () {
-            this.trigger("loaded_images"), this.checkLoaded();
+            (this.trigger("loaded_images"), this.checkLoaded());
           }),
           (AnimationItem.prototype.preloadImages = function () {
-            this.imagePreloader.setAssetsPath(this.assetsPath),
+            (this.imagePreloader.setAssetsPath(this.assetsPath),
               this.imagePreloader.setPath(this.path),
               this.imagePreloader.loadAssets(
                 this.animationData.assets,
                 this.imagesLoaded.bind(this),
-              );
+              ));
           }),
           (AnimationItem.prototype.configAnimation = function (t) {
             if (this.renderer)
               try {
-                (this.animationData = t),
+                ((this.animationData = t),
                   this.initialSegment
                     ? ((this.totalFrames = Math.floor(
                         this.initialSegment[1] - this.initialSegment[0],
@@ -17304,7 +17347,7 @@
                   this.loadSegments(),
                   this.updaFrameModifier(),
                   this.waitForFontsLoaded(),
-                  this.isPaused && this.audioController.pause();
+                  this.isPaused && this.audioController.pause());
               } catch (t) {
                 this.triggerConfigError(t);
               }
@@ -17344,14 +17387,14 @@
             this.isSubframeEnabled = !!t;
           }),
           (AnimationItem.prototype.gotoFrame = function () {
-            (this.currentFrame = this.isSubframeEnabled
+            ((this.currentFrame = this.isSubframeEnabled
               ? this.currentRawFrame
               : ~~this.currentRawFrame),
               this.timeCompleted !== this.totalFrames &&
                 this.currentFrame > this.timeCompleted &&
                 (this.currentFrame = this.timeCompleted),
               this.trigger("enterFrame"),
-              this.renderFrame();
+              this.renderFrame());
           }),
           (AnimationItem.prototype.renderFrame = function () {
             if (!1 !== this.isLoaded && this.renderer)
@@ -17423,7 +17466,7 @@
             if (!0 !== this.isPaused && !1 !== this.isLoaded) {
               var e = this.currentRawFrame + t * this.frameModifier,
                 r = !1;
-              e >= this.totalFrames - 1 && this.frameModifier > 0
+              (e >= this.totalFrames - 1 && this.frameModifier > 0
                 ? this.loop && this.playCount !== this.loop
                   ? e >= this.totalFrames
                     ? ((this.playCount += 1),
@@ -17449,11 +17492,11 @@
                 r &&
                   (this.setCurrentRawFrameValue(e),
                   this.pause(),
-                  this.trigger("complete"));
+                  this.trigger("complete")));
             }
           }),
           (AnimationItem.prototype.adjustSegment = function (t, e) {
-            (this.playCount = 0),
+            ((this.playCount = 0),
               t[1] < t[0]
                 ? (this.frameModifier > 0 &&
                     (this.playSpeed < 0
@@ -17472,18 +17515,18 @@
                   (this.timeCompleted = this.totalFrames),
                   (this.firstFrame = t[0]),
                   this.setCurrentRawFrameValue(0.001 + e)),
-              this.trigger("segmentStart");
+              this.trigger("segmentStart"));
           }),
           (AnimationItem.prototype.setSegment = function (t, e) {
             var r = -1;
-            this.isPaused &&
+            (this.isPaused &&
               (this.currentRawFrame + this.firstFrame < t
                 ? (r = t)
                 : this.currentRawFrame + this.firstFrame > e && (r = e - t)),
               (this.firstFrame = t),
               (this.totalFrames = e - t),
               (this.timeCompleted = this.totalFrames),
-              -1 !== r && this.goToAndStop(r, !0);
+              -1 !== r && this.goToAndStop(r, !0));
           }),
           (AnimationItem.prototype.playSegments = function (t, e) {
             if ((e && (this.segments.length = 0), "object" == typeof t[0])) {
@@ -17491,18 +17534,18 @@
                 i = t.length;
               for (r = 0; r < i; r += 1) this.segments.push(t[r]);
             } else this.segments.push(t);
-            this.segments.length &&
+            (this.segments.length &&
               e &&
               this.adjustSegment(this.segments.shift(), 0),
-              this.isPaused && this.play();
+              this.isPaused && this.play());
           }),
           (AnimationItem.prototype.resetSegments = function (t) {
-            (this.segments.length = 0),
+            ((this.segments.length = 0),
               this.segments.push([
                 this.animationData.ip,
                 this.animationData.op,
               ]),
-              t && this.checkSegments(0);
+              t && this.checkSegments(0));
           }),
           (AnimationItem.prototype.checkSegments = function (t) {
             return (
@@ -17528,13 +17571,13 @@
               (this.projectInterface = null));
           }),
           (AnimationItem.prototype.setCurrentRawFrameValue = function (t) {
-            (this.currentRawFrame = t), this.gotoFrame();
+            ((this.currentRawFrame = t), this.gotoFrame());
           }),
           (AnimationItem.prototype.setSpeed = function (t) {
-            (this.playSpeed = t), this.updaFrameModifier();
+            ((this.playSpeed = t), this.updaFrameModifier());
           }),
           (AnimationItem.prototype.setDirection = function (t) {
-            (this.playDirection = t < 0 ? -1 : 1), this.updaFrameModifier();
+            ((this.playDirection = t < 0 ? -1 : 1), this.updaFrameModifier());
           }),
           (AnimationItem.prototype.setVolume = function (t, e) {
             (e && this.name !== e) || this.audioController.setVolume(t);
@@ -17549,9 +17592,11 @@
             (t && this.name !== t) || this.audioController.unmute();
           }),
           (AnimationItem.prototype.updaFrameModifier = function () {
-            (this.frameModifier =
+            ((this.frameModifier =
               this.frameMult * this.playSpeed * this.playDirection),
-              this.audioController.setRate(this.playSpeed * this.playDirection);
+              this.audioController.setRate(
+                this.playSpeed * this.playDirection,
+              ));
           }),
           (AnimationItem.prototype.getPath = function () {
             return this.path;
@@ -17561,9 +17606,9 @@
             if (t.e) e = t.p;
             else if (this.assetsPath) {
               var r = t.p;
-              -1 !== r.indexOf("images/") && (r = r.split("/")[1]),
-                (e = this.assetsPath + r);
-            } else (e = this.path), (e += t.u ? t.u : ""), (e += t.p);
+              (-1 !== r.indexOf("images/") && (r = r.split("/")[1]),
+                (e = this.assetsPath + r));
+            } else ((e = this.path), (e += t.u ? t.u : ""), (e += t.p));
             return e;
           }),
           (AnimationItem.prototype.getAssetData = function (t) {
@@ -17626,7 +17671,7 @@
                 default:
                   this.triggerEvent(t);
               }
-            "enterFrame" === t &&
+            ("enterFrame" === t &&
               this.onEnterFrame &&
               this.onEnterFrame.call(
                 this,
@@ -17662,25 +17707,25 @@
                 ),
               "destroy" === t &&
                 this.onDestroy &&
-                this.onDestroy.call(this, new BMDestroyEvent(t, this));
+                this.onDestroy.call(this, new BMDestroyEvent(t, this)));
           }),
           (AnimationItem.prototype.triggerRenderFrameError = function (t) {
             var e = new BMRenderFrameErrorEvent(t, this.currentFrame);
-            this.triggerEvent("error", e),
-              this.onError && this.onError.call(this, e);
+            (this.triggerEvent("error", e),
+              this.onError && this.onError.call(this, e));
           }),
           (AnimationItem.prototype.triggerConfigError = function (t) {
             var e = new BMConfigErrorEvent(t, this.currentFrame);
-            this.triggerEvent("error", e),
-              this.onError && this.onError.call(this, e);
-          });
+            (this.triggerEvent("error", e),
+              this.onError && this.onError.call(this, e));
+          }));
         var Expressions = (function () {
           var t = {};
           return (
             (t.initExpressions = function (t) {
               var e = 0,
                 r = [];
-              (t.renderer.compInterface = CompExpressionInterface(t.renderer)),
+              ((t.renderer.compInterface = CompExpressionInterface(t.renderer)),
                 t.renderer.globalData.projectInterface.registerComposition(
                   t.renderer,
                 ),
@@ -17700,7 +17745,7 @@
                   t,
                 ) {
                   -1 === r.indexOf(t) && r.push(t);
-                });
+                }));
             }),
             t
           );
@@ -17764,20 +17809,20 @@
               if ("string" === r || "string" === i) return t + e;
               if (isNumerable(r, t) && isNumerable(i, e)) return t + e;
               if ($bm_isInstanceOfArray(t) && isNumerable(i, e))
-                return ((t = t.slice(0))[0] += e), t;
+                return (((t = t.slice(0))[0] += e), t);
               if (isNumerable(r, t) && $bm_isInstanceOfArray(e))
-                return ((e = e.slice(0))[0] = t + e[0]), e;
+                return (((e = e.slice(0))[0] = t + e[0]), e);
               if ($bm_isInstanceOfArray(t) && $bm_isInstanceOfArray(e)) {
                 for (
                   var n = 0, a = t.length, s = e.length, o = [];
                   n < a || n < s;
 
                 )
-                  ("number" == typeof t[n] || t[n] instanceof Number) &&
+                  (("number" == typeof t[n] || t[n] instanceof Number) &&
                   ("number" == typeof e[n] || e[n] instanceof Number)
                     ? (o[n] = t[n] + e[n])
                     : (o[n] = void 0 === e[n] ? t[n] : t[n] || e[n]),
-                    (n += 1);
+                    (n += 1));
                 return o;
               }
               return 0;
@@ -17793,20 +17838,20 @@
                   t - e
                 );
               if ($bm_isInstanceOfArray(t) && isNumerable(i, e))
-                return ((t = t.slice(0))[0] -= e), t;
+                return (((t = t.slice(0))[0] -= e), t);
               if (isNumerable(r, t) && $bm_isInstanceOfArray(e))
-                return ((e = e.slice(0))[0] = t - e[0]), e;
+                return (((e = e.slice(0))[0] = t - e[0]), e);
               if ($bm_isInstanceOfArray(t) && $bm_isInstanceOfArray(e)) {
                 for (
                   var n = 0, a = t.length, s = e.length, o = [];
                   n < a || n < s;
 
                 )
-                  ("number" == typeof t[n] || t[n] instanceof Number) &&
+                  (("number" == typeof t[n] || t[n] instanceof Number) &&
                   ("number" == typeof e[n] || e[n] instanceof Number)
                     ? (o[n] = t[n] - e[n])
                     : (o[n] = void 0 === e[n] ? t[n] : t[n] || e[n]),
-                    (n += 1);
+                    (n += 1));
                 return o;
               }
               return 0;
@@ -17880,7 +17925,7 @@
             function clamp(t, e, r) {
               if (e > r) {
                 var i = r;
-                (r = e), (e = i);
+                ((r = e), (e = i));
               }
               return Math.min(Math.max(t, e), r);
             }
@@ -17895,7 +17940,7 @@
               helperLengthArray = [0, 0, 0, 0, 0, 0];
             function length(t, e) {
               if ("number" == typeof t || t instanceof Number)
-                return (e = e || 0), Math.abs(t - e);
+                return ((e = e || 0), Math.abs(t - e));
               var r;
               e || (e = helperLengthArray);
               var i = Math.min(t.length, e.length),
@@ -17915,7 +17960,7 @@
                 s = Math.max(i, n, a),
                 o = Math.min(i, n, a),
                 h = (s + o) / 2;
-              if (s === o) (e = 0), (r = 0);
+              if (s === o) ((e = 0), (r = 0));
               else {
                 var l = s - o;
                 switch (((r = h > 0.5 ? l / (2 - s - o) : l / (s + o)), s)) {
@@ -17952,13 +17997,13 @@
                 n = t[0],
                 a = t[1],
                 s = t[2];
-              if (0 === a) (e = s), (i = s), (r = s);
+              if (0 === a) ((e = s), (i = s), (r = s));
               else {
                 var o = s < 0.5 ? s * (1 + a) : s + a - s * a,
                   h = 2 * s - o;
-                (e = hue2rgb(h, o, n + 1 / 3)),
+                ((e = hue2rgb(h, o, n + 1 / 3)),
                   (r = hue2rgb(h, o, n)),
-                  (i = hue2rgb(h, o, n - 1 / 3));
+                  (i = hue2rgb(h, o, n - 1 / 3)));
               }
               return [e, r, i, t[3]];
             }
@@ -17969,7 +18014,7 @@
                 r < e)
               ) {
                 var a = r;
-                (r = e), (e = a);
+                ((r = e), (e = a));
               }
               if (t <= e) return i;
               if (t >= r) return n;
@@ -17995,7 +18040,7 @@
                 for (r = 0; r < i; r += 1) n[r] = t[r] + a * (e[r] - t[r]);
                 return n;
               }
-              return void 0 === t && (t = 0), t + BMMath.random() * (e - t);
+              return (void 0 === t && (t = 0), t + BMMath.random() * (e - t));
             }
             function createPath(t, e, r, i) {
               var n,
@@ -18006,7 +18051,7 @@
                 h,
                 l = [0, 0];
               for (n = 0; n < a; n += 1)
-                (o = e && e[n] ? e[n] : l),
+                ((o = e && e[n] ? e[n] : l),
                   (h = r && r[n] ? r[n] : l),
                   s.setTripleAt(
                     t[n][0],
@@ -18017,7 +18062,7 @@
                     o[1] + t[n][1],
                     n,
                     !0,
-                  );
+                  ));
               return s;
             }
             function initiateExpression(elem, data, property) {
@@ -18030,14 +18075,14 @@
                 content,
                 effect,
                 thisProperty = property;
-              (thisProperty.valueAtTime = thisProperty.getValueAtTime),
+              ((thisProperty.valueAtTime = thisProperty.getValueAtTime),
                 Object.defineProperty(thisProperty, "value", {
                   get: function () {
                     return thisProperty.v;
                   },
                 }),
                 (elem.comp.frameDuration = 1 / elem.comp.globalData.frameRate),
-                (elem.comp.displayStartTime = 0);
+                (elem.comp.displayStartTime = 0));
               var inPoint = elem.data.ip / elem.comp.globalData.frameRate,
                 outPoint = elem.data.op / elem.comp.globalData.frameRate,
                 width = elem.data.sw ? elem.data.sw : 0,
@@ -18098,7 +18143,7 @@
               function loopOutDuration(t, e) {
                 return loopOut(t, e, !0);
               }
-              thisProperty.loopIn &&
+              (thisProperty.loopIn &&
                 ((loopIn = thisProperty.loopIn.bind(thisProperty)),
                 (loop_in = loopIn)),
                 thisProperty.loopOut &&
@@ -18109,7 +18154,7 @@
                 this.getValueAtTime &&
                   (valueAtTime = this.getValueAtTime.bind(this)),
                 this.getVelocityAtTime &&
-                  (velocityAtTime = this.getVelocityAtTime.bind(this));
+                  (velocityAtTime = this.getVelocityAtTime.bind(this)));
               var comp = elem.comp.globalData.projectInterface.bind(
                   elem.comp.globalData.projectInterface,
                 ),
@@ -18137,8 +18182,8 @@
                 return applyEase(easeInOutBez, t, e, r, i, n);
               }
               function applyEase(t, e, r, i, n, a) {
-                void 0 === n ? ((n = r), (a = i)) : (e = (e - r) / (i - r)),
-                  e > 1 ? (e = 1) : e < 0 && (e = 0);
+                (void 0 === n ? ((n = r), (a = i)) : (e = (e - r) / (i - r)),
+                  e > 1 ? (e = 1) : e < 0 && (e = 0));
                 var s = t(e);
                 if ($bm_isInstanceOfArray(n)) {
                   var o,
@@ -18159,11 +18204,11 @@
                     ((r = -1),
                     (t *= elem.comp.globalData.frameRate) < data.k[0].t)
                   )
-                    (r = 1), (i = data.k[0].t);
+                    ((r = 1), (i = data.k[0].t));
                   else {
                     for (e = 0; e < n - 1; e += 1) {
                       if (t === data.k[e].t) {
-                        (r = e + 1), (i = data.k[e].t);
+                        ((r = e + 1), (i = data.k[e].t));
                         break;
                       }
                       if (t > data.k[e].t && t < data.k[e + 1].t) {
@@ -18175,7 +18220,7 @@
                     }
                     -1 === r && ((r = e + 1), (i = data.k[e].t));
                   }
-                else (r = 0), (i = 0);
+                else ((r = 0), (i = 0));
                 var a = {};
                 return (
                   (a.index = r),
@@ -18187,20 +18232,20 @@
                 var e, r, i;
                 if (!data.k.length || "number" == typeof data.k[0])
                   throw new Error("The property has no keyframe at index " + t);
-                (t -= 1),
+                ((t -= 1),
                   (e = {
                     time: data.k[t].t / elem.comp.globalData.frameRate,
                     value: [],
-                  });
+                  }));
                 var n = Object.prototype.hasOwnProperty.call(data.k[t], "s")
                   ? data.k[t].s
                   : data.k[t - 1].e;
                 for (i = n.length, r = 0; r < i; r += 1)
-                  (e[r] = n[r]), (e.value[r] = n[r]);
+                  ((e[r] = n[r]), (e.value[r] = n[r]));
                 return e;
               }
               function framesToTime(t, e) {
-                return e || (e = elem.comp.globalData.frameRate), t / e;
+                return (e || (e = elem.comp.globalData.frameRate), t / e);
               }
               function timeToFrames(t, e) {
                 return (
@@ -18230,8 +18275,8 @@
                   : "";
               }
               function posterizeTime(t) {
-                (time = 0 === t ? 0 : Math.floor(time * t) / t),
-                  (value = valueAtTime(time));
+                ((time = 0 === t ? 0 : Math.floor(time * t) / t),
+                  (value = valueAtTime(time)));
               }
               var index = elem.data.ind,
                 hasParent = !(!elem.hierarchy || !elem.hierarchy.length),
@@ -18289,7 +18334,7 @@
               }
               return executeExpression;
             }
-            return (ob.initiateExpression = initiateExpression), ob;
+            return ((ob.initiateExpression = initiateExpression), ob);
           })(),
           expressionHelpers = (function () {
             return {
@@ -18354,7 +18399,7 @@
               },
             };
           })();
-        !(function () {
+        (!(function () {
           function t(t, e, r) {
             if (!this.k || !this.keyframes) return this.pv;
             t = t ? t.toLowerCase() : "";
@@ -18626,7 +18671,7 @@
           var n = PropertyFactory.getProp;
           PropertyFactory.getProp = function (i, a, s, o, h) {
             var l = n(i, a, s, o, h);
-            l.kf
+            (l.kf
               ? (l.getValueAtTime = expressionHelpers.getValueAtTime.bind(l))
               : (l.getValueAtTime =
                   expressionHelpers.getStaticValueAtTime.bind(l)),
@@ -18638,7 +18683,7 @@
                 expressionHelpers.getVelocityAtTime.bind(l)),
               (l.getSpeedAtTime = expressionHelpers.getSpeedAtTime.bind(l)),
               (l.numKeys = 1 === a.a ? a.k.length : 0),
-              (l.propertyIndex = a.ix);
+              (l.propertyIndex = a.ix));
             var p = 0;
             return (
               0 !== s &&
@@ -18659,7 +18704,7 @@
           var a = ShapePropertyFactory.getConstructorFunction(),
             s = ShapePropertyFactory.getKeyframedConstructorFunction();
           function o() {}
-          (o.prototype = {
+          ((o.prototype = {
             vertices: function (t, e) {
               this.k && this.getValue();
               var r,
@@ -18690,9 +18735,9 @@
             },
             pointOnPath: function (t, e) {
               var r = this.v;
-              void 0 !== e && (r = this.getValueAtTime(e, 0)),
+              (void 0 !== e && (r = this.getValueAtTime(e, 0)),
                 this._segmentsLength ||
-                  (this._segmentsLength = bez.getSegmentsLength(r));
+                  (this._segmentsLength = bez.getSegmentsLength(r)));
               for (
                 var i,
                   n = this._segmentsLength,
@@ -18718,7 +18763,7 @@
                   );
                   break;
                 }
-                (l += a[o].addedLength), (o += 1);
+                ((l += a[o].addedLength), (o += 1));
               }
               return (
                 i ||
@@ -18776,7 +18821,7 @@
               );
             }),
             (s.prototype.initiateExpression =
-              ExpressionManager.initiateExpression);
+              ExpressionManager.initiateExpression));
           var h = ShapePropertyFactory.getShapeProp;
           ShapePropertyFactory.getShapeProp = function (t, e, r, i, n) {
             var a = h(t, e, r, i, n);
@@ -18792,7 +18837,7 @@
           };
         })(),
           (function () {
-            (TextProperty.prototype.getExpressionValue = function (t, e) {
+            ((TextProperty.prototype.getExpressionValue = function (t, e) {
               var r = this.calculateExpression(e);
               if (t.t !== r) {
                 var i = {};
@@ -18808,7 +18853,7 @@
               (TextProperty.prototype.searchProperty = function () {
                 var t = this.searchKeyframes(),
                   e = this.searchExpressions();
-                return (this.kf = t || e), this.kf;
+                return ((this.kf = t || e), this.kf);
               }),
               (TextProperty.prototype.searchExpressions = function () {
                 return this.data.d.x
@@ -18821,8 +18866,8 @@
                     this.addEffect(this.getExpressionValue.bind(this)),
                     !0)
                   : null;
-              });
-          })();
+              }));
+          })());
         var ShapePathInterface = function (t, e, r) {
             var i = e.sh;
             function n(t) {
@@ -18841,12 +18886,12 @@
               Object.defineProperties(n, {
                 path: {
                   get: function () {
-                    return i.k && i.getValue(), i;
+                    return (i.k && i.getValue(), i);
                   },
                 },
                 shape: {
                   get: function () {
-                    return i.k && i.getValue(), i;
+                    return (i.k && i.getValue(), i);
                   },
                 },
                 _name: { value: t.nm },
@@ -18929,9 +18974,9 @@
                       }
                       return "number" == typeof t ? n[t - 1] : null;
                     };
-                  (a.propertyGroup = propertyGroupFactory(a, i)),
+                  ((a.propertyGroup = propertyGroupFactory(a, i)),
                     (n = t(e.it, r.it, a.propertyGroup)),
-                    (a.numProperties = n.length);
+                    (a.numProperties = n.length));
                   var s = o(
                     e.it[e.it.length - 1],
                     r.it[r.it.length - 1],
@@ -19030,7 +19075,7 @@
               var o = t.d ? t.d.length : 0,
                 h = {};
               for (i = 0; i < o; i += 1)
-                s(i), e.d.dataProps[i].p.setGroupProperty(a);
+                (s(i), e.d.dataProps[i].p.setGroupProperty(a));
               function l(t) {
                 return "Color" === t || "color" === t
                   ? l.color
@@ -19445,7 +19490,7 @@
                     return null;
                 }
               }
-              (c.getMatrix = t),
+              ((c.getMatrix = t),
                 (c.invertPoint = s),
                 (c.applyPoint = a),
                 (c.toWorld = r),
@@ -19456,7 +19501,7 @@
                 (c.fromComp = o),
                 (c.sampleImage = h),
                 (c.sourceRectAtTime = l.sourceRectAtTime.bind(l)),
-                (c._elem = l);
+                (c._elem = l));
               var f = getDescriptor(
                 (p = TransformExpressionInterface(l.finalTransform.mProp)),
                 "anchorPoint",
@@ -19520,7 +19565,7 @@
                     r = t.getFootageData();
                   function i(t) {
                     if (r[t])
-                      return (e = t), "object" == typeof (r = r[t]) ? i : r;
+                      return ((e = t), "object" == typeof (r = r[t]) ? i : r);
                     var n = t.indexOf(e);
                     if (-1 !== n) {
                       var a = parseInt(t.substr(n + e.length), 10);
@@ -19529,7 +19574,7 @@
                     return "";
                   }
                   return function () {
-                    return (e = ""), (r = t.getFootageData()), i;
+                    return ((e = ""), (r = t.getFootageData()), i);
                   };
                 })(t)),
                 e
@@ -19783,9 +19828,9 @@
           })(),
           MaskManagerInterface = (function () {
             function t(t, e) {
-              (this._mask = t), (this._data = e);
+              ((this._mask = t), (this._data = e));
             }
-            Object.defineProperty(t.prototype, "maskPath", {
+            (Object.defineProperty(t.prototype, "maskPath", {
               get: function () {
                 return (
                   this._mask.prop.k && this._mask.prop.getValue(),
@@ -19800,7 +19845,7 @@
                     100 * this._mask.op.v
                   );
                 },
-              });
+              }));
             return function (e) {
               var r,
                 i = createSizedArray(e.viewData.length),
@@ -19820,7 +19865,7 @@
             var t = { pv: 0, v: 0, mult: 1 },
               e = { pv: [0, 0, 0], v: [0, 0, 0], mult: 1 };
             function r(t, e, r) {
-              Object.defineProperty(t, "velocity", {
+              (Object.defineProperty(t, "velocity", {
                 get: function () {
                   return e.getVelocityAtTime(e.comp.currentFrame);
                 },
@@ -19849,7 +19894,7 @@
                 (t.valueAtTime = e.getValueAtTime),
                 (t.speedAtTime = e.getSpeedAtTime),
                 (t.velocityAtTime = e.getVelocityAtTime),
-                (t.propertyGroup = e.propertyGroup);
+                (t.propertyGroup = e.propertyGroup));
             }
             function i() {
               return t;
@@ -19889,7 +19934,7 @@
                         function () {
                           t.k && t.getValue();
                           for (var e = 0; e < n; e += 1)
-                            (s[e] = t.v[e] * i), (a[e] = s[e]);
+                            ((s[e] = t.v[e] * i), (a[e] = s[e]));
                           return a;
                         }
                       );
@@ -19928,12 +19973,12 @@
           var n,
             a = i.length;
           for (r = 0; r < a; r += 1)
-            (n = new GroupEffect(i[r], e)), this.effectElements.push(n);
+            ((n = new GroupEffect(i[r], e)), this.effectElements.push(n));
         }
         function GroupEffect(t, e) {
           this.init(t, e);
         }
-        !(function () {
+        (!(function () {
           !(function () {
             function t(t, e) {
               return (
@@ -19956,9 +20001,9 @@
             GroupEffect.prototype.iterateDynamicProperties),
           (GroupEffect.prototype.init = function (t, e) {
             var r;
-            (this.data = t),
+            ((this.data = t),
               (this.effectElements = []),
-              this.initDynamicPropertyContainer(e);
+              this.initDynamicPropertyContainer(e));
             var i,
               n = this.data.ef.length,
               a = this.data.ef;
@@ -19994,7 +20039,7 @@
               }
               i && this.effectElements.push(i);
             }
-          });
+          }));
         var lottie = {};
         function setLocationHref(t) {
           locationHref = t;
@@ -20065,7 +20110,7 @@
           }
           return null;
         }
-        (lottie.play = animationManager.play),
+        ((lottie.play = animationManager.play),
           (lottie.pause = animationManager.pause),
           (lottie.setLocationHref = setLocationHref),
           (lottie.togglePause = animationManager.togglePause),
@@ -20091,7 +20136,7 @@
             animationManager.getRegisteredAnimations),
           (lottie.setIDPrefix = setIDPrefix),
           (lottie.__getFactory = getFactory),
-          (lottie.version = "5.7.11");
+          (lottie.version = "5.7.11"));
         var standalone = "__[STANDALONE]__",
           animationData = "__[ANIMATIONDATA]__",
           renderer = "",
@@ -20100,8 +20145,8 @@
           var scripts = document.getElementsByTagName("script"),
             index = scripts.length - 1,
             myScript = scripts[index] || { src: "" };
-          (queryString = myScript.src.replace(/^[^\?]+\??/, "")),
-            (renderer = getQueryVariable("renderer"));
+          ((queryString = myScript.src.replace(/^[^\?]+\??/, "")),
+            (renderer = getQueryVariable("renderer")));
         }
         var readyStateCheckInterval = setInterval(checkReady, 100);
         return lottie;
@@ -20150,7 +20195,7 @@
               s,
               o = a.attr("data-wf-status"),
               u = a.attr("data-wf-domain") || "";
-            /\.webflow\.io$/i.test(u) && h.hostname !== u && (o = !0),
+            (/\.webflow\.io$/i.test(u) && h.hostname !== u && (o = !0),
               o &&
                 !l &&
                 ((e =
@@ -20176,7 +20221,7 @@
                   r[0])),
                 f(),
                 setTimeout(f, 500),
-                t(n).off(p, c).on(p, c));
+                t(n).off(p, c).on(p, c)));
           }),
           r
         );
@@ -20240,10 +20285,10 @@
             s.design =
             s.preview =
               function () {
-                (r = h && i.env("design")),
+                ((r = h && i.env("design")),
                   (a = i.env("slug") || l.pathname || ""),
                   i.scroll.off(d),
-                  (n = []);
+                  (n = []));
                 for (var t = document.links, e = 0; e < t.length; ++e) m(t[e]);
                 n.length && (i.scroll.on(d), d());
               }),
@@ -20388,7 +20433,7 @@
                         l = Date.now();
                       h(function t() {
                         var e = Date.now() - l;
-                        window.scroll(
+                        (window.scroll(
                           0,
                           (function (t, e, r, i) {
                             return r > i
@@ -20402,10 +20447,10 @@
                             var n;
                           })(i, n, e, s),
                         ),
-                          e <= s ? h(t) : "function" == typeof r && r();
+                          e <= s ? h(t) : "function" == typeof r && r());
                       });
                     })(f, function () {
-                      y(f, "add"), f.focus(), y(f, "remove");
+                      (y(f, "add"), f.focus(), y(f, "remove"));
                     });
                   },
                   e ? 0 : 300,
@@ -20417,11 +20462,11 @@
           ready: function () {
             var t = e.WF_CLICK_EMPTY,
               r = e.WF_CLICK_SCROLL;
-            s.on(r, f, g),
+            (s.on(r, f, g),
               s.on(t, c, function (t) {
                 t.preventDefault();
               }),
-              document.head.insertBefore(u, document.head.firstChild);
+              document.head.insertBefore(u, document.head.firstChild));
           },
         };
       }),
@@ -20450,11 +20495,11 @@
           function l(e) {
             if (a) {
               if (s && "mousemove" === e.type)
-                return e.preventDefault(), void e.stopPropagation();
+                return (e.preventDefault(), void e.stopPropagation());
               var i = e.touches,
                 h = i ? i[0].clientX : e.clientX,
                 l = h - n;
-              (n = h),
+              ((n = h),
                 Math.abs(l) > o &&
                   r &&
                   "" === String(r()) &&
@@ -20462,7 +20507,7 @@
                     var n = t.Event(e, { originalEvent: r });
                     t(r.target).trigger(n, i);
                   })("swipe", e, { direction: l > 0 ? "right" : "left" }),
-                  c());
+                  c()));
             }
           }
           function p(t) {
@@ -20477,7 +20522,7 @@
           function c() {
             a = !1;
           }
-          e.addEventListener("touchstart", h, !1),
+          (e.addEventListener("touchstart", h, !1),
             e.addEventListener("touchmove", l, !1),
             e.addEventListener("touchend", p, !1),
             e.addEventListener("touchcancel", c, !1),
@@ -20486,7 +20531,7 @@
             e.addEventListener("mouseup", p, !1),
             e.addEventListener("mouseout", c, !1),
             (this.destroy = function () {
-              e.removeEventListener("touchstart", h, !1),
+              (e.removeEventListener("touchstart", h, !1),
                 e.removeEventListener("touchmove", l, !1),
                 e.removeEventListener("touchend", p, !1),
                 e.removeEventListener("touchcancel", c, !1),
@@ -20494,8 +20539,8 @@
                 e.removeEventListener("mousemove", l, !1),
                 e.removeEventListener("mouseup", p, !1),
                 e.removeEventListener("mouseout", c, !1),
-                (e = null);
-            });
+                (e = null));
+            }));
         }
         return (
           (t.event.special.tap = { bindType: "click", delegateType: "click" }),
@@ -20556,7 +20601,7 @@
         function A(r, i) {
           var n = t(i),
             s = t.data(i, y);
-          s ||
+          (s ||
             (s = t.data(i, y, {
               open: !1,
               el: n,
@@ -20578,9 +20623,9 @@
                 (h && i.closest(".w-editor-bem-EditorOverlay").length) ||
                   R(e, i);
               };
-            })(s));
+            })(s)));
           var l = n.find(".w-nav-brand");
-          l &&
+          (l &&
             "/" === l.attr("href") &&
             null == l.attr("aria-label") &&
             l.attr("aria-label", "home"),
@@ -20604,22 +20649,22 @@
                     return function (r, i) {
                       i = i || {};
                       var n = c.width();
-                      T(t),
+                      (T(t),
                         !0 === i.open && z(t, !0),
                         !1 === i.open && N(t, !0),
                         t.open &&
                           e.defer(function () {
                             n !== c.width() && M(t);
-                          });
+                          }));
                     };
                   })(s),
                 ))
               : (!(function (e) {
                   if (e.overlay) return;
-                  (e.overlay = t(d).appendTo(e.el)),
+                  ((e.overlay = t(d).appendTo(e.el)),
                     e.overlay.attr("id", e.overlayContainerId),
                     (e.parent = e.menu.parent()),
-                    N(e, !0);
+                    N(e, !0));
                 })(s),
                 s.button.on("click" + y, F(s)),
                 s.menu.on("click" + y, "a", I(s)),
@@ -20631,10 +20676,16 @@
                         case a.SPACE:
                         case a.ENTER:
                           return (
-                            F(t)(), e.preventDefault(), e.stopPropagation()
+                            F(t)(),
+                            e.preventDefault(),
+                            e.stopPropagation()
                           );
                         case a.ESCAPE:
-                          return N(t), e.preventDefault(), e.stopPropagation();
+                          return (
+                            N(t),
+                            e.preventDefault(),
+                            e.stopPropagation()
+                          );
                         case a.ARROW_RIGHT:
                         case a.ARROW_DOWN:
                         case a.HOME:
@@ -20702,7 +20753,7 @@
                     };
                   })(s),
                 )),
-            V(r, i);
+            V(r, i));
         }
         function C(e, r) {
           var i = t.data(r, y);
@@ -20715,20 +20766,20 @@
           var r = {},
             i = t.config || {},
             n = (r.animation = t.el.attr("data-animation") || "default");
-          (r.animOver = /^over/.test(n)),
+          ((r.animOver = /^over/.test(n)),
             (r.animDirect = /left$/.test(n) ? -1 : 1),
             i.animation !== n && t.open && e.defer(M, t),
             (r.easing = t.el.attr("data-easing") || "ease"),
-            (r.easing2 = t.el.attr("data-easing2") || "ease");
+            (r.easing2 = t.el.attr("data-easing2") || "ease"));
           var a = t.el.attr("data-duration");
-          (r.duration = null != a ? Number(a) : 400),
+          ((r.duration = null != a ? Number(a) : 400),
             (r.docHeight = t.el.attr("data-doc-height")),
-            (t.config = r);
+            (t.config = r));
         }
         function D(t) {
           if (t.links[t.selectedIdx]) {
             var e = t.links[t.selectedIdx];
-            e.focus(), I(e);
+            (e.focus(), I(e));
           }
         }
         function M(t) {
@@ -20747,7 +20798,7 @@
               : r.preventDefault();
           };
         }
-        (l.ready =
+        ((l.ready =
           l.design =
           l.preview =
             function () {
@@ -20758,11 +20809,11 @@
                 !(s = f.find(y)).length)
               )
                 return;
-              s.each(A), _(), i.resize.on(w);
+              (s.each(A), _(), i.resize.on(w));
             }),
           (l.destroy = function () {
-            (S = t()), _(), s && s.length && s.each(C);
-          });
+            ((S = t()), _(), s && s.length && s.each(C));
+          }));
         var R = u(function (t, e) {
           if (t.open) {
             var r = e.closest(".w-nav-menu");
@@ -20777,10 +20828,10 @@
               var r = e.container.css(B);
               "none" === r && (r = "");
               return function (e, i) {
-                (i = t(i)).css(B, ""), "none" === i.css(B) && i.css(B, r);
+                ((i = t(i)).css(B, ""), "none" === i.css(B) && i.css(B, r));
               };
             })(i);
-            i.links.each(a), i.dropdowns.each(a);
+            (i.links.each(a), i.dropdowns.each(a));
           }
           i.open && G(i);
         }
@@ -20793,13 +20844,13 @@
         }
         function z(t, e) {
           if (!t.open) {
-            (t.open = !0),
+            ((t.open = !0),
               t.menu.each(O),
               t.links.addClass(E),
               t.dropdowns.addClass(v),
               t.dropdownToggle.addClass(b),
               t.dropdownList.addClass(x),
-              t.button.addClass(g);
+              t.button.addClass(g));
             var r = t.config;
             ("none" === r.animation ||
               !p.support.transform ||
@@ -20854,7 +20905,7 @@
         }
         function N(t, e) {
           if (t.open) {
-            (t.open = !1), t.button.removeClass(g);
+            ((t.open = !1), t.button.removeClass(g));
             var r = t.config;
             if (
               (("none" === r.animation ||
@@ -20865,7 +20916,7 @@
               f.off("click" + y, t.outside),
               e)
             )
-              return p(t.menu).stop(), void h();
+              return (p(t.menu).stop(), void h());
             var i = "transform " + r.duration + "ms " + r.easing2,
               n = t.menu.outerHeight(!0),
               a = t.menu.outerWidth(!0),
@@ -20881,7 +20932,7 @@
             }
           }
           function h() {
-            t.menu.height(""),
+            (t.menu.height(""),
               p(t.menu).set({ x: 0, y: 0 }),
               t.menu.each(L),
               t.links.removeClass(E),
@@ -20893,7 +20944,7 @@
                 (S.length ? t.menu.insertAfter(S) : t.menu.prependTo(t.parent),
                 t.overlay.attr("style", "").hide()),
               t.el.triggerHandler("w-close"),
-              t.button.attr("aria-expanded", "false");
+              t.button.attr("aria-expanded", "false"));
           }
         }
         return l;
@@ -20905,7 +20956,7 @@
     var i = r(257);
     function n(t, e) {
       var r = document.createEvent("CustomEvent");
-      r.initCustomEvent(e, !0, !0, null), t.dispatchEvent(r);
+      (r.initCustomEvent(e, !0, !0, null), t.dispatchEvent(r));
     }
     var a = window.jQuery,
       s = {},
@@ -20914,16 +20965,16 @@
           i.triggers.reset(t, e);
         },
         intro: function (t, e) {
-          i.triggers.intro(t, e), n(e, "COMPONENT_ACTIVE");
+          (i.triggers.intro(t, e), n(e, "COMPONENT_ACTIVE"));
         },
         outro: function (t, e) {
-          i.triggers.outro(t, e), n(e, "COMPONENT_INACTIVE");
+          (i.triggers.outro(t, e), n(e, "COMPONENT_INACTIVE"));
         },
       };
-    (s.triggers = {}),
+    ((s.triggers = {}),
       (s.types = { INTRO: "w-ix-intro.w-ix", OUTRO: "w-ix-outro.w-ix" }),
       a.extend(s.triggers, o),
-      (t.exports = s);
+      (t.exports = s));
   },
   function (t, e, r) {
     "use strict";
@@ -20943,14 +20994,14 @@
             ((e.__wf_intro = null), i(e).triggerHandler(n.types.OUTRO));
         },
       };
-    (n.triggers = {}),
+    ((n.triggers = {}),
       (n.types = { INTRO: "w-ix-intro.w-ix", OUTRO: "w-ix-outro.w-ix" }),
       (n.init = function () {
         for (var t = a.length, e = 0; e < t; e++) {
           var r = a[e];
           r[0](0, r[1]);
         }
-        (a = []), i.extend(n.triggers, s);
+        ((a = []), i.extend(n.triggers, s));
       }),
       (n.async = function () {
         for (var t in s) {
@@ -20962,6 +21013,6 @@
         }
       }),
       n.async(),
-      (t.exports = n);
+      (t.exports = n));
   },
 ]);
